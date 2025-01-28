@@ -1,0 +1,50 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1738104266624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738104291410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n body {\n   margin: 0;\n-  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n-    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n     sans-serif;\n   -webkit-font-smoothing: antialiased;\n   -moz-osx-font-smoothing: grayscale;\n }\n \n code {\n-  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n     monospace;\n }\n \n-:root {\n-  --color1: var(--color-bllind);\n-}\n+;:root{\n+  --color1: #282c34;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738104324335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n     monospace;\n }\n \n ;:root{\n-  --color1: #282c34;\n+  --background-color: #282c34;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738104332006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n     monospace;\n }\n \n-;:root{\n+:root{\n   --background-color: #282c34;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738104393019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n body {\n   margin: 0;\n-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n+  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n+    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n     sans-serif;\n   -webkit-font-smoothing: antialiased;\n   -moz-osx-font-smoothing: grayscale;\n }\n \n code {\n-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n+  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n     monospace;\n }\n \n\\ No newline at end of file\n-:root{\n-  --background-color: #282c34;\n-}\n+:root {\n+  --background-color: var(--background-color);\n+}\n"
+                },
+                {
+                    "date": 1738104400973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n     monospace;\n }\n \n :root {\n-  --background-color: var(--background-color);\n-}\n\\ No newline at end of file\n+  background-color: var(--background-color);\n+}\n"
+                },
+                {
+                    "date": 1738104416471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n     monospace;\n }\n \n :root {\n-  background-color: var(--background-color);\n+  --background-color: #282c34;\n }\n"
+                },
+                {
+                    "date": 1738104433822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n     monospace;\n }\n \n :root {\n-  --background-color: #282c34;\n+  --background-color-white: #282c34;\n }\n"
+                },
+                {
+                    "date": 1738104468452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,4 @@\n code {\n   font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n     monospace;\n }\n-\n-:root {\n-  --background-color-white: #282c34;\n-}\n"
+                }
+            ],
+            "date": 1738104266624,
+            "name": "Commit-0",
+            "content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n\n:root {\n  --color1: var(--color-bllind);\n}\n"
+        }
+    ]
+}
