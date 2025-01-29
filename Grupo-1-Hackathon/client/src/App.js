@@ -1,8 +1,12 @@
 import "./App.css";
-import Alert from "./components/Alert";
+import Login from "./pages/Login/index.jsx";
 
 function App() {
-  return <><Alert alertTitle={"oi"} /></>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;

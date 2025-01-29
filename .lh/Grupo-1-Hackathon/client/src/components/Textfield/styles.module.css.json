@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/components/Textfield/styles.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1738150187510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738150209227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,11 @@\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   margin-bottom: 15px;\r\n-  color: var(--white-color);\r\n }\r\n \r\n .inputField {\r\n-  /* color: var(--white-color); */\r\n   border: none;\r\n   border-radius: 5px;\r\n   background-color: var(--textfield-background-color);\r\n   font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1738150214484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+.inputContainer {\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  align-items: center;\r\n+  margin-bottom: 15px;\r\n+}\r\n+\r\n+.inputField {\r\n+  border: none;\r\n+  border-radius: 5px;\r\n+  background-color: var(--textfield-background-color);\r\n+  font-size: 16px;\r\n+  padding: 15px;\r\n+  outline: none;\r\n+  flex-grow: 1;\r\n+}\r\n+\r\n+.inputField.withLabel {\r\n+  margin-left: 10px;\r\n+  min-width: 25%;\r\n+}\r\n+\r\n+.inputLabel {\r\n+  width: 100%;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738150341200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+.inputContainer {\r\n+  color: red;\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  align-items: center;\r\n+  margin-bottom: 15px;\r\n+}\r\n+\r\n+.inputField {\r\n+  border: none;\r\n+  border-radius: 5px;\r\n+  background-color: var(--textfield-background-color);\r\n+  font-size: 16px;\r\n+  padding: 15px;\r\n+  outline: none;\r\n+  flex-grow: 1;\r\n+}\r\n+\r\n+.inputField.withLabel {\r\n+  margin-left: 10px;\r\n+  min-width: 25%;\r\n+}\r\n+\r\n+.inputLabel {\r\n+  width: 100%;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738150351517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+.inputContainer {\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  align-items: center;\r\n+  margin-bottom: 15px;\r\n+}\r\n+\r\n+.inputField {\r\n+  color: red;\r\n+  border: none;\r\n+  border-radius: 5px;\r\n+  background-color: var(--textfield-background-color);\r\n+  font-size: 16px;\r\n+  padding: 15px;\r\n+  outline: none;\r\n+  flex-grow: 1;\r\n+}\r\n+\r\n+.inputField.withLabel {\r\n+  margin-left: 10px;\r\n+  min-width: 25%;\r\n+}\r\n+\r\n+.inputLabel {\r\n+  width: 100%;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738150385833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   margin-bottom: 15px;\r\n }\r\n \r\n .inputField {\r\n-  color: red;\r\n+  color: var(--textfield-color);\r\n   border: none;\r\n   border-radius: 5px;\r\n   background-color: var(--textfield-background-color);\r\n   font-size: 16px;\r\n@@ -23,80 +23,4 @@\n \r\n .inputLabel {\r\n   width: 100%;\r\n }\r\n-.inputContainer {\r\n-  color: red;\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  margin-bottom: 15px;\r\n-}\r\n-\r\n-.inputField {\r\n-  border: none;\r\n-  border-radius: 5px;\r\n-  background-color: var(--textfield-background-color);\r\n-  font-size: 16px;\r\n-  padding: 15px;\r\n-  outline: none;\r\n-  flex-grow: 1;\r\n-}\r\n-\r\n-.inputField.withLabel {\r\n-  margin-left: 10px;\r\n-  min-width: 25%;\r\n-}\r\n-\r\n-.inputLabel {\r\n-  width: 100%;\r\n-}\r\n-.inputContainer {\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  margin-bottom: 15px;\r\n-}\r\n-\r\n-.inputField {\r\n-  border: none;\r\n-  border-radius: 5px;\r\n-  background-color: var(--textfield-background-color);\r\n-  font-size: 16px;\r\n-  padding: 15px;\r\n-  outline: none;\r\n-  flex-grow: 1;\r\n-}\r\n-\r\n-.inputField.withLabel {\r\n-  margin-left: 10px;\r\n-  min-width: 25%;\r\n-}\r\n-\r\n-.inputLabel {\r\n-  width: 100%;\r\n-}\r\n-.inputContainer {\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  margin-bottom: 15px;\r\n-}\r\n-\r\n-.inputField {\r\n-  border: none;\r\n-  border-radius: 5px;\r\n-  background-color: var(--textfield-background-color);\r\n-  font-size: 16px;\r\n-  padding: 15px;\r\n-  outline: none;\r\n-  flex-grow: 1;\r\n-}\r\n-\r\n-.inputField.withLabel {\r\n-  margin-left: 10px;\r\n-  min-width: 25%;\r\n-}\r\n-\r\n-.inputLabel {\r\n-  width: 100%;\r\n-}\r\n"
+                }
+            ],
+            "date": 1738150187510,
+            "name": "Commit-0",
+            "content": ".inputContainer {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 15px;\r\n  color: var(--white-color);\r\n}\r\n\r\n.inputField {\r\n  /* color: var(--white-color); */\r\n  border: none;\r\n  border-radius: 5px;\r\n  background-color: var(--textfield-background-color);\r\n  font-size: 16px;\r\n  padding: 15px;\r\n  outline: none;\r\n  flex-grow: 1;\r\n}\r\n\r\n.inputField.withLabel {\r\n  margin-left: 10px;\r\n  min-width: 25%;\r\n}\r\n\r\n.inputLabel {\r\n  width: 100%;\r\n}\r\n"
+        }
+    ]
+}
