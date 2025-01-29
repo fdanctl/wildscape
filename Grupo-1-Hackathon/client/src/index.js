@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>

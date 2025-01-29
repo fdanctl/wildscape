@@ -1,0 +1,51 @@
+.logo {
+  height: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 75%;
+  gap: 10px;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 110px 0px 20px 0px;
+  align-self: center;
+  color: var(--white-color);
+}
+
+.imageMonkey {
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 65%;
+  max-width: 50%;
+  object-fit: contain;
+}
+
+.imageDog {
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+  max-width: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .imageMonkey {
+    left: 295px;
+    bottom: -54px;
+  }
+  .imageDog {
+    left: 0;
+  }
+}

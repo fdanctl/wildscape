@@ -1,0 +1,98 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/components/Card/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1738162732537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738162810812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n import React from \"react\";\n import styles from \"./styles.module.css\";\n \n-const Card = ({ children }) => {\n-  return <div className=\"card\">{children}</div>;\n+const Card = ({ title, content }) => {\n+  return (\n+    <>\n+      <div className=\"card\">{title}</div>;<div className=\"card\">{content}</div>;\n+    </>\n+  );\n };\n \n export default Card;\n"
+                },
+                {
+                    "date": 1738162835601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n \n const Card = ({ title, content }) => {\n   return (\n     <>\n-      <div className=\"card\">{title}</div>;<div className=\"card\">{content}</div>;\n+      <div className=\"title\">{title}</div>\n+      <div className=\"content\">{content}</div>\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1738162846748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content }) => {\n+  return (\n+    <>\n+      <div className=\"title\">{title}</div>\n+      <div className=\"content\">{content}</div>\n+    </>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738162882903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content }) => {\n+  return (\n+    <>\n+      <div className=\"title\">{title}</div>\n+      <div className=\"content\">{content}</div>\n+    </>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738162916845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,38 +2,12 @@\n import styles from \"./styles.module.css\";\n \n const Card = ({ title, content }) => {\n   return (\n-    <>\n+    <div className={styles.card}>\n       <div className=\"title\">{title}</div>\n       <div className=\"content\">{content}</div>\n-    </>\n+    </div>\n   );\n };\n \n export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content }) => {\n-  return (\n-    <>\n-      <div className=\"title\">{title}</div>\n-      <div className=\"content\">{content}</div>\n-    </>\n-  );\n-};\n-\n-export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content }) => {\n-  return (\n-    <>\n-      <div className=\"title\">{title}</div>\n-      <div className=\"content\">{content}</div>\n-    </>\n-  );\n-};\n-\n-export default Card;\n"
+                },
+                {
+                    "date": 1738163305499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n const Card = ({ title, content }) => {\n   return (\n     <div className={styles.card}>\n-      <div className=\"title\">{title}</div>\n+      <div className={styles.title}>{title}</div>\n       <div className=\"content\">{content}</div>\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1738163867070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\n import styles from \"./styles.module.css\";\n \n-const Card = ({ title, content }) => {\n+const Card = ({ title, content, side }) => {\n   return (\n     <div className={styles.card}>\n       <div className={styles.title}>{title}</div>\n       <div className=\"content\">{content}</div>\n"
+                },
+                {
+                    "date": 1738164031781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,13 @@\n import styles from \"./styles.module.css\";\n \n const Card = ({ title, content, side }) => {\n   return (\n-    <div className={styles.card}>\n+    <div\n+      className={`${styles.card} ${\n+        side === \"right\" ? styles.cardRight : styles.cardLeft\n+      }`}\n+    >\n       <div className={styles.title}>{title}</div>\n       <div className=\"content\">{content}</div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1738164741925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content, side }) => {\n+  return (\n+    <div\n+      className={`${styles.card} ${\n+        side === \"right\" ? styles.cardRight : styles.cardLeft\n+      }`}\n+    >\n+      <div className={styles.title}>{title}</div>\n+      <div className=\"content\">{content}</div>\n+    </div>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738164796197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,17 @@\n import React from \"react\";\n-import styles from \"./styles.module.css\";\n+import styles from \"./styles.module.css\"; \n \n const Card = ({ title, content, side }) => {\n   return (\n-    <div\n-      className={`${styles.card} ${\n-        side === \"right\" ? styles.cardRight : styles.cardLeft\n-      }`}\n-    >\n-      <div className={styles.title}>{title}</div>\n-      <div className=\"content\">{content}</div>\n+    <div className={styles.cardContainer}> \n+      <div \n+        className={`${styles.card} ${side === \"right\" ? styles.cardRight : styles.cardLeft}`}\n+      >\n+        <div className={styles.title}>{title}</div>\n+        <div className=\"content\">{content}</div> \n+      </div>\n     </div>\n   );\n };\n \n-export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content, side }) => {\n-  return (\n-    <div\n-      className={`${styles.card} ${\n-        side === \"right\" ? styles.cardRight : styles.cardLeft\n-      }`}\n-    >\n-      <div className={styles.title}>{title}</div>\n-      <div className=\"content\">{content}</div>\n-    </div>\n-  );\n-};\n-\n-export default Card;\n+export default Card;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738164844648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,19 @@\n import React from \"react\";\n-import styles from \"./styles.module.css\"; \n+import styles from \"./styles.module.css\";\n \n const Card = ({ title, content, side }) => {\n   return (\n-    <div className={styles.cardContainer}> \n-      <div \n-        className={`${styles.card} ${side === \"right\" ? styles.cardRight : styles.cardLeft}`}\n+    <div className={styles.cardContainer}>\n+      <div\n+        className={`${styles.card} ${\n+          side === \"right\" ? styles.cardRight : styles.cardLeft\n+        }`}\n       >\n         <div className={styles.title}>{title}</div>\n-        <div className=\"content\">{content}</div> \n\\ No newline at end of file\n+        <div className=\"content\">{content}</div>\n       </div>\n     </div>\n   );\n };\n \n-export default Card;\n+export default Card;\n"
+                },
+                {
+                    "date": 1738164900520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content, side }) => {\n+  return (\n+    <div className={styles.cardContainer}>\n+      <div\n+        className={`${styles.card} ${\n+          side === \"right\" ? styles.cardRight : styles.cardLeft\n+        }`}\n+      >\n+        <div className={styles.title}>{title}</div>\n+        <div className=\"content\">{content}</div>\n+      </div>\n+    </div>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738164939410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,23 +16,4 @@\n   );\n };\n \n export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content, side }) => {\n-  return (\n-    <div className={styles.cardContainer}>\n-      <div\n-        className={`${styles.card} ${\n-          side === \"right\" ? styles.cardRight : styles.cardLeft\n-        }`}\n-      >\n-        <div className={styles.title}>{title}</div>\n-        <div className=\"content\">{content}</div>\n-      </div>\n-    </div>\n-  );\n-};\n-\n-export default Card;\n"
+                },
+                {
+                    "date": 1738164955223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <div className={styles.cardContainer}>\n       <div\n         className={`${styles.card} ${\n-          side === \"right\" ? styles.cardRight : styles.cardLeft\n+          side === \"right\" ?`${styles.cardRight}` : styles.cardLeft\n         }`}\n       >\n         <div className={styles.title}>{title}</div>\n         <div className=\"content\">{content}</div>\n"
+                },
+                {
+                    "date": 1738164964847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content, side }) => {\n+  return (\n+    <div className={styles.cardContainer}>\n+      <div\n+        className={`${styles.card} ${\n+          side === \"right\" ? `${styles.cardRight}` : `${styles.cardLeft}`\n+        }`}\n+      >\n+        <div className={styles.title}>{title}</div>\n+        <div className=\"content\">{content}</div>\n+      </div>\n+    </div>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738164971397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import React from \"react\";\n+import styles from \"./styles.module.css\";\n+\n+const Card = ({ title, content, side }) => {\n+  return (\n+    <div className={styles.cardContainer}>\n+      <div\n+        className={`${styles.card} ${\n+          side === \"right\" ?`${styles.card}` : styles.cardLeft\n+        }`}\n+      >\n+        <div className={styles.title}>{title}</div>\n+        <div className=\"content\">{content}</div>\n+      </div>\n+    </div>\n+  );\n+};\n+\n+export default Card;\n"
+                },
+                {
+                    "date": 1738165012870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,55 +3,13 @@\n \n const Card = ({ title, content, side }) => {\n   return (\n     <div className={styles.cardContainer}>\n-      <div\n-        className={`${styles.card} ${\n-          side === \"right\" ?`${styles.card}` : styles.cardLeft\n-        }`}\n-      >\n+      <div className={`${styles.card} ${styles[side]}`}>\n         <div className={styles.title}>{title}</div>\n         <div className=\"content\">{content}</div>\n       </div>\n     </div>\n   );\n };\n \n export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content, side }) => {\n-  return (\n-    <div className={styles.cardContainer}>\n-      <div\n-        className={`${styles.card} ${\n-          side === \"right\" ? `${styles.cardRight}` : `${styles.cardLeft}`\n-        }`}\n-      >\n-        <div className={styles.title}>{title}</div>\n-        <div className=\"content\">{content}</div>\n-      </div>\n-    </div>\n-  );\n-};\n-\n-export default Card;\n-import React from \"react\";\n-import styles from \"./styles.module.css\";\n-\n-const Card = ({ title, content, side }) => {\n-  return (\n-    <div className={styles.cardContainer}>\n-      <div\n-        className={`${styles.card} ${\n-          side === \"right\" ?`${styles.cardRight}` : styles.cardLeft\n-        }`}\n-      >\n-        <div className={styles.title}>{title}</div>\n-        <div className=\"content\">{content}</div>\n-      </div>\n-    </div>\n-  );\n-};\n-\n-export default Card;\n"
+                },
+                {
+                    "date": 1738165064789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n \n const Card = ({ title, content, side }) => {\n   return (\n     <div className={styles.cardContainer}>\n-      <div className={`${styles.card} ${styles[side]}`}>\n+      <div className={`${styles.card} ${styles[side]}`}> \n         <div className={styles.title}>{title}</div>\n         <div className=\"content\">{content}</div>\n       </div>\n     </div>\n   );\n };\n \n-export default Card;\n+export default Card;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738165152418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n \n const Card = ({ title, content, side }) => {\n   return (\n     <div className={styles.cardContainer}>\n-      <div className={`${styles.card} ${styles[side]}`}> \n+      <div className={`${styles.card} ${styles[side]}`}>\n         <div className={styles.title}>{title}</div>\n         <div className=\"content\">{content}</div>\n       </div>\n     </div>\n   );\n };\n \n\\ No newline at end of file\n-export default Card;\n+export default Card;\n"
+                },
+                {
+                    "date": 1738166394050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n import React from \"react\";\n import styles from \"./styles.module.css\";\n \n-const Card = ({ title, content, side }) => {\n+const Card = ({ title, content, side, onClick }) => {\n   return (\n     <div className={styles.cardContainer}>\n-      <div className={`${styles.card} ${styles[side]}`}>\n+      <div className={`${styles.card} ${styles[side]}`} onClick={onClick}>\n         <div className={styles.title}>{title}</div>\n         <div className=\"content\">{content}</div>\n       </div>\n     </div>\n   );\n };\n\\ No newline at end of file\n \n-export default Card;\n+export default Card;\n"
+                }
+            ],
+            "date": 1738162732537,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\nimport styles from \"./styles.module.css\";\n\nconst Card = ({ children }) => {\n  return <div className=\"card\">{children}</div>;\n};\n\nexport default Card;\n"
+        }
+    ]
+}

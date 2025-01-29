@@ -1,16 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bayon&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Bayon", serif;
+  color: #ffffff;
+  font-weight: 100;
+  background: linear-gradient(to bottom, #6c766b, #b3d6b0);
+  height: 100vh;
+  width: 100vw;
 }
 
 :root {
+  /* --background-dark-green-color: #6c766b;
+  --background-light-green-color: #b3d6b0; */
   /* Basic Colors */
   --white-color: #ffffff;
   /* Textfield Colors */
   --textfield-background-color: #fafafa;
   --textfield-color: #333333;
+  /* Card Colors */
+  --green-card-color: #414e40;
 }

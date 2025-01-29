@@ -1336,6 +1336,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
+"@fontsource/bayon@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/bayon/-/bayon-5.1.1.tgz#b0f4fc0b2d28a54ad942d51ea4b0e891ec2c8636"
+  integrity sha512-FNoN/nlaFDU2J5ZJikzBp7/sw0ihxP9msnsHBGBq9pU4VvCgmExjTyKFgSBtmP/gBY8WkN5ILAdu6EtyIH7dsQ==
+
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.13.0.tgz#fb907624df3256d04b9aa2df50d7aa97ec648748"
