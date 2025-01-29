@@ -10,6 +10,10 @@ body {
   width: 100vw;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   /* --background-dark-green-color: #6c766b;
   --background-light-green-color: #b3d6b0; */
