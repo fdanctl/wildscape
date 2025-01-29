@@ -31,6 +31,16 @@ export async function FindResourceByName(
   return result;
 }
 
+export async function FindResourceByNameSearch(
+  str: string
+): Promise<ResourceWithId[] | null> {
+  const collection = await getMongoCollection(db, col);
+  const result = await collection
+    .find({ name: { $regex: str, $options: "i" } })
+    .toArray();
+  return result;
+}
+
 export async function RemoveResource(id: string): Promise<void> {
   const newId = new ObjectId(id);
   const collection = await getMongoCollection(db, col);

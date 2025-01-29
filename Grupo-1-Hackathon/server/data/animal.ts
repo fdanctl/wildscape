@@ -32,6 +32,16 @@ export async function FindAnimalById(id: string): Promise<AnimalWithId | null> {
   return result;
 }
 
+export async function FindAnimalByName(
+  str: string
+): Promise<AnimalWithId[] | null> {
+  const collection = await getMongoCollection(db, col);
+  const result = await collection
+    .find({ name: { $regex: str, $options: "i" } })
+    .toArray();
+  return result;
+}
+
 export async function ChangeAnimal(id: string, body: Animal) {
   const newId = new ObjectId(id);
   const collection = await getMongoCollection(db, col);
