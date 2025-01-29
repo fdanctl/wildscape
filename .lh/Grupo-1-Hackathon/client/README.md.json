@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1738153414960,
@@ -28,6 +28,10 @@
                 {
                     "date": 1738166039177,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+`yarn add @fontsource/bayon`\n+`yarn add hugeicons-react`\n+`yarn add react-router`\n+\n+<!-- import Textfield from \"../../components/Textfield/index.jsx\";\n+\n+ const [employeeNumber, setEmployeeNumber] = useState(\"\");\n+  const [password, setPassword] = useState(\"\"); -->\n+ <!-- <>\n+          <Textfield\n+            placeholder=\"Employee Number\"\n+            type=\"text\"\n+            value={employeeNumber}\n+            onChange={(e) => setEmployeeNumber(e.target.value)}\n+          />\n+          <Textfield\n+            placeholder=\"Employee Number\"\n+            type=\"password\"\n+            value={password}\n+            onChange={(e) => setPassword(e.target.value)}\n+          />\n+        </> -->\n"
+                },
+                {
+                    "date": 1738169309690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,62 +1,5 @@\n `yarn add @fontsource/bayon`\n `yarn add hugeicons-react`\n `yarn add react-router`\n \n-<!-- import Textfield from \"../../components/Textfield/index.jsx\";\n \n- const [employeeNumber, setEmployeeNumber] = useState(\"\");\n-  const [password, setPassword] = useState(\"\"); -->\n- <!-- <>\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"text\"\n-            value={employeeNumber}\n-            onChange={(e) => setEmployeeNumber(e.target.value)}\n-          />\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"password\"\n-            value={password}\n-            onChange={(e) => setPassword(e.target.value)}\n-          />\n-        </> -->\n-`yarn add @fontsource/bayon`\n-`yarn add hugeicons-react`\n-\n-<!-- import Textfield from \"../../components/Textfield/index.jsx\";\n-\n- const [employeeNumber, setEmployeeNumber] = useState(\"\");\n-  const [password, setPassword] = useState(\"\"); -->\n- <!-- <>\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"text\"\n-            value={employeeNumber}\n-            onChange={(e) => setEmployeeNumber(e.target.value)}\n-          />\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"password\"\n-            value={password}\n-            onChange={(e) => setPassword(e.target.value)}\n-          />\n-        </> -->\n-`yarn add @fontsource/bayon`\n-<!-- import Textfield from \"../../components/Textfield/index.jsx\";\n-\n- const [employeeNumber, setEmployeeNumber] = useState(\"\");\n-  const [password, setPassword] = useState(\"\"); -->\n- <!-- <>\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"text\"\n-            value={employeeNumber}\n-            onChange={(e) => setEmployeeNumber(e.target.value)}\n-          />\n-          <Textfield\n-            placeholder=\"Employee Number\"\n-            type=\"password\"\n-            value={password}\n-            onChange={(e) => setPassword(e.target.value)}\n-          />\n-        </> -->\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1738153414960,

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/server/data/animal.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1738169528671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738169542737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,5 @@\n export async function RemoveAnimal(id: string): Promise<void> {\n   const newId = new ObjectId(id);\n   const collection = await getMongoCollection(db, col);\n   await collection.deleteOne({ _id: newId });\n-}\n\\ No newline at end of file\n+}\n"
+                }
+            ],
+            "date": 1738169528671,
+            "name": "Commit-0",
+            "content": "import { Animal, AnimalWithId } from \"../models/animal\";\nimport { getMongoCollection } from \"./mongodb\";\nimport { ObjectId } from \"mongodb\";\n\nconst col = \"animals\";\nconst db = \"wildscape\";\n\nexport async function InsertAnimal(obj: Animal): Promise<string> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.insertOne(obj);\n  return result.insertedId;\n}\n\nexport async function FindAnimals(animal: string): Promise<AnimalWithId[]> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.find({ species: animal }).toArray();\n\n  return result;\n}\n\nexport async function FindAllAnimals(): Promise<AnimalWithId[]> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.find().toArray();\n\n  return result;\n}\n\nexport async function FindAnimalById(id: string): Promise<AnimalWithId | null> {\n  const newId = new ObjectId(id);\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.findOne({ _id: newId });\n  return result;\n}\n\nexport async function FindAnimalByName(\n  str: string\n): Promise<AnimalWithId[] | null> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection\n    .find({ name: { $regex: str, $options: \"i\" } })\n    .toArray();\n  return result;\n}\n\nexport async function ChangeAnimal(id: string, body: Animal) {\n  const newId = new ObjectId(id);\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.updateOne({ _id: newId }, { $set: body });\n  return result;\n}\n\nexport async function RemoveAnimal(id: string): Promise<void> {\n  const newId = new ObjectId(id);\n  const collection = await getMongoCollection(db, col);\n  await collection.deleteOne({ _id: newId });\n}"
+        }
+    ]
+}

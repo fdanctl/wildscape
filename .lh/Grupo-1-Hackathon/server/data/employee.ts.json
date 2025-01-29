@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/server/data/employee.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738169548368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738169548368,
+            "name": "Commit-0",
+            "content": "import { Credentials, Employee, EmployeeWithId } from \"../models/employee\";\nimport { getMongoCollection } from \"./mongodb\";\nimport { ObjectId } from \"mongodb\";\n\nconst col = \"employees\";\nconst db = \"wildscape\";\n\nexport async function InsertEmployee(obj: Employee): Promise<string> {\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.insertOne(obj);\n    return result.insertedId;\n}\n\nexport async function FindEmployees(): Promise<EmployeeWithId[]> {\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.find({}).toArray();\n\n    return result;\n}\n\nexport async function FindEmployeeByNr(\n    nr: number,\n): Promise<EmployeeWithId | null> {\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.findOne({ employeeNr: nr });\n    return result;\n}\n\nexport async function FindEmployeeById(\n    id: string,\n): Promise<EmployeeWithId | null> {\n    const newId = new ObjectId(id);\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.findOne({ _id: newId });\n    return result;\n}\n\nexport async function FindEmployeeByCredentials(\n    credentials: Credentials,\n): Promise<EmployeeWithId | null> {\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.findOne({\n        employeeNr: credentials.employeeNr,\n        password: credentials.password,\n    });\n    return result;\n}\n\nexport async function ChangeEmployee(employeeNr: number, body: Employee) {\n    const collection = await getMongoCollection(db, col);\n    const result = await collection.updateOne(\n        { employeeNr: employeeNr },\n        { $set: body },\n    );\n    return result;\n}\n\nexport async function RemoveEmployee(nr: number): Promise<void> {\n    const collection = await getMongoCollection(db, col);\n    await collection.deleteOne({ employeeNr: nr });\n}\n"
+        }
+    ]
+}

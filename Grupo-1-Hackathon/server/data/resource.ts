@@ -7,7 +7,7 @@ import { getMongoCollection } from "./mongodb";
 import { ObjectId } from "mongodb";
 
 const col = "resources";
-const db = "zoomania";
+const db = "wildscape";
 
 export async function InsertResource(obj: Resource): Promise<string> {
   const collection = await getMongoCollection(db, col);

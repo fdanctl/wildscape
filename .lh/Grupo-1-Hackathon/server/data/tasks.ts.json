@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/server/data/tasks.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738169587937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738169587937,
+            "name": "Commit-0",
+            "content": "import { Task, TaskWithId } from \"../models/tasks\";\nimport { getMongoCollection } from \"./mongodb\";\nimport { ObjectId } from \"mongodb\";\n\nconst col = \"tasks\";\nconst db = \"wildscape\";\n\nexport async function InsertTask(obj: Task): Promise<string> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.insertOne(obj);\n  return result.insertedId;\n}\n\nexport async function FindTasks(employeeId: string): Promise<TaskWithId[]> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.find({ employee_id: employeeId }).toArray();\n\n  return result;\n}\n\nexport async function FindAllTasks(): Promise<TaskWithId[]> {\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.find({}).toArray();\n\n  return result;\n}\n\nexport async function ChangeTask(id: string, body: Task) {\n  const newId = new ObjectId(id);\n  const collection = await getMongoCollection(db, col);\n  const result = await collection.updateOne({ _id: newId }, { $set: body });\n  return result;\n}\n\nexport async function RemoveTask(id: string): Promise<void> {\n  const newId = new ObjectId(id);\n  const collection = await getMongoCollection(db, col);\n  await collection.deleteOne({ _id: newId });\n}"
+        }
+    ]
+}

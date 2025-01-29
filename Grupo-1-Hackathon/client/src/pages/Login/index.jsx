@@ -4,7 +4,7 @@ import ImageDog from "../../assets/images/dog.png";
 import ImageMonkey from "../../assets/images/monkey.png";
 import Logo from "../../assets/images/logo.png";
 import Card from "../../components/Card";
-import Link from "react-router-dom";
+import { Link } from "react-router";
 
 const Login = () => {
   return (
@@ -13,13 +13,13 @@ const Login = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>Login</h1>
         <>
-          <Link>
+          <Link to="/admin">
             <Card title={"ADMINISTRATOR"} side={"left"}></Card>
           </Link>
           <img src={ImageDog} alt="Dog Image" className={styles.imageDog} />
         </>
         <>
-          <Link>
+          <Link to="/employee">
             <Card title={"EMPLOYEE"} side="right" onClick={() => {}}></Card>
           </Link>
           <img

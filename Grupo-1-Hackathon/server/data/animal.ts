@@ -3,7 +3,7 @@ import { getMongoCollection } from "./mongodb";
 import { ObjectId } from "mongodb";
 
 const col = "animals";
-const db = "zoomania";
+const db = "wildscape";
 
 export async function InsertAnimal(obj: Animal): Promise<string> {
   const collection = await getMongoCollection(db, col);

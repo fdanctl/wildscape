@@ -1,0 +1,23 @@
+.logo {
+  height: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 75%;
+  gap: 10px;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 110px 0px 20px 0px;
+  align-self: center;
+  color: var(--white-color);
+}

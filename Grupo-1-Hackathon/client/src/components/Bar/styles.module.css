@@ -1,0 +1,16 @@
+.bar {
+  background: var(--white-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bar p {
+  color: var(--textfield-color);
+}
+
+.icon {
+  size: 24;
+  color: var(--textfield-color);
+}
