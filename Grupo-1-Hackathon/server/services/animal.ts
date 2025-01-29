@@ -1,6 +1,7 @@
 import {
     ChangeAnimal,
     FindAnimalById,
+    FindAnimalByName,
     FindAnimals,
     InsertAnimal,
     RemoveAnimal,
@@ -16,6 +17,12 @@ export async function ReadAllAnimalType(
 
 export async function ReadAnimalById(id: string): Promise<Animal | null> {
     const animal = await FindAnimalById(id);
+
+    return animal;
+}
+
+export async function ReadAnimalByName(str: string): Promise<Animal[] | null> {
+    const animal = await FindAnimalByName(str);
 
     return animal;
 }

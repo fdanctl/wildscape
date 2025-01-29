@@ -52,3 +52,5 @@ router
     await DeleteTask(id);
     res.status(200).json({ message: "removido com sucesso" });
   });
+
+  // PESQUISA ANIMAL E RESOURCES PELO NOME

@@ -4,6 +4,7 @@ import {
   FindResources,
   FindResourceByName,
   InsertResource,
+  FindResourceByNameSearch,
 } from "../data/resource";
 import {
   Resource,
@@ -49,4 +50,12 @@ export async function CreateResource(body: Resource): Promise<string> {
 export async function UpdateResource(body: ResourceDeduction) {
   await ChangeResource(body);
   return;
+}
+
+export async function ReadResourcesByName(
+  str: string
+): Promise<Resource[] | null> {
+  const animal = await FindResourceByNameSearch(str);
+
+  return animal;
 }

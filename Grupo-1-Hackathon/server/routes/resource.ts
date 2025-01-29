@@ -2,10 +2,12 @@ import express from "express";
 import {
   CreateResource,
   ReadResources,
+  ReadResourcesByName,
   UpdateResource,
 } from "../services/resource";
 export const router = express.Router();
 import { Request, Response } from "express";
+import { FindAnimalByName } from "../data/animal";
 
 // ler todos os recursos na base de dados return os recursos com
 // estatisticas (consumo diario e estimativa de fim de stock)
@@ -14,6 +16,13 @@ router.get("/", async (req, res) => {
   res.status(200).json(result);
 });
 
+router.get("/search/:str", async (req, res) => {
+  const str = req.params.str;
+  const result = await ReadResourcesByName(str);
+  res.status(200).json(result);
+});
+
+// adiciona recurso
 router.post("/", async (req: Request, res: Response) => {
   const body = req.body;
   const id = await CreateResource(body);
