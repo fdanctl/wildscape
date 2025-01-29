@@ -1,0 +1,9 @@
+.alert {
+    background-color: #ff2727;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
