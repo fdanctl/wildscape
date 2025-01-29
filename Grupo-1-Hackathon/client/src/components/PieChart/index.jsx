@@ -16,14 +16,12 @@ export default function BasicPie() {
       outerRadius: 100,
       paddingAngle: 5,
       cornerRadius: 5,
-      startAngle: -45,
-      endAngle: 225,
       cx: 150,
       cy: 150,
         },
       ]}
       width={400}
-      height={200}
+      height={300}
     />
   );
 }
