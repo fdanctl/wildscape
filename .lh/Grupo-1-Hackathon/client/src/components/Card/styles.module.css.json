@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 64,
+            "activePatchIndex": 65,
             "patches": [
                 {
                     "date": 1738162985722,
@@ -264,6 +264,10 @@
                 {
                     "date": 1738166311757,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,105 +37,11 @@\n }\n \n @media (max-width: 768px) {\n   .left {\n-    left: 0;\n+    left: 100px;\n   }\n   .right {\n     top: 540px;\n     left: 340px;\n   }\n }\n-.cardContainer {\n-  display: flex;\n-  justify-content: space-between;\n-  align-items: center;\n-  width: 100%;\n-}\n-\n-.card {\n-  background-color: var(--green-card-color);\n-  color: var(--white-color);\n-  border-radius: 10px;\n-  padding: 50px;\n-  text-align: center;\n-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n-  width: auto;\n-  min-width: 135px;\n-  background-color: var(--green-card-color);\n-}\n-\n-.title {\n-  font-size: 25px;\n-}\n-\n-.right {\n-  position: absolute;\n-  right: 231px;\n-  top: 492px;\n-  z-index: 100;\n-  rotate: -4deg;\n-}\n-\n-.left {\n-  position: absolute;\n-  left: 20%;\n-  top: 420px;\n-  z-index: 100;\n-}\n-\n-@media (max-width: 768px) {\n-  .left {\n-    left: 0;\n-  }\n-  .right {\n-    top: 530px;\n-    left: 340px;\n-  }\n-}\n-.cardContainer {\n-  display: flex;\n-  justify-content: space-between;\n-  align-items: center;\n-  width: 100%;\n-}\n-\n-.card {\n-  background-color: var(--green-card-color);\n-  color: var(--white-color);\n-  border-radius: 10px;\n-  padding: 50px;\n-  text-align: center;\n-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n-  width: auto;\n-  min-width: 135px;\n-  background-color: var(--green-card-color);\n-}\n-\n-.title {\n-  font-size: 25px;\n-}\n-\n-.right {\n-  position: absolute;\n-  right: 231px;\n-  top: 492px;\n-  z-index: 100;\n-  rotate: -4deg;\n-}\n-\n-.left {\n-  position: absolute;\n-  left: 20%;\n-  top: 420px;\n-  z-index: 100;\n-}\n-\n-@media (max-width: 768px) {\n-  .left {\n-    left: 0;\n-  }\n-  .right {\n-    top: 530px;\n-    left: 330px;\n-  }\n-}\n"
+                },
+                {
+                    "date": 1738177770943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+.cardContainer {\n+  display: flex;\n+  justify-content: space-between;\n+  align-items: center;\n+  width: 100%;\n+}\n+\n+.card {\n+  background-color: var(--green-card-color);\n+  color: var(--white-color);\n+  border-radius: 10px;\n+  padding: 50px;\n+  text-align: center;\n+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n+  width: auto;\n+  min-width: 150px;\n+  background-color: var(--green-card-color);\n+}\n+\n+.title {\n+  font-size: 25px;\n+}\n+\n+.right {\n+  position: absolute;\n+  right: 231px;\n+  top: 492px;\n+  z-index: 100;\n+  rotate: -4deg;\n+}\n+\n+.left {\n+  position: absolute;\n+  left: 20%;\n+  top: 420px;\n+  z-index: 100;\n+}\n+\n+@media (max-width: 768px) {\n+  .left {\n+    left: 100px;\n+  }\n+  .right {\n+    top: 540px;\n+    left: 340px;\n+  }\n+}\n"
                 }
             ],
             "date": 1738162985722,

@@ -9,7 +9,7 @@
 }
 
 /* Personalized Colors */
-.gray {
-  background: gray;
-  /* padding: 15px 30px; */
+.green {
+  background: var(--green-card-color);
+  color: var(--white-color);
 }

@@ -3,14 +3,14 @@ import styles from "./styles.module.css";
 import Card from "../../components/Card/index.jsx";
 import Alert from "../../components/Alert/index.jsx";
 import PieChart from "../../components/PieChart/index.jsx";
-import logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router";
 
 const Dashboard = () => {
     return (
         <div className={styles.dashboard}>
             <div className={styles.logo}>
-                <img src={logo} alt="Wildscape Logo" />
+                <img src={Logo} alt="Wildscape Logo" />
             </div>
             <h1 className={styles.title}>DASHBOARD</h1>
             <div className={styles.board}>

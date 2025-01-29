@@ -5,6 +5,7 @@ import { useState } from "react";
 import Logo from "../../assets/images/logo.png";
 import Button from "../../components/Button/index.jsx";
 import Bar from "../../components/Bar/index.jsx";
+import { Link } from "react-router-dom";
 
 const Login2 = () => {
   const [employeeNumber, setEmployeeNumber] = useState("");
@@ -26,8 +27,9 @@ const Login2 = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button label="Login" color="gray" onClick={() => {}} />
-        <Bar species="oi" />
+        <Link to="/dashboard">
+          <Button label="Login" color="green" />
+        </Link>
       </div>
     </>
   );
