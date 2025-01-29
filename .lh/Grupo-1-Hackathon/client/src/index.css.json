@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 56,
+            "activePatchIndex": 57,
             "patches": [
                 {
                     "date": 1738149338256,
@@ -232,6 +232,10 @@
                 {
                     "date": 1738177563746,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,33 +26,4 @@\n   --green-card-color: #414e40;\n   /* Button Colors */\n   --green-color: #374533;\n }\n-@import url(\"https://fonts.googleapis.com/css2?family=Bayon&display=swap\");\n-\n-body {\n-  margin: 0;\n-  font-family: \"Bayon\", serif;\n-  color: #ffffff;\n-  font-weight: 100;\n-  background: linear-gradient(to bottom, #6c766b, #b3d6b0);\n-  height: 100vh;\n-  width: 100vw;\n-}\n-\n-a {\n-  text-decoration: none;\n-}\n-\n-:root {\n-  /* --background-dark-green-color: #6c766b;\n-  --background-light-green-color: #b3d6b0; */\n-  /* Basic Colors */\n-  --white-color: #ffffff;\n-  /* Textfield Colors */\n-  --textfield-background-color: #fafafa;\n-  --textfield-color: #333333;\n-  /* Card Colors */\n-  --green-card-color: #414e40;\n-  /* Button Colors */\n-  --green-color: #374533;\n-}\n"
+                },
+                {
+                    "date": 1738180840623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,8 @@\n   --textfield-background-color: #fafafa;\n   --textfield-color: #333333;\n   /* Card Colors */\n   --green-card-color: #414e40;\n+  --lighter-green-color: #829B7B;\n   /* Button Colors */\n   --green-color: #374533;\n }\n"
                 }
             ],
             "date": 1738149338256,
