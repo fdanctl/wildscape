@@ -1,32 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFish } from "@fortawesome/free-solid-svg-icons";
+import { faAppleWhole, faFish, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 
-const Bar = ({ species, name, medication, food }) => {
+const Bar = ({ species, name, medication, food, onchange }) => {
   return (
-    <div className={styles.bar}>
+    <div className={styles.bar} onChange={onchange}>
       <input type="checkbox" />
       <p>{species}</p>
       <p>{name}</p>
       <p>{medication}</p>
       {food === "grass" ? (
-        <FontAwesomeIcon />
+        <FontAwesomeIcon icon={faLeaf} className={styles.icon} />
       ) : food === "fruit" ? (
-        // <BananaIcon
-        //   className={styles.icon}
-        //   size={24}
-        //   color={"#737373"}
-        //   variant={"stroke"}
-        // />
-        <FontAwesomeIcon icon={faFish} />
+        <FontAwesomeIcon icon={faAppleWhole} className={styles.icon} />
       ) : (
-        // <FishFoodIcon
-        //   className={styles.icon}
-        //   size={24}
-        //   color={"#737373"}
-        //   variant={"stroke"}
-        // />
-        <FontAwesomeIcon icon={faFish} />
+        <FontAwesomeIcon icon={faFish} className={styles.icon}/>
       )}
     </div>
   );
