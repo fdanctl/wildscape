@@ -15,7 +15,7 @@
   color: white;
   height: 100vh;
   padding: 20px;
-  gap: 20px;
+  gap: 10px;
   margin: 100px;
 }
 
@@ -41,25 +41,6 @@
   flex-direction: column;
   gap: 10px;
   width: 300px; /* Adjust width as needed */
-}
-
-.navButton {
-  background-color: #829b7b; /* Match the theme color */
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  width: 100%;
-  text-align: left;
-  padding-left: 20px; /* Indent text for better readability */
-  min-height: 160px;
-  text-align-last: center;
-}
-
-.navButton:hover {
-  background-color: #506c3b; /* Darken on hover */
 }
 
 .resources {

@@ -15,15 +15,21 @@ const Dashboard = () => {
             <h1 className={styles.title}>DASHBOARD</h1>
             <div className={styles.board}>
                 <div className={styles.nav}>
+                    <Link to={"/wildlife"}>
                     <Card title="WILDLIFE">
-                        <button className={styles.navButton}>WILDLIFE</button>
+                        WILDLIFE
                     </Card>
+                    </Link>
+                    <Link to={"/animalcarelog"}>
                     <Card title="ANIMAL CARE LOG">
-                        <button className={styles.navButton}>ANIMAL CARE LOG</button>
+                        ANIMAL CARE LOG
                     </Card>
+                    </Link>
+                    <Link to={"/myaccount"}>
                     <Card title="MY ACCOUNT">
-                        <button className={styles.navButton}>MY ACCOUNT</button>
+                        MY ACCOUNT
                     </Card>
+                    </Link>
                 </div>
                 <Link to={"/resources"}>
                     <Card title="RESOURCES" content={<PieChart />}>
