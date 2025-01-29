@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/pages/Resources/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1738181616816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738181627821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,8 @@\n import React, { useState } from \"react\";\r\n import styles from \"./styles.module.css\";\r\n-import ImageDog from \"../../assets/images/dog.png\";\r\n-import ImageMonkey from \"../../assets/images/monkey.png\";\r\n-import Logo from \"../../assets/images/logo.png\";\r\n-import Card from \"../../components/Card\";\r\n-import { Link } from \"react-router\";\r\n \r\n-const Login = () => {\r\n+const Resources = () => {\r\n   return <>oi</>;\r\n };\r\n \r\n-export default Login;\r\n+export default Resources;\r\n"
+                }
+            ],
+            "date": 1738181616816,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport styles from \"./styles.module.css\";\r\nimport ImageDog from \"../../assets/images/dog.png\";\r\nimport ImageMonkey from \"../../assets/images/monkey.png\";\r\nimport Logo from \"../../assets/images/logo.png\";\r\nimport Card from \"../../components/Card\";\r\nimport { Link } from \"react-router\";\r\n\r\nconst Login = () => {\r\n  return <>oi</>;\r\n};\r\n\r\nexport default Login;\r\n"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1738154081387,
@@ -64,6 +64,18 @@
                 {
                     "date": 1738169281097,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,18 @@\n import App from \"./App\";\n import { BrowserRouter, Route, Routes } from \"react-router\";\n import Dashboard from \"./pages/Dashboard\";\n import Login from \"./pages/Login\";\n+import Login2 from \"./pages/Login2\";\n \n const root = ReactDOM.createRoot(document.getElementById(\"root\"));\n root.render(\n   <BrowserRouter>\n     <Routes>\n       <Route path=\"/\" element={<Login />} />\n       {/* <Route path=\"/login\" element={<Dashboard />}/> */}\n       <Route path=\"/dashboard\" element={<Dashboard />} />\n+      <Route path=\"/employee\" element={<Login2 />} />\n+      <Route path=\"/admin\" element={<Login2 />} />\n     </Routes>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1738191526019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { BrowserRouter, Route, Routes } from \"react-router\";\n import Dashboard from \"./pages/Dashboard\";\n import Login from \"./pages/Login\";\n import Login2 from \"./pages/Login2\";\n+import Wildlife from \"./pages/Wildlife\";\n \n const root = ReactDOM.createRoot(document.getElementById(\"root\"));\n root.render(\n   <BrowserRouter>\n@@ -15,7 +16,9 @@\n       {/* <Route path=\"/login\" element={<Dashboard />}/> */}\n       <Route path=\"/dashboard\" element={<Dashboard />} />\n       <Route path=\"/employee\" element={<Login2 />} />\n       <Route path=\"/admin\" element={<Login2 />} />\n+      {/* <Route path=\"/myAccount\" element={<MyAccount />} /> */}\n+      <Route path=\"/wildlife\" element={<Wildlife />} />\n     </Routes>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1738192144929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,9 @@\n       <Route path=\"/employee\" element={<Login2 />} />\n       <Route path=\"/admin\" element={<Login2 />} />\n       {/* <Route path=\"/myAccount\" element={<MyAccount />} /> */}\n       <Route path=\"/wildlife\" element={<Wildlife />} />\n+      <Route path=\"/animalCareLog\" element={<AnimalCareLog />} />\n+      <Route path=\"/wildlife\" element={<Wildlife />} />\n     </Routes>\n   </BrowserRouter>\n );\n"
+                },
+                {
+                    "date": 1738192211342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n       {/* <Route path=\"/login\" element={<Dashboard />}/> */}\n       <Route path=\"/dashboard\" element={<Dashboard />} />\n       <Route path=\"/employee\" element={<Login2 />} />\n       <Route path=\"/admin\" element={<Login2 />} />\n+      <Route path=\"/wildlife\" element={<Wildlife />} />\n+      {/* <Route path=\"/animalCareLog\" element={<AnimalCareLog />} /> */}\n       {/* <Route path=\"/myAccount\" element={<MyAccount />} /> */}\n-      <Route path=\"/wildlife\" element={<Wildlife />} />\n-      <Route path=\"/animalCareLog\" element={<AnimalCareLog />} />\n-      <Route path=\"/wildlife\" element={<Wildlife />} />\n+      {/* <Route path=\"/resources\" element={<Resources />} /> */}\n     </Routes>\n   </BrowserRouter>\n );\n"
                 }
             ],
             "date": 1738154081387,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 65,
+            "activePatchIndex": 72,
             "patches": [
                 {
                     "date": 1738162985722,
@@ -268,6 +268,34 @@
                 {
                     "date": 1738177770943,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+.cardContainer {\n+  display: flex;\n+  justify-content: space-between;\n+  align-items: center;\n+  width: 100%;\n+}\n+\n+.card {\n+  background-color: var(--green-card-color);\n+  color: var(--white-color);\n+  border-radius: 10px;\n+  padding: 50px;\n+  text-align: center;\n+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n+  width: auto;\n+  min-width: 150px;\n+  background-color: var(--green-card-color);\n+}\n+\n+.title {\n+  font-size: 25px;\n+}\n+\n+.right {\n+  position: absolute;\n+  right: 231px;\n+  top: 492px;\n+  z-index: 100;\n+  rotate: -4deg;\n+}\n+\n+.left {\n+  position: absolute;\n+  left: 20%;\n+  top: 420px;\n+  z-index: 100;\n+}\n+\n+@media (max-width: 768px) {\n+  .left {\n+    left: 100px;\n+  }\n+  .right {\n+    top: 540px;\n+    left: 340px;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1738182623369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n .cardContainer {\n-  display: flex;\n   justify-content: space-between;\n   align-items: center;\n   width: 100%;\n }\n@@ -15,56 +14,11 @@\n   width: auto;\n   min-width: 150px;\n   background-color: var(--green-card-color);\n }\n-\n-.title {\n-  font-size: 25px;\n+.blue {\n+  background-color: --lighter-green-color;\n }\n-\n-.right {\n-  position: absolute;\n-  right: 231px;\n-  top: 492px;\n-  z-index: 100;\n-  rotate: -4deg;\n-}\n-\n-.left {\n-  position: absolute;\n-  left: 20%;\n-  top: 420px;\n-  z-index: 100;\n-}\n-\n-@media (max-width: 768px) {\n-  .left {\n-    left: 100px;\n-  }\n-  .right {\n-    top: 540px;\n-    left: 340px;\n-  }\n-}\n-.cardContainer {\n-  display: flex;\n-  justify-content: space-between;\n-  align-items: center;\n-  width: 100%;\n-}\n-\n-.card {\n-  background-color: var(--green-card-color);\n-  color: var(--white-color);\n-  border-radius: 10px;\n-  padding: 50px;\n-  text-align: center;\n-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n-  width: auto;\n-  min-width: 135px;\n-  background-color: var(--green-card-color);\n-}\n-\n .title {\n   font-size: 25px;\n }\n \n"
+                },
+                {
+                    "date": 1738182634327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   min-width: 150px;\n   background-color: var(--green-card-color);\n }\n .blue {\n-  background-color: --lighter-green-color;\n+  background-color: var(--lighter-green-color;);\n }\n .title {\n   font-size: 25px;\n }\n"
+                },
+                {
+                    "date": 1738182659676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+.cardContainer {\n+  justify-content: space-between;\n+  align-items: center;\n+  width: 100%;\n+}\n+\n+.card {\n+  background-color: var(--green-card-color);\n+  color: var(--white-color);\n+  border-radius: 10px;\n+  padding: 50px;\n+  text-align: center;\n+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n+  width: auto;\n+  min-width: 150px;\n+  background-color: var(--green-card-color);\n+}\n+\n+.blue {\n+  background-color: var(--lighter-green-color);\n+}\n+\n+.title {\n+  font-size: 25px;\n+}\n+\n+.right {\n+  position: absolute;\n+  right: 231px;\n+  top: 492px;\n+  z-index: 100;\n+  rotate: -4deg;\n+}\n+\n+.left {\n+  position: absolute;\n+  left: 20%;\n+  top: 420px;\n+  z-index: 100;\n+}\n+\n+@media (max-width: 768px) {\n+  .left {\n+    left: 100px;\n+  }\n+  .right {\n+    top: 540px;\n+    left: 340px;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1738182668040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   background-color: var(--green-card-color);\n }\n \n .blue {\n-  background-color: var(--lighter-green-color);\n+  background-color: red\n }\n \n .title {\n   font-size: 25px;\n@@ -47,52 +47,4 @@\n     top: 540px;\n     left: 340px;\n   }\n }\n-.cardContainer {\n-  justify-content: space-between;\n-  align-items: center;\n-  width: 100%;\n-}\n-\n-.card {\n-  background-color: var(--green-card-color);\n-  color: var(--white-color);\n-  border-radius: 10px;\n-  padding: 50px;\n-  text-align: center;\n-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n-  width: auto;\n-  min-width: 150px;\n-  background-color: var(--green-card-color);\n-}\n-.blue {\n-  background-color: var(--lighter-green-color;);\n-}\n-.title {\n-  font-size: 25px;\n-}\n-\n-.right {\n-  position: absolute;\n-  right: 231px;\n-  top: 492px;\n-  z-index: 100;\n-  rotate: -4deg;\n-}\n-\n-.left {\n-  position: absolute;\n-  left: 20%;\n-  top: 420px;\n-  z-index: 100;\n-}\n-\n-@media (max-width: 768px) {\n-  .left {\n-    left: 100px;\n-  }\n-  .right {\n-    top: 540px;\n-    left: 340px;\n-  }\n-}\n"
+                },
+                {
+                    "date": 1738182736851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   background-color: var(--green-card-color);\n }\n \n .blue {\n-  background-color: red\n+  background-color: var(--lighter-green-color);\n }\n \n .title {\n   font-size: 25px;\n"
+                },
+                {
+                    "date": 1738182748996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+.cardContainer {\n+  justify-content: space-between;\n+  align-items: center;\n+  width: 100%;\n+}\n+\n+.card {\n+  background-color: var(--green-card-color);\n+  color: var(--white-color);\n+  border-radius: 10px;\n+  padding: 50px;\n+  text-align: center;\n+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n+  width: auto;\n+  min-width: 150px;\n+  background-color: var(--green-card-color);\n+}\n+\n+.blue {\n+  background-color: var(--lighter-green-color);\n+}\n+\n+.title {\n+  font-size: 25px;\n+}\n+\n+.right {\n+  position: absolute;\n+  right: 231px;\n+  top: 492px;\n+  z-index: 100;\n+  rotate: -4deg;\n+}\n+\n+.left {\n+  position: absolute;\n+  left: 20%;\n+  top: 420px;\n+  z-index: 100;\n+}\n+\n+@media (max-width: 768px) {\n+  .left {\n+    left: 100px;\n+  }\n+  .right {\n+    top: 540px;\n+    left: 340px;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1738188788250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+.cardContainer {\n+  justify-content: space-between;\n+  align-items: center;\n+  width: 100%;\n+}\n+\n+.card {\n+  background-color: var(--green-card-color);\n+  color: var(--white-color);\n+  border-radius: 10px;\n+  padding: 50px;\n+  text-align: center;\n+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n+  width: auto;\n+  min-width: 150px;\n+  background-color: var(--green-card-color);\n+}\n+\n+.green {\n+  background-color: var(--lighter-green-color);\n+}\n+\n+.title {\n+  font-size: 25px;\n+}\n+\n+.right {\n+  position: absolute;\n+  right: 231px;\n+  top: 492px;\n+  z-index: 100;\n+  rotate: -4deg;\n+}\n+\n+.left {\n+  position: absolute;\n+  left: 20%;\n+  top: 420px;\n+  z-index: 100;\n+}\n+\n+@media (max-width: 768px) {\n+  .left {\n+    left: 100px;\n+  }\n+  .right {\n+    top: 540px;\n+    left: 340px;\n+  }\n+}\n"
                 }
             ],
             "date": 1738162985722,

@@ -9,7 +9,7 @@ import { Link } from "react-router";
 const Login = () => {
   return (
     <>
-      <img src={Logo} alt="Dog Image" className={styles.logo} />
+      <img src={Logo} alt="Logo Image" className={styles.logo} />
       <div className={styles.container}>
         <h1 className={styles.title}>Login</h1>
         <>
@@ -20,7 +20,7 @@ const Login = () => {
         </>
         <>
           <Link to="/employee">
-            <Card title={"EMPLOYEE"} side="right" onClick={() => {}}></Card>
+            <Card title={"EMPLOYEE"} side="right"></Card>
           </Link>
           <img
             src={ImageMonkey}
