@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6799f2b008e74859037bc3c0"
+  },
+  "name": "Feline Food",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 350,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "6799f3a2828675b64c75f46f"
+  },
+  "name": "Lion Vacines",
+  "type": "med",
+  "subtype": "vacine",
+  "quantity": 500,
+  "unit": "doses"
+},
+{
+  "_id": {
+    "$oid": "679a3d85fd21a421e9bb7f40"
+  },
+  "name": "Hay",
+  "type": "food",
+  "subtype": "grass",
+  "quantity": 1000,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "679a3da2fd21a421e9bb7f42"
+  },
+  "name": "Penguin Fish",
+  "type": "food",
+  "subtype": "fish",
+  "quantity": 300,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "679a3dc6fd21a421e9bb7f44"
+  },
+  "name": "Parrot Seed Mix",
+  "type": "food",
+  "subtype": "seeds",
+  "quantity": 100,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "679a3de3fd21a421e9bb7f46"
+  },
+  "name": "Frozen Rats",
+  "type": "food",
+  "subtype": "rodent",
+  "quantity": 300,
+  "unit": "units"
+},
+{
+  "_id": {
+    "$oid": "679a4060fd21a421e9bb7f59"
+  },
+  "name": "Penguin Vitamin Supplement",
+  "type": "med",
+  "subtype": "vitamin",
+  "quantity": 200,
+  "unit": "tablets"
+}]

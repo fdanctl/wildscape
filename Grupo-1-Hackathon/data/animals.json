@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "6799f478828675b64c75f470"
+  },
+  "name": "Simba",
+  "age": 5,
+  "species": "lion",
+  "dailyNeeds": [
+    {
+      "quantity": 50,
+      "unit": "kg",
+      "resource_id": "6799f2b008e74859037bc3c0"
+    },
+    {
+      "quantity": 1,
+      "unit": "doses",
+      "resource_id": "6799f3a2828675b64c75f46f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "679a3ef1fd21a421e9bb7f49"
+  },
+  "name": "Gigi",
+  "age": 7,
+  "species": "giraffe",
+  "dailyNeeds": [
+    {
+      "quantity": 30,
+      "unit": "kg",
+      "resource_id": "679a3d85fd21a421e9bb7f40"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "679a3f77fd21a421e9bb7f4f"
+  },
+  "name": "Dumbo",
+  "age": 12,
+  "species": "elephant",
+  "dailyNeeds": [
+    {
+      "quantity": 100,
+      "unit": "kg",
+      "resource_id": "679a3d85fd21a421e9bb7f40"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6799f478828675b64c75f473"
+  },
+  "name": "Penko",
+  "age": 3,
+  "species": "penguin",
+  "dailyNeeds": [
+    {
+      "quantity": 5,
+      "unit": "kg",
+      "resource_id": "679a3da2fd21a421e9bb7f42"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "679a4023fd21a421e9bb7f56"
+  },
+  "name": "Penny",
+  "age": 9,
+  "species": "penguin",
+  "dailyNeeds": [
+    {
+      "quantity": 5,
+      "unit": "kg",
+      "resource_id": "679a3da2fd21a421e9bb7f42"
+    },
+    {
+      "quantity": 1,
+      "unit": "tablets",
+      "resource_id": "679a4060fd21a421e9bb7f59"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "679a4103fd21a421e9bb7f60"
+  },
+  "name": "Polly",
+  "age": 4,
+  "species": "parrot",
+  "dailyNeeds": [
+    {
+      "quantity": 0.5,
+      "unit": "kg",
+      "resource_id": "679a3dc6fd21a421e9bb7f44"
+    }
+  ]
+}]
