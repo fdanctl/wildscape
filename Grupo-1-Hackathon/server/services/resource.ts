@@ -32,7 +32,7 @@ export async function ReadResources() {
 
     newResult[i].dailyConsumption = sum;
     newResult[i].daysLeft =
-      sum < 1 ? result[i].quantity : result[i].quantity / sum;
+      sum < 1 ? "Undetermined" : result[i].quantity / sum;
   }
 
   return newResult;
