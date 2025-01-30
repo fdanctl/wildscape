@@ -3,11 +3,191 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 45,
             "patches": [
                 {
                     "date": 1738169422714,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738181796945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+.logo {\r\n+  height: 70px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738181831132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .logo {\r\n-  height: 70px;\r\n+  height: 170px;\r\n   position: absolute;\r\n   left: 10px;\r\n   top: 10px;\r\n }\r\n@@ -20,27 +20,4 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n-.logo {\r\n-  height: 40px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n"
+                },
+                {
+                    "date": 1738182023604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738195995640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+.dashboard {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background-color: var(--green-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738196005289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .dashboard {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n-  background-color: var(--green-color);\r\n+  background: var(--background-linear-color);\r\n   height: 100vh;\r\n }\r\n \r\n .logo {\r\n@@ -28,50 +28,4 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-.logo {\r\n-  height: 170px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n"
+                },
+                {
+                    "date": 1738196020401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.dashboard {\r\n+.login2 {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n   background: var(--background-linear-color);\r\n"
+                },
+                {
+                    "date": 1738201081040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin: 30px;\r\n+  padding-left: 20px;\r\n+}\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738201090293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n   margin: 30px;\r\n-  padding-left: 20px;\r\n+  /* padding-left: 20px; */\r\n }\r\n .container {\r\n   display: flex;\r\n   flex-direction: column;\r\n@@ -33,35 +33,4 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n"
+                },
+                {
+                    "date": 1738201272544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n }\r\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n-  margin: 30px;\r\n+  margin-bottom: 20px;\r\n+  /* margin: 30px; */\r\n   /* padding-left: 20px; */\r\n }\r\n .container {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1738201287822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n }\r\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n+  margin-top: -10px;\r\n   margin-bottom: 20px;\r\n   /* margin: 30px; */\r\n   /* padding-left: 20px; */\r\n }\r\n"
+                },
+                {
+                    "date": 1738201355875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+  /* margin: 30px; */\r\n+  /* padding-left: 20px; */\r\n+}\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738201460864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,46 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+  /* margin: 30px; */\r\n+  /* padding-left: 20px; */\r\n+}\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.containerLink {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738201485363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   margin-bottom: 20px;\r\n   /* margin: 30px; */\r\n   /* padding-left: 20px; */\r\n }\r\n+\r\n .container {\r\n   display: flex;\r\n   flex-direction: column;\r\n   justify-self: center;\r\n@@ -43,80 +44,4 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n-  /* margin: 30px; */\r\n-  /* padding-left: 20px; */\r\n-}\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: -10px;\r\n-  margin-bottom: 20px;\r\n-  /* margin: 30px; */\r\n-  /* padding-left: 20px; */\r\n-}\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n"
+                },
+                {
+                    "date": 1738201523998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n   position: absolute;\r\n   left: 10px;\r\n   top: 10px;\r\n }\r\n+\r\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n   margin-top: 40px;\r\n"
+                },
+                {
+                    "date": 1738201549543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n .logo {\r\n   height: 115px;\r\n-  position: absolute;\r\n+  /* position: absolute; */\r\n   left: 10px;\r\n   top: 10px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1738201557031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \r\n .logo {\r\n   height: 115px;\r\n   /* position: absolute; */\r\n-  left: 10px;\r\n-  top: 10px;\r\n+  /* left: 10px;\r\n+  top: 10px; */\r\n }\r\n \r\n .icon {\r\n   color: var(--green-color);\r\n"
+                },
+                {
+                    "date": 1738201564297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   height: 115px;\r\n   /* position: absolute; */\r\n   /* left: 10px;\r\n   top: 10px; */\r\n+  margin-bottom: 10px;\r\n }\r\n \r\n .icon {\r\n   color: var(--green-color);\r\n"
+                },
+                {
+                    "date": 1738201593787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,11 @@\n }\r\n \r\n .logo {\r\n   height: 115px;\r\n-  /* position: absolute; */\r\n-  /* left: 10px;\r\n-  top: 10px; */\r\n-  margin-bottom: 10px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n }\r\n \r\n .icon {\r\n   color: var(--green-color);\r\n"
+                },
+                {
+                    "date": 1738201611319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,12 +31,13 @@\n }\r\n \r\n .containerLink {\r\n   display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n+  flex-direction: column; /* Stack vertically */\r\n+  align-items: flex-start; /* Align items to the start (left) */\r\n   width: 75%;\r\n   gap: 10px;\r\n+  position: relative;\r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n"
+                },
+                {
+                    "date": 1738201620735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,14 +30,9 @@\n   gap: 10px;\r\n }\r\n \r\n .containerLink {\r\n-  display: flex;\r\n-  flex-direction: column; /* Stack vertically */\r\n-  align-items: flex-start; /* Align items to the start (left) */\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-  position: relative;\r\n+  \r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n"
+                },
+                {
+                    "date": 1738201632919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n   gap: 10px;\r\n }\r\n \r\n .containerLink {\r\n-  \r\n+  gap: 10px;\r\n+  position: relative;\r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n"
+                },
+                {
+                    "date": 1738201673337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n   gap: 10px;\r\n }\r\n \r\n .containerLink {\r\n-  gap: 10px;\r\n-  position: relative;\r\n+  display: flex;\r\n+  flex-direction: column; /* Stack vertically */\r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n"
+                },
+                {
+                    "date": 1738202014222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n }\r\n \r\n .containerLink {\r\n   display: flex;\r\n-  flex-direction: column; /* Stack vertically */\r\n+  flex-direction: column;\r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n@@ -42,4 +42,8 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n+\r\n+a{\r\n+  background-color: red;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202116767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,7 +43,9 @@\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n \r\n-a{\r\n-  background-color: red;\r\n+a {\r\n+  position: absolute;\r\n+  left: 45px;\r\n+  top: 150px;\r\n }\r\n"
+                },
+                {
+                    "date": 1738202184139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,51 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+  /* margin: 30px; */\r\n+  /* padding-left: 20px; */\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.containerLink {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n+\r\n+.link {\r\n+  position: absolute;\r\n+  left: 45px;\r\n+  top: 150px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202204845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n   gap: 10px;\r\n }\r\n \r\n .containerLink {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n+  /* display: flex;\r\n+  flex-direction: column; */\r\n }\r\n \r\n .title {\r\n   font-size: 45px;\r\n@@ -48,55 +48,4 @@\n   position: absolute;\r\n   left: 45px;\r\n   top: 150px;\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n-  /* margin: 30px; */\r\n-  /* padding-left: 20px; */\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.containerLink {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-\r\n-a {\r\n-  position: absolute;\r\n-  left: 45px;\r\n-  top: 150px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1738202214055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,13 +29,8 @@\n   width: 75%;\r\n   gap: 10px;\r\n }\r\n \r\n-.containerLink {\r\n-  /* display: flex;\r\n-  flex-direction: column; */\r\n-}\r\n-\r\n .title {\r\n   font-size: 45px;\r\n   font-weight: 300;\r\n   letter-spacing: 2px;\r\n"
+                },
+                {
+                    "date": 1738202262306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,8 @@\n   color: var(--green-color);\r\n   font-size: 66px;\r\n   margin-top: 40px;\r\n   margin-bottom: 20px;\r\n-  /* margin: 30px; */\r\n-  /* padding-left: 20px; */\r\n }\r\n \r\n .container {\r\n   display: flex;\r\n@@ -40,7 +38,7 @@\n }\r\n \r\n .link {\r\n   position: absolute;\r\n-  left: 45px;\r\n-  top: 150px;\r\n+  left: 60px;\r\n+  top: 170px;\r\n }\r\n"
+                },
+                {
+                    "date": 1738202336121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,10 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n+.textfieldsContainer {\r\n+}\r\n \r\n .link {\r\n   position: absolute;\r\n   left: 60px;\r\n"
+                },
+                {
+                    "date": 1738202351979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,11 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n+\r\n .textfieldsContainer {\r\n+  margin-top: 10px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202358766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   color: var(--white-color);\r\n }\r\n \r\n .textfieldsContainer {\r\n-  margin-top: 10px;\r\n+  margin-top: 40px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202364737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   color: var(--white-color);\r\n }\r\n \r\n .textfieldsContainer {\r\n-  margin-top: 40px;\r\n+  margin-top: 80px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202370705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   color: var(--white-color);\r\n }\r\n \r\n .textfieldsContainer {\r\n-  margin-top: 80px;\r\n+  margin-top: 120px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202430899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,51 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n+\r\n+.textfieldsContainer {\r\n+  margin-top: 120px;\r\n+}\r\n+.textfieldUserPass {\r\n+  margin-top: 120px;\r\n+}\r\n+\r\n+.link {\r\n+  position: absolute;\r\n+  left: 60px;\r\n+  top: 170px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202436564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,60 +40,12 @@\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n }\r\n .textfieldUserPass {\r\n-  margin-top: 120px;\r\n+  margin-bottom: 120px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n   left: 60px;\r\n   top: 170px;\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-\r\n-.textfieldsContainer {\r\n-  margin-top: 120px;\r\n-}\r\n-\r\n-.link {\r\n-  position: absolute;\r\n-  left: 60px;\r\n-  top: 170px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1738202445957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n }\r\n \r\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n+  gap: 20px;\r\n }\r\n .textfieldUserPass {\r\n   margin-bottom: 120px;\r\n }\r\n"
+                },
+                {
+                    "date": 1738202458746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,52 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n+\r\n+.textfieldsContainer {\r\n+  margin-top: 120px;\r\n+  gap: 20px;\r\n+}\r\n+.textfieldUserPass {\r\n+  /* margin-bottom: 120px; */\r\n+}\r\n+\r\n+.link {\r\n+  position: absolute;\r\n+  left: 60px;\r\n+  top: 170px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202466441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n }\r\n \r\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n-  gap: 20px;\r\n+  gap: 5px;\r\n }\r\n .textfieldUserPass {\r\n   /* margin-bottom: 120px; */\r\n }\r\n@@ -49,56 +49,4 @@\n   position: absolute;\r\n   left: 60px;\r\n   top: 170px;\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-\r\n-.textfieldsContainer {\r\n-  margin-top: 120px;\r\n-  gap: 20px;\r\n-}\r\n-.textfieldUserPass {\r\n-  margin-bottom: 120px;\r\n-}\r\n-\r\n-.link {\r\n-  position: absolute;\r\n-  left: 60px;\r\n-  top: 170px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1738202476311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n }\r\n \r\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n-  gap: 5px;\r\n+  /* gap: 5px; */\r\n }\r\n .textfieldUserPass {\r\n   /* margin-bottom: 120px; */\r\n }\r\n"
+                },
+                {
+                    "date": 1738202482652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,12 +38,11 @@\n }\r\n \r\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n-  /* gap: 5px; */\r\n }\r\n .textfieldUserPass {\r\n-  /* margin-bottom: 120px; */\r\n+  margin-bottom: 120px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202487955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .textfieldsContainer {\r\n   margin-top: 120px;\r\n }\r\n .textfieldUserPass {\r\n-  margin-bottom: 120px;\r\n+  margin-bottom: 80px;\r\n }\r\n \r\n .link {\r\n   position: absolute;\r\n"
+                },
+                {
+                    "date": 1738202499791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,52 @@\n+.login2 {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--background-linear-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n+\r\n+.textfieldsContainer {\r\n+  margin-top: 120px;\r\n+}\r\n+\r\n+.textfieldUserPass {\r\n+  margin-bottom: 80px;\r\n+}\r\n+\r\n+.link {\r\n+  position: absolute;\r\n+  left: 60px;\r\n+  top: 170px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202651740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,103 +1,59 @@\n+/* styles.module.css */\r\n .login2 {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n   background: var(--background-linear-color);\r\n   height: 100vh;\r\n }\r\n \r\n+.header {\r\n+  display: flex;\r\n+  align-items: center;\r\n+  justify-content: space-between; /* Space between logo, icon, and title */\r\n+  width: 75%;\r\n+  margin-top: 20px; /* Adjust as needed */\r\n+}\r\n+\r\n .logo {\r\n   height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n }\r\n \r\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n }\r\n \r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n .title {\r\n   font-size: 45px;\r\n   font-weight: 300;\r\n   letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n   color: var(--white-color);\r\n+  margin: 0; /* Reset default h1 margins */\r\n }\r\n \r\n-.textfieldsContainer {\r\n-  margin-top: 120px;\r\n-}\r\n-\r\n-.textfieldUserPass {\r\n-  margin-bottom: 80px;\r\n-}\r\n-\r\n .link {\r\n-  position: absolute;\r\n-  left: 60px;\r\n-  top: 170px;\r\n+  /* No position: absolute needed */\r\n+  text-decoration: none; /* Remove underline from link (optional) */\r\n }\r\n-.login2 {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  align-items: center;\r\n-  background: var(--background-linear-color);\r\n-  height: 100vh;\r\n-}\r\n \r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.icon {\r\n-  color: var(--green-color);\r\n-  font-size: 66px;\r\n-  margin-top: 40px;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n .container {\r\n   display: flex;\r\n   flex-direction: column;\r\n   justify-self: center;\r\n   width: 75%;\r\n   gap: 10px;\r\n+  margin-top: 80px; /* Adjust as needed */\r\n }\r\n \r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n+.textfieldsContainer {\r\n+  display: flex; /* Added to make textfields and button in a column */\r\n+  flex-direction: column; /* Stack textfields and button */\r\n+  gap: 20px; /* Space between textfields and button */\r\n }\r\n \r\n-.textfieldsContainer {\r\n-  margin-top: 120px;\r\n-}\r\n .textfieldUserPass {\r\n-  margin-bottom: 80px;\r\n+  margin-bottom: 0; /* Remove unnecessary margin */\r\n }\r\n \r\n-.link {\r\n-  position: absolute;\r\n-  left: 60px;\r\n-  top: 170px;\r\n-}\r\n+/* Other styles as needed... */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738202691339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,59 +1,52 @@\n-/* styles.module.css */\r\n .login2 {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n   background: var(--background-linear-color);\r\n   height: 100vh;\r\n }\r\n \r\n-.header {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  justify-content: space-between; /* Space between logo, icon, and title */\r\n-  width: 75%;\r\n-  margin-top: 20px; /* Adjust as needed */\r\n-}\r\n-\r\n .logo {\r\n   height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n }\r\n \r\n .icon {\r\n   color: var(--green-color);\r\n   font-size: 66px;\r\n+  margin-top: 40px;\r\n+  margin-bottom: 20px;\r\n }\r\n \r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  color: var(--white-color);\r\n-  margin: 0; /* Reset default h1 margins */\r\n-}\r\n-\r\n-.link {\r\n-  /* No position: absolute needed */\r\n-  text-decoration: none; /* Remove underline from link (optional) */\r\n-}\r\n-\r\n .container {\r\n   display: flex;\r\n   flex-direction: column;\r\n   justify-self: center;\r\n   width: 75%;\r\n   gap: 10px;\r\n-  margin-top: 80px; /* Adjust as needed */\r\n }\r\n \r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n\\ No newline at end of file\n+  color: var(--white-color);\r\n+}\r\n+\r\n .textfieldsContainer {\r\n-  display: flex; /* Added to make textfields and button in a column */\r\n-  flex-direction: column; /* Stack textfields and button */\r\n-  gap: 20px; /* Space between textfields and button */\r\n+  margin-top: 120px;\r\n }\r\n \r\n .textfieldUserPass {\r\n-  margin-bottom: 0; /* Remove unnecessary margin */\r\n+  margin-bottom: 80px;\r\n }\r\n \r\n-/* Other styles as needed... */\n+.link {\r\n+  position: absolute;\r\n+  left: 60px;\r\n+  top: 170px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738202715961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,5 @@\n .link {\r\n   position: absolute;\r\n   left: 60px;\r\n   top: 170px;\r\n-}\n\\ No newline at end of file\n+}\r\n"
                 }
             ],
             "date": 1738169422714,

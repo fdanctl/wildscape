@@ -1,38 +1,22 @@
-// import { Plant01Icon, BananaIcon, FishFoodIcon } from "@hugeicons/react-native";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAppleWhole, faFish, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 
-const Bar = ({ species, name, medication, food }) => {
+const Bar = ({ species, name, medication, food, onchange }) => {
   return (
-    <>ADD new library</>
-    // <div className={styles.bar}>
-    //   <input type="checkbox" />
-    //   <p>{species}</p>
-    //   <p>{name}</p>
-    //   <p>{medication}</p>
-    //   {food === "grass" ? (
-    //     <Plant01Icon
-    //       className={styles.icon}
-    //       size={24}
-    //       color={"#737373"}
-    //       variant={"stroke"}
-    //     />
-    //   ) : food === "fruit" ? (
-    //     <BananaIcon
-    //       className={styles.icon}
-    //       size={24}
-    //       color={"#737373"}
-    //       variant={"stroke"}
-    //     />
-    //   ) : (
-    //     <FishFoodIcon
-    //       className={styles.icon}
-    //       size={24}
-    //       color={"#737373"}
-    //       variant={"stroke"}
-    //     />
-    //   )}
-    // </div>
+    <div className={styles.bar} onChange={onchange}>
+      <input type="checkbox" />
+      <p>{species}</p>
+      <p>{name}</p>
+      <p>{medication}</p>
+      {food === "grass" ? (
+        <FontAwesomeIcon icon={faLeaf} className={styles.icon} />
+      ) : food === "fruit" ? (
+        <FontAwesomeIcon icon={faAppleWhole} className={styles.icon} />
+      ) : (
+        <FontAwesomeIcon icon={faFish} className={styles.icon}/>
+      )}
+    </div>
   );
 };
 

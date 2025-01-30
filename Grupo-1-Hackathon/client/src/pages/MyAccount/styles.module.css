@@ -1,32 +1,22 @@
-
+.myaccount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--green-color);
+    height: 100vh;
+  }
   
-  .profileContainer {
-    background-color: #829B7B;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
+  .title {
+    font-size: 45px;
+    font-weight: 300;
     justify-self: center;
-  }
-
-  .profileContainer h1 {
-    margin-bottom: 20px;
+    align-self: center;
   }
   
-  .profileContainer p {
-    margin: 10px 0;
-  }
-  
-  .logoutButton {
-    background-color: #2F4F4F;
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .logoutButton:hover {
-    background-color: #556B2F;
+  .icon {
+    color: var(--green-color);
+    font-size: 66px;
+    margin: 30px;
+    padding-left: 20px;
   }
   

@@ -1,0 +1,214 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/pages/Wildlife/styles.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1738193921052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738193940890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+.wildlifeBox{\n+  background-color: red;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738193952510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,2 @@\n .wildlifeBox{\n-  background-color: red;\n-}\n-.wildlifeBox{\n-  background-color: red;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738195204154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +0,0 @@\n-.wildlifeBox{\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738195256532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+.wildlifeBox{\n+    background-color: red;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738195263017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .wildlifeBox{\n     background-color: red;\n+    width: 100%;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738195409592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+.wildlifeBox{\n+    /* background-color: red; */\n+    width: 100%;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738196079466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--background-linear-color);\n+  height: 100vh;\n+}\n"
+                },
+                {
+                    "date": 1738196087448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,4 @@\n   align-items: center;\n   background: var(--background-linear-color);\n   height: 100vh;\n }\n-.wildlifeBox{\n-    /* background-color: red; */\n-    width: 100%;\n-}\n-.wildlifeBox{\n-    background-color: red;\n-    width: 100%;\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738197467440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n"
+                },
+                {
+                    "date": 1738198077777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n"
+                },
+                {
+                    "date": 1738198561547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,13 @@\n   align-items: center;\n   background: var(--green-color);\n   height: 100vh;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  letter-spacing: 2px;\n+  margin: 110px 0px 20px 0px;\n+  align-self: center;\n+  color: var(--white-color);\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--background-linear-color);\n-  height: 100vh;\n-}\n"
+                },
+                {
+                    "date": 1738198571792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,5 @@\n   font-weight: 300;\n   letter-spacing: 2px;\n   margin: 110px 0px 20px 0px;\n   align-self: center;\n-  color: var(--white-color);\n }\n"
+                },
+                {
+                    "date": 1738198621926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,7 @@\n \n .title {\n   font-size: 45px;\n   font-weight: 300;\n-  letter-spacing: 2px;\n-  margin: 110px 0px 20px 0px;\n+  justify-self: center;\n   align-self: center;\n }\n"
+                },
+                {
+                    "date": 1738199027809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,8 @@\n   font-weight: 300;\n   justify-self: center;\n   align-self: center;\n }\n+\n+.title {\n+  color: var(--black-color);\n+}\n"
+                },
+                {
+                    "date": 1738199037813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.title {\n+  color: var(--black-color);\n+  font-size: 66px;\n+}\n"
+                },
+                {
+                    "date": 1738199059462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,24 +14,7 @@\n }\n \n .title {\n   color: var(--black-color);\n+  background-color: var(--black-color);\n   font-size: 66px;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.title {\n-  color: var(--black-color);\n-}\n"
+                },
+                {
+                    "date": 1738199069586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--black-color);\n+  background-color: var(--black-color);\n+  font-size: 66px;\n+}\n"
+                },
+                {
+                    "date": 1738199112698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--black-color);\n+  font-size: 66px;\n+}\n"
+                },
+                {
+                    "date": 1738199128836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,45 +15,6 @@\n \n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n+  margin: 10px;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--black-color);\n-  background-color: var(--black-color);\n-  font-size: 66px;\n-}\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.title {\n-  color: var(--black-color);\n-  background-color: var(--black-color);\n-  font-size: 66px;\n-}\n"
+                },
+                {
+                    "date": 1738199134112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--black-color);\n+  font-size: 66px;\n+  margin: 20px;\n+}\n"
+                },
+                {
+                    "date": 1738199140307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,26 +15,6 @@\n \n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n-  margin: 20px;\n+  margin: 25px;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--black-color);\n-  font-size: 66px;\n-  margin: 10px;\n-}\n"
+                },
+                {
+                    "date": 1738199145754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--black-color);\n+  font-size: 66px;\n+  margin: 30px;\n+}\n"
+                },
+                {
+                    "date": 1738199153677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,25 +16,6 @@\n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n   margin: 30px;\n+  background-color: red;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--black-color);\n-  font-size: 66px;\n-  margin: 25px;\n-}\n"
+                },
+                {
+                    "date": 1738199169000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,5 @@\n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n   margin: 30px;\n-  background-color: red;\n }\n"
+                },
+                {
+                    "date": 1738199175774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n   margin: 30px;\n+  padding-left: 10px;\n }\n"
+                },
+                {
+                    "date": 1738199182581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,6 @@\n .icon {\n   color: var(--black-color);\n   font-size: 66px;\n   margin: 30px;\n-  padding-left: 10px;\n+  padding-left: 20px;\n }\n"
+                },
+                {
+                    "date": 1738199219013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   align-self: center;\n }\n \n .icon {\n-  color: var(--black-color);\n+  color: var(--green-color);\n   font-size: 66px;\n   margin: 30px;\n   padding-left: 20px;\n }\n"
+                },
+                {
+                    "date": 1738200575560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+}\n"
+                },
+                {
+                    "date": 1738200618742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+  flex-direction: column;\n+  justify-self: center;\n+  width: 75%;\n+  gap: 10px;\n+}\n"
+                },
+                {
+                    "date": 1738200626498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,54 +22,5 @@\n \n .container {\n   display: flex;\n   flex-direction: column;\n-  justify-self: center;\n-  width: 75%;\n-  gap: 10px;\n }\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n-\n-.container {\n-  display: flex;\n-}\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n"
+                },
+                {
+                    "date": 1738200631882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+  flex-direction: row;\n+}\n"
+                },
+                {
+                    "date": 1738200637346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,31 +22,8 @@\n \n .container {\n   display: flex;\n   flex-direction: row;\n-}\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n   align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n+  justify-content: center;\n+  gap: 10px;\n }\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n-\n-.container {\n-  display: flex;\n-  flex-direction: column;\n-}\n"
+                },
+                {
+                    "date": 1738200669506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+  flex-direction: row;\n+  align-items: center;\n+  justify-content: center;\n+  gap: 10px;\n+}\n+.searchField {\n+  width: 90%;\n+}\n"
+                },
+                {
+                    "date": 1738200840043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+  flex-direction: row;\n+  align-items: center;\n+  justify-content: center; /* Keep this for horizontal centering */\n+  gap: 10px;\n+  width: 100%; /* Ensure container takes full width */\n+}\n+\n+.searchField {\n+  width: 80%; /* Occupies 80% of the container */\n+}\n+\n+/* Target the Button directly */\n+.container > button { /* Or target by className if your Button component adds one */\n+  width: 10%; /* Occupies 10% of the container */\n+}\n+\n+\n+/*  Alternative using flex-basis: */\n+/* .searchField {\n+  flex-basis: 80%;\n+}\n+\n+.container > button {\n+  flex-basis: 10%;\n+} */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738200869630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+.wildlife {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  background: var(--green-color);\n+  height: 100vh;\n+}\n+\n+.title {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n+.icon {\n+  color: var(--green-color);\n+  font-size: 66px;\n+  margin: 30px;\n+  padding-left: 20px;\n+}\n+\n+.container {\n+  display: flex;\n+  flex-direction: row;\n+  align-items: center;\n+  justify-content: center;\n+  gap: 10px;\n+  width: 100%;\n+}\n+\n+.searchField {\n+  width: 80%;\n+}\n+\n+.container > button {\n+  width: 10%;\n+}\n"
+                },
+                {
+                    "date": 1738204622187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,41 +11,9 @@\n   font-weight: 300;\n   justify-self: center;\n   align-self: center;\n }\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n-\n-.container {\n-  display: flex;\n-  flex-direction: row;\n-  align-items: center;\n-  justify-content: center;\n-  gap: 10px;\n-  width: 100%;\n-}\n-\n-.searchField {\n-  width: 80%;\n-}\n-\n-.container > button {\n-  width: 10%;\n-}\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n+.backtest {\n   font-size: 45px;\n   font-weight: 300;\n   justify-self: center;\n   align-self: center;\n@@ -61,88 +29,16 @@\n .container {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n-  justify-content: center; /* Keep this for horizontal centering */\n+  justify-content: center;\n   gap: 10px;\n-  width: 100%; /* Ensure container takes full width */\n+  width: 100%;\n }\n \n .searchField {\n-  width: 80%; /* Occupies 80% of the container */\n+  width: 80%;\n }\n \n-/* Target the Button directly */\n-.container > button { /* Or target by className if your Button component adds one */\n-  width: 10%; /* Occupies 10% of the container */\n-}\n-\n-\n-/*  Alternative using flex-basis: */\n-/* .searchField {\n-  flex-basis: 80%;\n-}\n-\n .container > button {\n-  flex-basis: 10%;\n-} */\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n+  width: 10%;\n }\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n-\n-.container {\n-  display: flex;\n-  flex-direction: row;\n-  align-items: center;\n-  justify-content: center;\n-  gap: 10px;\n-}\n-.searchField {\n-  width: 90%;\n-}\n-.wildlife {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  background: var(--green-color);\n-  height: 100vh;\n-}\n-\n-.title {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n-.icon {\n-  color: var(--green-color);\n-  font-size: 66px;\n-  margin: 30px;\n-  padding-left: 20px;\n-}\n-\n-.container {\n-  display: flex;\n-  flex-direction: row;\n\\ No newline at end of file\n-  align-items: center;\n-  justify-content: center;\n-  gap: 10px;\n-}\n"
+                },
+                {
+                    "date": 1738204733090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,11 @@\n   font-weight: 300;\n   justify-self: center;\n   align-self: center;\n }\n+\n .backtest {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n+background-color: red;\n }\n \n .icon {\n   color: var(--green-color);\n"
+                },
+                {
+                    "date": 1738204928770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,7 @@\n .searchField {\n   width: 80%;\n }\n \n-.container > button {\n+/* .container > button {\n   width: 10%;\n-}\n+} */\n"
+                },
+                {
+                    "date": 1738204956677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   align-self: center;\n }\n \n .backtest {\n-background-color: red;\n+  background-color: red;\n }\n \n .icon {\n   color: var(--green-color);\n@@ -35,8 +35,4 @@\n \n .searchField {\n   width: 80%;\n }\n-\n-/* .container > button {\n-  width: 10%;\n-} */\n"
+                },
+                {
+                    "date": 1738205075072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 30px;\n+  margin: 0px 25px 50px 25px;\n   padding-left: 20px;\n }\n \n .container {\n"
+                },
+                {
+                    "date": 1738205090641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n   justify-self: center;\n   align-self: center;\n }\n \n-.backtest {\n+/* .backtest {\n   background-color: red;\n-}\n+} */\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n"
+                },
+                {
+                    "date": 1738205199313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,8 @@\n   justify-self: center;\n   align-self: center;\n }\n \n-/* .backtest {\n-  background-color: red;\n-} */\n-\n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n   margin: 0px 25px 50px 25px;\n"
+                },
+                {
+                    "date": 1738205231218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,19 @@\n   justify-self: center;\n   align-self: center;\n }\n \n+.backtest {\n+  font-size: 45px;\n+  font-weight: 300;\n+  justify-self: center;\n+  align-self: center;\n+}\n+\n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 0px 25px 50px 25px;\n+  margin: 30px;\n   padding-left: 20px;\n }\n \n .container {\n@@ -31,4 +38,8 @@\n \n .searchField {\n   width: 80%;\n }\n+\n+.container > button {\n+  width: 10%;\n+}\n"
+                },
+                {
+                    "date": 1738205248198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,15 +12,8 @@\n   justify-self: center;\n   align-self: center;\n }\n \n-.backtest {\n-  font-size: 45px;\n-  font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n-}\n-\n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n   margin: 30px;\n"
+                },
+                {
+                    "date": 1738205260230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 30px;\n+  margin: 0px 25px 50px 25px;\n   padding-left: 20px;\n }\n \n .container {\n"
+                },
+                {
+                    "date": 1738205278348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   flex-direction: row;\n   align-items: center;\n   justify-content: center;\n   gap: 10px;\n-  width: 100%;\n+  width: 80%;\n }\n \n .searchField {\n   width: 80%;\n"
+                },
+                {
+                    "date": 1738205303469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n   align-items: center;\n   justify-content: center;\n   gap: 10px;\n   width: 80%;\n+  justify-self: center;\n }\n \n .searchField {\n   width: 80%;\n"
+                },
+                {
+                    "date": 1738205310728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,12 @@\n .container {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n+  justify-self: center;\n   justify-content: center;\n   gap: 10px;\n   width: 80%;\n-  justify-self: center;\n }\n \n .searchField {\n   width: 80%;\n"
+                },
+                {
+                    "date": 1738205322719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-self: center;\n-  justify-content: center;\n   gap: 10px;\n   width: 80%;\n }\n \n"
+                }
+            ],
+            "date": 1738193921052,
+            "name": "Commit-0",
+            "content": ".wildlifeBox{\n  background-color: red;\n}"
+        }
+    ]
+}

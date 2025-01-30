@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/components/Dropdown/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738198498918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738198498918,
+            "name": "Commit-0",
+            "content": "import styles from \"./styles.module.css\";\r\n\r\nconst Dropdown = ({ label, placeholder, value, onChange, type }) => {\r\n  return (\r\n    <div className={styles.inputContainer}>\r\n      {label && (\r\n        <label htmlFor={label} className={styles.inputLabel}>\r\n          {label}\r\n          <input\r\n            type={type}\r\n            id={label}\r\n            className={`${styles.inputField} ${styles.withLabel}`}\r\n            placeholder={placeholder}\r\n            value={value}\r\n            onChange={onChange}\r\n          />\r\n        </label>\r\n      )}\r\n      {!label && (\r\n        <input\r\n          type={type}\r\n          className={styles.inputField}\r\n          placeholder={placeholder}\r\n          value={value}\r\n          onChange={onChange}\r\n        />\r\n      )}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Dropdown;\r\n"
+        }
+    ]
+}

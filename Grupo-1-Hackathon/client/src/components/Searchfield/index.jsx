@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles.module.css";
 
 function SearchField() {
@@ -18,7 +20,12 @@ function SearchField() {
       value={searchTerm}
       onChange={handleSearch}
       InputProps={{
-        endAdornment: <SearchIcon className={styles.icon} />,
+        endAdornment: (
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            style={{ color: "inherit" }}
+          />
+        ),
       }}
       className={styles.searchField}
     />

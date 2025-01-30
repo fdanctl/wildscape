@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/components/ReturnButton/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1738198714842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738198884728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const ReturnButton = ({ label, color, onClick }) => {\r\n+  return (\r\n+    <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n+      <FontAwesomeIcon icon={faCircleArrowLeft} />\r\n+    </button>\r\n+  );\r\n+};\r\n+\r\n+export default ReturnButton;\r\n"
+                },
+                {
+                    "date": 1738198903277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,22 +5,10 @@\n \r\n const ReturnButton = ({ label, color, onClick }) => {\r\n   return (\r\n     <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n-      <FontAwesomeIcon icon={faCircleArrowLeft} />\r\n+      <FontAwesomeIcon icon={faCircleArrowLeft} size=\"lg\" />\r\n     </button>\r\n   );\r\n };\r\n \r\n export default ReturnButton;\r\n-import React from \"react\";\r\n-import styles from \"./styles.module.css\";\r\n-\r\n-const ReturnButton = ({ label, color, onClick }) => {\r\n-  return (\r\n-    <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n-      {label}\r\n-    </button>\r\n-  );\r\n-};\r\n-\r\n-export default ReturnButton;\r\n"
+                },
+                {
+                    "date": 1738198911804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n const ReturnButton = ({ label, color, onClick }) => {\r\n   return (\r\n     <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n-      <FontAwesomeIcon icon={faCircleArrowLeft} size=\"lg\" />\r\n+      <FontAwesomeIcon icon={faCircleArrowLeft} size=\"26px\" />\r\n     </button>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1738198917220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n const ReturnButton = ({ label, color, onClick }) => {\r\n   return (\r\n     <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n-      <FontAwesomeIcon icon={faCircleArrowLeft} size=\"26px\" />\r\n+      <FontAwesomeIcon icon={faCircleArrowLeft} size=\"66px\" />\r\n     </button>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1738198945591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const ReturnButton = ({ label, color, onClick }) => {\r\n+  return (\r\n+    <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n+      <FontAwesomeIcon icon={faCircleArrowLeft} fontSize=\"66px\" />\r\n+    </button>\r\n+  );\r\n+};\r\n+\r\n+export default ReturnButton;\r\n"
+                }
+            ],
+            "date": 1738198714842,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport styles from \"./styles.module.css\";\r\n\r\nconst ReturnButton = ({ label, color, onClick }) => {\r\n  return (\r\n    <button className={`${styles.button} ${styles[color]}`} onClick={onClick}>\r\n      {label}\r\n    </button>\r\n  );\r\n};\r\n\r\nexport default ReturnButton;\r\n"
+        }
+    ]
+}
