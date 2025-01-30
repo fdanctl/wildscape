@@ -1,0 +1,32 @@
+
+  
+  .profileContainer {
+    background-color: #829B7B;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    justify-self: center;
+  }
+
+  .profileContainer h1 {
+    margin-bottom: 20px;
+  }
+  
+  .profileContainer p {
+    margin: 10px 0;
+  }
+  
+  .logoutButton {
+    background-color: #2F4F4F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logoutButton:hover {
+    background-color: #556B2F;
+  }
+  
