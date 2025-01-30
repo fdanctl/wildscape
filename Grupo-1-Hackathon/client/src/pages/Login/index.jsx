@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 const Login = () => {
   return (
-    <>
+    <div className={styles.login}>
       <img src={Logo} alt="Logo Image" className={styles.logo} />
       <div className={styles.container}>
         <h1 className={styles.title}>Login</h1>
@@ -29,7 +29,7 @@ const Login = () => {
           />
         </>
       </div>
-    </>
+    </div>
   );
 };
 

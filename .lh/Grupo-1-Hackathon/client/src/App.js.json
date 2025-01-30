@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1738149481263,
@@ -16,6 +16,10 @@
                 {
                     "date": 1738149890152,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import \"./App.css\";\n-import Login from \"../../pages/Login/index.jsx\";\n+import Login from \"./pages/Login/index.jsx\";\n \n function App() {\n   return (\n     <>\n"
+                },
+                {
+                    "date": 1738194899121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import \"./App.css\";\n import Login from \"./pages/Login/index.jsx\";\n+import Dashboard from \"./pages/Dashboard/index.jsx\";\n \n-function App() {\n-  return (\n-    <>\n-      <Login />\n-    </>\n-  );\n-}\n+// function App() {\n+//   return (\n+//     <>\n+//       <Login />\n+//     </>\n+//   );\n+// }\n \n-export default App;\n+// export default App;\n"
                 }
             ],
             "date": 1738149481263,

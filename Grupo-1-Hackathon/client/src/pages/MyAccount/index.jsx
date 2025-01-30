@@ -4,15 +4,15 @@ import BackgroundBox from "../../components/BackgroundBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Resources = () => {
+const MyAccount = () => {
   return (
-    <div className={styles.resources}>
+    <div className={styles.myaccount}>
       <BackgroundBox>
-        <h1 className={styles.title}>Resourses</h1>
+        <h1 className={styles.title}>My Account</h1>
         <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
       </BackgroundBox>
     </div>
   );
 };
 
-export default Resources;
+export default MyAccount;

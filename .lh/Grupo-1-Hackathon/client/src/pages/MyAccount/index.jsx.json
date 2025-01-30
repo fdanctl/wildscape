@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/pages/MyAccount/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1738199550466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738199579475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n \r\n const MyAccount = () => {\r\n   return (\r\n-    <div className={styles.wildlife}>\r\n+    <div className={styles.myaccount}>\r\n       <BackgroundBox>\r\n-        <h1 className={styles.title}>Resourses</h1>\r\n+        <h1 className={styles.title}>My Account</h1>\r\n         <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n       </BackgroundBox>\r\n     </div>\r\n   );\r\n"
+                }
+            ],
+            "date": 1738199550466,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport styles from \"./styles.module.css\";\r\nimport BackgroundBox from \"../../components/BackgroundBox\";\r\nimport { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\nimport { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n\r\nconst MyAccount = () => {\r\n  return (\r\n    <div className={styles.wildlife}>\r\n      <BackgroundBox>\r\n        <h1 className={styles.title}>Resourses</h1>\r\n        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n      </BackgroundBox>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default MyAccount;\r\n"
+        }
+    ]
+}

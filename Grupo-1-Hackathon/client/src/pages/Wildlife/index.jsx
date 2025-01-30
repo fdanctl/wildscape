@@ -1,12 +1,26 @@
 import React from "react";
-import Bar from "../../components/Bar";
+// import Bar from "../../components/Bar";
+import BackgroundBox from "../../components/BackgroundBox";
+import styles from "./styles.module.css";
+import Button from "../../components/Button";
+import SearchField from "../../components/Searchfield";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Wildlife = () => {
   return (
-    <>
-      <Bar species={"oi"} name={"oi"} medication={"oi"} food={"grass"} />
-    </>
+    <div className={styles.wildlife}>
+      <BackgroundBox>
+        <h1 className={styles.title}>Wildlife</h1>
+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
+        {/* <SearchField />
+        <Button color={"green"} label={"Add"} /> */}
+      </BackgroundBox>
+    </div>
   );
 };
+{
+  /* <Bar species={"oi"} name={"oi"} medication={"oi"} food={"grass"} /> */
+}
 
 export default Wildlife;

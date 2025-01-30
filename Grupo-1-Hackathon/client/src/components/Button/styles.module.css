@@ -1,5 +1,4 @@
 .button {
-  background: blue;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -12,4 +11,5 @@
 .green {
   background: var(--green-card-color);
   color: var(--white-color);
+  width: 100%;
 }

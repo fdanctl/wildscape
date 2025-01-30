@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 43,
             "patches": [
                 {
                     "date": 1738191586764,
@@ -20,6 +20,166 @@
                 {
                     "date": 1738191749773,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+\n+const Wildlife = () => {\n+  return (\n+    <>\n+      <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} />\n+    </>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738192543463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,8 @@\n import React from \"react\";\n import Bar from \"../../components/Bar\";\n \n const Wildlife = () => {\n-  return (\n-    <>\n-      <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} />\n-    </>\n-  );\n+  return <>oi </>;\n };\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"oi\"} />\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"oi\"} />\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738192820175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n import React from \"react\";\n import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n \n const Wildlife = () => {\n-  return <>oi </>;\n+  return (\n+    <>\n+      <BackgroundBox></BackgroundBox>\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </>\n+  );\n };\n \n export default Wildlife;\n"
+                },
+                {
+                    "date": 1738192850304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+\n+const Wildlife = () => {\n+  return (\n+    <>\n+      <BackgroundBox></BackgroundBox>\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193111666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+\n+const Wildlife = () => {\n+  return (\n+    <>\n+      <BackgroundBox></BackgroundBox>\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193129861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+\n+const Wildlife = () => {\n+  return (\n+    <>\n+      <BackgroundBox></BackgroundBox>\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193883221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox />\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </div>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193889693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,68 +3,12 @@\n import BackgroundBox from \"../../components/BackgroundBox\";\n \n const Wildlife = () => {\n   return (\n-    <div className={styles.wildlife}>\n+    <div className={styles.wildlifeBox}>\n       <BackgroundBox />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <BackgroundBox></BackgroundBox>\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <BackgroundBox></BackgroundBox>\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <BackgroundBox></BackgroundBox>\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-\n-const Wildlife = () => {\n-  return (\n-    <>\n-      <BackgroundBox></BackgroundBox>\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </>\n-  );\n-};\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193924351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlifeBox}>\n+      <BackgroundBox />\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </div>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738193931241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from \"react\";\n import Bar from \"../../components/Bar\";\n import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlifeBox}>\n@@ -11,18 +12,4 @@\n   );\n };\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlifeBox}>\n-      <BackgroundBox />\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </div>\n-  );\n-};\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738195202344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div>\n+      <BackgroundBox />\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </div>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738195245836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,23 +4,8 @@\n import styles from \"./styles.module.css\";\n \n const Wildlife = () => {\n   return (\n-    <div>\n-      <BackgroundBox />\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </div>\n-  );\n-};\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-\n-const Wildlife = () => {\n-  return (\n     <div className={styles.wildlifeBox}>\n       <BackgroundBox />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n"
+                },
+                {
+                    "date": 1738195581664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n import styles from \"./styles.module.css\";\n \n const Wildlife = () => {\n   return (\n-    <div className={styles.wildlifeBox}>\n+    <body className={styles.wildlifeBox}>\n       <BackgroundBox />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </div>\n+    </body>\n   );\n };\n \n export default Wildlife;\n"
+                },
+                {
+                    "date": 1738195614670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlifeBox}>\n+      <BackgroundBox />\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </div>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738196067834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,27 +4,12 @@\n import styles from \"./styles.module.css\";\n \n const Wildlife = () => {\n   return (\n-    <div className={styles.wildlifeBox}>\n+    <div className={styles.Wildlife}>\n       <BackgroundBox />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-\n-const Wildlife = () => {\n-  return (\n-    <body className={styles.wildlifeBox}>\n-      <BackgroundBox />\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </body>\n-  );\n-};\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738196094037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n const Wildlife = () => {\n   return (\n     <div className={styles.Wildlife}>\n-      <BackgroundBox />\n+      {/* <BackgroundBox /> */}\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1738196104153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import styles from \"./styles.module.css\";\n \n const Wildlife = () => {\n   return (\n-    <div className={styles.Wildlife}>\n+    <div className={styles.wildlife}>\n       {/* <BackgroundBox /> */}\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1738196109476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n-      {/* <BackgroundBox /> */}\n+      <BackgroundBox />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1738197609369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n import React from \"react\";\n import Bar from \"../../components/Bar\";\n import BackgroundBox from \"../../components/BackgroundBox\";\n import styles from \"./styles.module.css\";\n+import SearchField from \"../../components/Searchfield\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox />\n+      <SearchField />\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1738197669319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <SearchField />\n+      </BackgroundBox>\n+      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n+    </div>\n+  );\n+};\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738197988578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,30 +6,13 @@\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n+      <SearchField />\n       <BackgroundBox>\n-        <SearchField />\n       </BackgroundBox>\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox />\n-      <SearchField />\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-    </div>\n-  );\n-};\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738197994167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n+      <BackgroundBox>\n       <SearchField />\n-      <BackgroundBox>\n       </BackgroundBox>\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1738197999255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n-      <SearchField />\n+        <SearchField />\n       </BackgroundBox>\n       {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1738198010890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <SearchField />\n       </BackgroundBox>\n-      {/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n     </div>\n   );\n };\n+{/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n \n export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198190316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <SearchField />\n+      <BackgroundBox>\n+        <SearchField />\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198272024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import React from \"react\";\n+import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <SearchField />\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198318558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n import React from \"react\";\n-import Bar from \"../../components/Bar\";\n+// import Bar from \"../../components/Bar\";\n import BackgroundBox from \"../../components/BackgroundBox\";\n import styles from \"./styles.module.css\";\n+import Button from \"../../components/Button\";\n import SearchField from \"../../components/Searchfield\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <SearchField />\n+        <Button />\n       </BackgroundBox>\n     </div>\n   );\n };\n@@ -17,43 +19,4 @@\n   /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n }\n \n export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <SearchField />\n-      <BackgroundBox>\n-        <SearchField />\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{\n-  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n-}\n-\n-export default Wildlife;\n-import React from \"react\";\n-import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox>\n-        <SearchField />\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{/* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */}\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198346351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import React from \"react\";\n+// import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import Button from \"../../components/Button\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <SearchField />\n+        <Button></Button>\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198357387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <SearchField />\n-        <Button></Button>\n+        <Button>Add</Button>\n       </BackgroundBox>\n     </div>\n   );\n };\n@@ -19,26 +19,4 @@\n   /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n }\n \n export default Wildlife;\n-import React from \"react\";\n-// import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import Button from \"../../components/Button\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox>\n-        <SearchField />\n-        <Button />\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{\n-  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n-}\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198418610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import React from \"react\";\n+// import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import Button from \"../../components/Button\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <SearchField />\n+        <Button color={\"green\"}>Add</Button>\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198436873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import React from \"react\";\n+// import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import Button from \"../../components/Button\";\n+import SearchField from \"../../components/Searchfield\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <SearchField />\n+        <Button color={\"green\"} label={\"Add\"}>\n+          Add\n+        </Button>\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198446786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,9 @@\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <SearchField />\n-        <Button color={\"green\"} label={\"Add\"}>\n-          Add\n-        </Button>\n+        <Button color={\"green\"} label={\"Add\"} />\n       </BackgroundBox>\n     </div>\n   );\n };\n@@ -21,48 +19,4 @@\n   /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n }\n \n export default Wildlife;\n-import React from \"react\";\n-// import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import Button from \"../../components/Button\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox>\n-        <SearchField />\n-        <Button color={\"green\"}>Add</Button>\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{\n-  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n-}\n-\n-export default Wildlife;\n-import React from \"react\";\n-// import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import Button from \"../../components/Button\";\n-import SearchField from \"../../components/Searchfield\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox>\n-        <SearchField />\n-        <Button>Add</Button>\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{\n-  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n-}\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738198541632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n-        <SearchField />\n-        <Button color={\"green\"} label={\"Add\"} />\n+        {/* <SearchField />\n+        <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1738198551439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n+        <h1 className={styles.title}>WILDLIFE</h1>\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n"
+                },
+                {
+                    "date": 1738198662013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <h1 className={styles.title}>WILDLIFE</h1>\n+        <ReturnButton />\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n"
+                },
+                {
+                    "date": 1738198675712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import BackgroundBox from \"../../components/BackgroundBox\";\n import styles from \"./styles.module.css\";\n import Button from \"../../components/Button\";\n import SearchField from \"../../components/Searchfield\";\n+import ReturnButton from \"../../components/ReturnButton\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n"
+                },
+                {
+                    "date": 1738198994287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,17 @@\n import BackgroundBox from \"../../components/BackgroundBox\";\n import styles from \"./styles.module.css\";\n import Button from \"../../components/Button\";\n import SearchField from \"../../components/Searchfield\";\n-import ReturnButton from \"../../components/ReturnButton\";\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <h1 className={styles.title}>WILDLIFE</h1>\n-        <ReturnButton />\n+        <FontAwesomeIcon icon={faCircleArrowLeft} fontSize=\"66px\" />\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n"
+                },
+                {
+                    "date": 1738199013747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <h1 className={styles.title}>WILDLIFE</h1>\n-        <FontAwesomeIcon icon={faCircleArrowLeft} fontSize=\"66px\" />\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n"
+                },
+                {
+                    "date": 1738199031236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import React from \"react\";\n+// import Bar from \"../../components/Bar\";\n+import BackgroundBox from \"../../components/BackgroundBox\";\n+import styles from \"./styles.module.css\";\n+import Button from \"../../components/Button\";\n+import SearchField from \"../../components/Searchfield\";\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\n+\n+const Wildlife = () => {\n+  return (\n+    <div className={styles.wildlife}>\n+      <BackgroundBox>\n+        <h1 className={styles.title}>WILDLIFE</h1>\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n+        {/* <SearchField />\n+        <Button color={\"green\"} label={\"Add\"} /> */}\n+      </BackgroundBox>\n+    </div>\n+  );\n+};\n+{\n+  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n+}\n+\n+export default Wildlife;\n"
+                },
+                {
+                    "date": 1738199052578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,30 +23,4 @@\n   /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n }\n \n export default Wildlife;\n-import React from \"react\";\n-// import Bar from \"../../components/Bar\";\n-import BackgroundBox from \"../../components/BackgroundBox\";\n-import styles from \"./styles.module.css\";\n-import Button from \"../../components/Button\";\n-import SearchField from \"../../components/Searchfield\";\n-import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n-import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\n-\n-const Wildlife = () => {\n-  return (\n-    <div className={styles.wildlife}>\n-      <BackgroundBox>\n-        <h1 className={styles.title}>WILDLIFE</h1>\n-        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n-        {/* <SearchField />\n-        <Button color={\"green\"} label={\"Add\"} /> */}\n-      </BackgroundBox>\n-    </div>\n-  );\n-};\n-{\n-  /* <Bar species={\"oi\"} name={\"oi\"} medication={\"oi\"} food={\"grass\"} /> */\n-}\n-\n-export default Wildlife;\n"
+                },
+                {
+                    "date": 1738199443315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n-        <h1 className={styles.title}>WILDLIFE</h1>\n+        <h1 className={styles.title}>Wildlife</h1>\n         <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n"
                 }
             ],
             "date": 1738191586764,

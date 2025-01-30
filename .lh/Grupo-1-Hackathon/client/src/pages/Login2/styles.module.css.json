@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1738169422714,
@@ -20,6 +20,18 @@
                 {
                     "date": 1738182023604,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738195995640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+.dashboard {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background-color: var(--green-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 115px;\r\n+  position: absolute;\r\n+  left: 10px;\r\n+  top: 10px;\r\n+}\r\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  justify-self: center;\r\n+  width: 75%;\r\n+  gap: 10px;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  letter-spacing: 2px;\r\n+  margin: 110px 0px 20px 0px;\r\n+  align-self: center;\r\n+  color: var(--white-color);\r\n+}\r\n"
+                },
+                {
+                    "date": 1738196005289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .dashboard {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n-  background-color: var(--green-color);\r\n+  background: var(--background-linear-color);\r\n   height: 100vh;\r\n }\r\n \r\n .logo {\r\n@@ -28,50 +28,4 @@\n   margin: 110px 0px 20px 0px;\r\n   align-self: center;\r\n   color: var(--white-color);\r\n }\r\n-.logo {\r\n-  height: 115px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n-.logo {\r\n-  height: 170px;\r\n-  position: absolute;\r\n-  left: 10px;\r\n-  top: 10px;\r\n-}\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  justify-self: center;\r\n-  width: 75%;\r\n-  gap: 10px;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 45px;\r\n-  font-weight: 300;\r\n-  letter-spacing: 2px;\r\n-  margin: 110px 0px 20px 0px;\r\n-  align-self: center;\r\n-  color: var(--white-color);\r\n-}\r\n"
+                },
+                {
+                    "date": 1738196020401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.dashboard {\r\n+.login2 {\r\n   display: flex;\r\n   flex-direction: column;\r\n   align-items: center;\r\n   background: var(--background-linear-color);\r\n"
                 }
             ],
             "date": 1738169422714,

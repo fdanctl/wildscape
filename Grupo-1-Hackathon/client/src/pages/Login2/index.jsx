@@ -11,7 +11,7 @@ const Login2 = () => {
   const [employeeNumber, setEmployeeNumber] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <>
+    <div className={styles.login2}>
       <img src={Logo} alt="Dog Image" className={styles.logo} />
       <div className={styles.container}>
         <h1 className={styles.title}>Login</h1>
@@ -31,7 +31,7 @@ const Login2 = () => {
           <Button label="Login" color="green" />
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

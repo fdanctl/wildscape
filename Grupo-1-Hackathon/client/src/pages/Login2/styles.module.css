@@ -1,3 +1,11 @@
+.login2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-linear-color);
+  height: 100vh;
+}
+
 .logo {
   height: 115px;
   position: absolute;

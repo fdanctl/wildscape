@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/pages/AnimalCareLog/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1738199679257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738199686446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const AnimalCareLog = () => {\r\n   return (\r\n     <div className={styles.wildlife}>\r\n       <BackgroundBox>\r\n-        <h1 className={styles.title}>Resourses</h1>\r\n+        <h1 className={styles.title}>Animal Carelog</h1>\r\n         <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n       </BackgroundBox>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1738199697545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import BackgroundBox from \"../../components/BackgroundBox\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const AnimalCareLog = () => {\r\n+  return (\r\n+    <div className={styles.wildlife}>\r\n+      <BackgroundBox>\r\n+        <h1 className={styles.title}>Animal Care Log</h1>\r\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n+      </BackgroundBox>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default AnimalCareLog;\r\n"
+                },
+                {
+                    "date": 1738199735080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import BackgroundBox from \"../../components/BackgroundBox\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const AnimalCareLog = () => {\r\n+  return (\r\n+    <div className={styles.wildlife}>\r\n+      <BackgroundBox>\r\n+        <h1 className={styles.title}>Animal Care Log</h1>\r\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n+      </BackgroundBox>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default AnimalCareLog;\r\n"
+                },
+                {
+                    "date": 1738199747529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import BackgroundBox from \"../../components/BackgroundBox\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const AnimalCareLog = () => {\r\n+  return (\r\n+    <div className={styles.wildlife}>\r\n+      <BackgroundBox>\r\n+        <h1 className={styles.title}>Animal Care Log</h1>\r\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n+      </BackgroundBox>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default AnimalCareLog;\r\n"
+                },
+                {
+                    "date": 1738199790353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\r\n+import styles from \"./styles.module.css\";\r\n+import BackgroundBox from \"../../components/BackgroundBox\";\r\n+import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n+import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+\r\n+const AnimalCareLog = () => {\r\n+  return (\r\n+    <div className={styles.animalCareLog}>\r\n+      <BackgroundBox>\r\n+        <h1 className={styles.title}>Animal Care Log</h1>\r\n+        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n+      </BackgroundBox>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default AnimalCareLog;\r\n"
+                }
+            ],
+            "date": 1738199679257,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport styles from \"./styles.module.css\";\r\nimport BackgroundBox from \"../../components/BackgroundBox\";\r\nimport { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\nimport { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n\r\nconst AnimalCareLog = () => {\r\n  return (\r\n    <div className={styles.wildlife}>\r\n      <BackgroundBox>\r\n        <h1 className={styles.title}>Resourses</h1>\r\n        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n      </BackgroundBox>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimalCareLog;\r\n"
+        }
+    ]
+}
