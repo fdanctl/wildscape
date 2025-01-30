@@ -4,6 +4,7 @@ import {
   DeleteAnimal,
   ReadAllAnimalType,
   ReadAnimalById,
+  ReadAnimals,
   UpdateAnimal,
 } from "../services/animal";
 import { FindAnimalByName } from "../data/animal";
@@ -19,6 +20,11 @@ router.post("/", async (req, res) => {
     return;
   }
   res.status(200).json({ message: "created successfully", id: id });
+});
+
+router.get("/", async (req, res) => {
+  const result = await ReadAnimals();
+  res.status(200).json(result);
 });
 
 // get data do animal por especie

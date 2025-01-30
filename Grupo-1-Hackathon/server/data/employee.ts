@@ -5,6 +5,7 @@ import { ObjectId } from "mongodb";
 const col = "employees";
 const db = "wildscape";
 
+
 export async function InsertEmployee(obj: Employee): Promise<string> {
     const collection = await getMongoCollection(db, col);
     const result = await collection.insertOne(obj);
