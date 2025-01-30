@@ -36,3 +36,20 @@
 .container > button {
   width: 10%;
 }
+
+.dropdownContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 82.5%;
+  margin: 20px 120px -209px 121px;
+}
+
+.dropdownContainer > div {
+  width: 30%;
+}
+
+.barContainer {
+  width: 80%;
+  justify-self: center;
+}

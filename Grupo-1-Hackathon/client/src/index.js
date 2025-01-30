@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Login2 from "./pages/Login2";
 import Wildlife from "./pages/Wildlife";
 import AnimalCareLog from "./pages/AnimalCareLog";
+import AddAnimal from "./pages/AddAnimal";
 import MyAccount from "./pages/MyAccount";
 import Resources from "./pages/Resources";
 import ManageWildlife from "./pages/Wildlife/ManageWildlife"
@@ -23,6 +24,7 @@ root.render(
       <Route path="/admin" element={<Login2 />} />
       <Route path="/managewildlife" element={<ManageWildlife />} />
       <Route path="/wildlife" element={<Wildlife />} />
+      <Route path="/addAnimal" element={<AddAnimal />} />
       <Route path="/animalCareLog" element={<AnimalCareLog />} />
       <Route path="/myAccount" element={<MyAccount />} />
       <Route path="/resources" element={<Resources />} />

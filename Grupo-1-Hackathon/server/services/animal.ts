@@ -1,5 +1,6 @@
 import {
     ChangeAnimal,
+    FindAllAnimals,
     FindAnimalById,
     FindAnimalByName,
     FindAnimals,
@@ -7,6 +8,12 @@ import {
     RemoveAnimal,
 } from "../data/animal";
 import { Animal, AnimalWithId } from "../models/animal";
+
+export async function ReadAnimals() {
+    const result = await FindAllAnimals();
+    return result
+    
+}
 
 export async function ReadAllAnimalType(
     animal: string,
