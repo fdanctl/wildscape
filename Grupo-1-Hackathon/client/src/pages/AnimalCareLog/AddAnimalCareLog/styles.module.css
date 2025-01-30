@@ -1,0 +1,38 @@
+.animalCareLog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--green-color);
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 45px;
+    font-weight: 300;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .icon {
+    color: var(--green-color);
+    font-size: 66px;
+    margin: 30px;
+    padding-left: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  
+  .saveButton {
+    background-color: var(--dark-green-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+  }
+  
