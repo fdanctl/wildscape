@@ -9,6 +9,7 @@ import Wildlife from "./pages/Wildlife";
 import AnimalCareLog from "./pages/AnimalCareLog";
 import MyAccount from "./pages/MyAccount";
 import Resources from "./pages/Resources";
+import ManageWildlife from "./pages/Wildlife/ManageWildlife"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +21,7 @@ root.render(
       <Route path="/myaccount" element={<MyAccount />} />
       <Route path="/employee" element={<Login2 />} />
       <Route path="/admin" element={<Login2 />} />
+      <Route path="/managewildlife" element={<ManageWildlife />} />
       <Route path="/wildlife" element={<Wildlife />} />
       <Route path="/animalCareLog" element={<AnimalCareLog />} />
       <Route path="/myAccount" element={<MyAccount />} />
