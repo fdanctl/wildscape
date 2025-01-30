@@ -1,22 +1,23 @@
 .bar {
-    background: var(--white-color);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1px 4rem;
-    border-radius: 10px;
+  background: var(--white-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 4rem;
+  border-radius: 10px;
+  min-height: 50px;
 }
 
 .bar input {
-    accent-color: var(--textfield-color);
+  accent-color: var(--textfield-color);
 }
 
 .bar p {
-    color: var(--textfield-color);
+  color: var(--textfield-color);
 }
 
 .icon {
-    size: 24;
-    color: var(--textfield-color);
+  size: 24;
+  color: var(--textfield-color);
 }

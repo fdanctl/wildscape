@@ -1,29 +1,35 @@
 import styles from "./styles.module.css";
 
-const Dropdown = ({ label, placeholder, value, onChange, type }) => {
+const Dropdown = ({ label, options, value, onChange, placeholder }) => {
   return (
     <div className={styles.inputContainer}>
       {label && (
         <label htmlFor={label} className={styles.inputLabel}>
           {label}
-          <input
-            type={type}
+          <select
             id={label}
             className={`${styles.inputField} ${styles.withLabel}`}
-            placeholder={placeholder}
             value={value}
             onChange={onChange}
-          />
+          >
+            {placeholder && <option value="">{placeholder}</option>}
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label || option.value}
+              </option>
+            ))}
+          </select>
         </label>
       )}
       {!label && (
-        <input
-          type={type}
-          className={styles.inputField}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-        />
+        <select className={styles.inputField} value={value} onChange={onChange}>
+          {placeholder && <option value="">{placeholder}</option>}
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label || option.value}
+            </option>
+          ))}
+        </select>
       )}
     </div>
   );

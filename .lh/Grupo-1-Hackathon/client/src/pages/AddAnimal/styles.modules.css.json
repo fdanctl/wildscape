@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/pages/AddAnimal/styles.modules.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738229508055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738229508055,
+            "name": "Commit-0",
+            "content": ".animalCareLog {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background: var(--green-color);\r\n  height: 100vh;\r\n}\r\n\r\n.title {\r\n  font-size: 45px;\r\n  font-weight: 300;\r\n  justify-self: center;\r\n  align-self: center;\r\n}\r\n\r\n.icon {\r\n  color: var(--green-color);\r\n  font-size: 66px;\r\n  margin: 30px;\r\n  padding-left: 20px;\r\n}\r\n"
+        }
+    ]
+}

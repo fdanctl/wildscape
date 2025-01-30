@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 49,
+            "activePatchIndex": 66,
             "patches": [
                 {
                     "date": 1738193921052,
@@ -204,6 +204,74 @@
                 {
                     "date": 1738205322719,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-self: center;\n-  justify-content: center;\n   gap: 10px;\n   width: 80%;\n }\n \n"
+                },
+                {
+                    "date": 1738218134500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,4 +35,8 @@\n \n .container > button {\n   width: 10%;\n }\n+\n+.dropdownContainer {\n+  display: flex;\n+}\n"
+                },
+                {
+                    "date": 1738218142644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,5 +38,6 @@\n }\n \n .dropdownContainer {\n   display: flex;\n+  width: 100%;\n }\n"
+                },
+                {
+                    "date": 1738218358160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,41 +3,57 @@\n   flex-direction: column;\n   align-items: center;\n   background: var(--green-color);\n   height: 100vh;\n+  padding: 20px; /* Add some padding to the main container */\n }\n \n .title {\n   font-size: 45px;\n   font-weight: 300;\n-  justify-self: center;\n-  align-self: center;\n+  margin-bottom: 20px; /* Add margin below the title */\n }\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 0px 25px 50px 25px;\n-  padding-left: 20px;\n+  margin-right: 20px; /* Adjust margin as needed */\n+  cursor: pointer; /* Make the icon clickable */\n+  align-self: flex-start; /* Align icon to the left */\n }\n \n .container {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n-  justify-self: center;\n-  gap: 10px;\n+  justify-content: space-between; /* Distribute space between search and button */\n   width: 80%;\n+  margin-bottom: 20px; /* Add margin below the search/button area */\n }\n \n .searchField {\n-  width: 80%;\n+  width: 70%; /* Adjust width as needed */\n }\n \n .container > button {\n-  width: 10%;\n+  width: 25%; /* Adjust width as needed */\n+  padding: 10px; /* Add padding to the button */\n }\n \n .dropdownContainer {\n   display: flex;\n-  width: 100%;\n+  flex-direction: row;\n+  justify-content: space-around; /* Distribute space around dropdowns */\n+  width: 80%;\n }\n+\n+.dropdownContainer > div { /* Target the individual Dropdown components */\n+  width: 30%; /* Adjust width as needed */\n+}\n+\n+/* Optional: Add some styling to the BackgroundBox component */\n+.background-box { /* Assuming your BackgroundBox has this class */\n+  padding: 20px;\n+  border-radius: 8px;\n+  background-color: white; /* Or any other background color */\n+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1738218419310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,15 +45,8 @@\n   justify-content: space-around; /* Distribute space around dropdowns */\n   width: 80%;\n }\n \n-.dropdownContainer > div { /* Target the individual Dropdown components */\n+.dropdownContainer > div {\n+  /* Target the individual Dropdown components */\n   width: 30%; /* Adjust width as needed */\n }\n-\n-/* Optional: Add some styling to the BackgroundBox component */\n-.background-box { /* Assuming your BackgroundBox has this class */\n-  padding: 20px;\n-  border-radius: 8px;\n-  background-color: white; /* Or any other background color */\n\\ No newline at end of file\n-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */\n-}\n"
+                },
+                {
+                    "date": 1738218425321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,50 +3,41 @@\n   flex-direction: column;\n   align-items: center;\n   background: var(--green-color);\n   height: 100vh;\n-  padding: 20px; /* Add some padding to the main container */\n }\n \n .title {\n   font-size: 45px;\n   font-weight: 300;\n-  margin-bottom: 20px; /* Add margin below the title */\n+  justify-self: center;\n+  align-self: center;\n }\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin-right: 20px; /* Adjust margin as needed */\n-  cursor: pointer; /* Make the icon clickable */\n-  align-self: flex-start; /* Align icon to the left */\n+  margin: 0px 25px 50px 25px;\n+  padding-left: 20px;\n }\n \n .container {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n-  justify-content: space-between; /* Distribute space between search and button */\n+  justify-self: center;\n+  gap: 10px;\n   width: 80%;\n-  margin-bottom: 20px; /* Add margin below the search/button area */\n }\n \n .searchField {\n-  width: 70%; /* Adjust width as needed */\n+  width: 80%;\n }\n \n .container > button {\n-  width: 25%; /* Adjust width as needed */\n-  padding: 10px; /* Add padding to the button */\n+  width: 10%;\n }\n \n .dropdownContainer {\n   display: flex;\n-  flex-direction: row;\n-  justify-content: space-around; /* Distribute space around dropdowns */\n-  width: 80%;\n+  width: 100%;\n }\n-\n-.dropdownContainer > div {\n-  /* Target the individual Dropdown components */\n-  width: 30%; /* Adjust width as needed */\n-}\n"
+                },
+                {
+                    "date": 1738218445263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,15 @@\n \n .container > button {\n   width: 10%;\n }\n-\n .dropdownContainer {\n   display: flex;\n-  width: 100%;\n+  flex-direction: row;\n+  justify-content: space-around; /* Distribute space around dropdowns */\n+  width: 80%;\n }\n+\n+.dropdownContainer > div {\n+  /* Target the individual Dropdown components */\n+  width: 30%; /* Adjust width as needed */\n+}\n"
+                },
+                {
+                    "date": 1738218603416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,11 @@\n }\n .dropdownContainer {\n   display: flex;\n   flex-direction: row;\n-  justify-content: space-around; /* Distribute space around dropdowns */\n-  width: 80%;\n+  justify-content: space-around;\n+  width: 82.5%;\n+  margin: 1% 5% 7% 8.8%;\n }\n \n .dropdownContainer > div {\n   /* Target the individual Dropdown components */\n"
+                },
+                {
+                    "date": 1738218620207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,7 +44,6 @@\n   margin: 1% 5% 7% 8.8%;\n }\n \n .dropdownContainer > div {\n-  /* Target the individual Dropdown components */\n-  width: 30%; /* Adjust width as needed */\n+  width: 30%;\n }\n"
+                },
+                {
+                    "date": 1738218632890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,6 +44,7 @@\n   margin: 1% 5% 7% 8.8%;\n }\n \n .dropdownContainer > div {\n-  width: 30%;\n+  /* width: 30%; */\n+  background-color: red;\n }\n"
+                },
+                {
+                    "date": 1738218639545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,7 +44,6 @@\n   margin: 1% 5% 7% 8.8%;\n }\n \n .dropdownContainer > div {\n-  /* width: 30%; */\n-  background-color: red;\n+  width: 30%;\n }\n"
+                },
+                {
+                    "date": 1738219552215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,14 +35,15 @@\n \n .container > button {\n   width: 10%;\n }\n+\n .dropdownContainer {\n   display: flex;\n   flex-direction: row;\n   justify-content: space-around;\n   width: 82.5%;\n-  margin: 1% 5% 7% 8.8%;\n+  margin: 1% 5% 0% 8.8%;\n }\n \n .dropdownContainer > div {\n   width: 30%;\n"
+                },
+                {
+                    "date": 1738219615088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,4 +47,11 @@\n \n .dropdownContainer > div {\n   width: 30%;\n }\n+\n+.barContainer {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  width: 80%;\n+}\n"
+                },
+                {
+                    "date": 1738219622479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,6 @@\n   width: 30%;\n }\n \n .barContainer {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n   width: 80%;\n }\n"
+                },
+                {
+                    "date": 1738219646833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,6 @@\n }\n \n .barContainer {\n   width: 80%;\n+  justify-self: center;\n }\n"
+                },
+                {
+                    "date": 1738219839309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   display: flex;\n   flex-direction: row;\n   justify-content: space-around;\n   width: 82.5%;\n-  margin: 1% 5% 0% 8.8%;\n+  margin: 5px 120px -225px 121px;\n }\n \n .dropdownContainer > div {\n   width: 30%;\n"
+                },
+                {
+                    "date": 1738219898877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   display: flex;\n   flex-direction: row;\n   justify-content: space-around;\n   width: 82.5%;\n-  margin: 5px 120px -225px 121px;\n+  margin: 20px 120px -225px 121px;\n }\n \n .dropdownContainer > div {\n   width: 30%;\n"
+                },
+                {
+                    "date": 1738219921761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   display: flex;\n   flex-direction: row;\n   justify-content: space-around;\n   width: 82.5%;\n-  margin: 20px 120px -225px 121px;\n+  margin: 20px 120px -209px 121px;\n }\n \n .dropdownContainer > div {\n   width: 30%;\n"
                 }
             ],
             "date": 1738193921052,
