@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1738199550466,
@@ -20,6 +20,78 @@
                 {
                     "date": 1738200311864,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import styles from \"./styles.module.css\";\r\n import BackgroundBox from \"../../components/BackgroundBox\";\r\n import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n+import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n   return (\r\n     <div className={styles.myaccount}>\r\n"
+                },
+                {
+                    "date": 1738234464565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,17 @@\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n+  useEffect(() => {\r\n+    const getData = async () => {\r\n+      const response = await fetch(\"http://localhost:3045/api/employee\");\r\n+      const body = await response.json();\r\n+\r\n+      setData(body);\r\n+    };\r\n+    getData();\r\n+  }, []);\r\n   return (\r\n     <div className={styles.myaccount}>\r\n       <BackgroundBox>\r\n         <h1 className={styles.title}>My Account</h1>\r\n"
+                },
+                {
+                    "date": 1738234478209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n+  const [data, setData] = useState([]);\r\n+\r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\"http://localhost:3045/api/employee\");\r\n       const body = await response.json();\r\n"
+                },
+                {
+                    "date": 1738234504348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React, { useState } from \"react\";\r\n+import React, { useState, useEffect } from \"react\";\r\n import styles from \"./styles.module.css\";\r\n import BackgroundBox from \"../../components/BackgroundBox\";\r\n import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\r\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n@@ -9,9 +9,9 @@\n   const [data, setData] = useState([]);\r\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n-      const response = await fetch(\"http://localhost:3045/api/employee\");\r\n+      const response = await fetch(\"http://localhost:3045/api/employee/id/123\");\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n     };\r\n"
+                },
+                {
+                    "date": 1738234605507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,12 @@\n         <h1 className={styles.title}>My Account</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n+        <p>Employee: {data.name}</p>\r\n+        <p>Employee Nrº: {data.employeeNr}</p>\r\n+        <p>Telephone: {data.tel}</p>\r\n+        <p>E-mail: {data.email}</p>\r\n       </BackgroundBox>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1738234631700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n   const [data, setData] = useState([]);\r\n-\r\n+  console.log(data);\r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\"http://localhost:3045/api/employee/id/123\");\r\n       const body = await response.json();\r\n@@ -23,8 +23,9 @@\n         <h1 className={styles.title}>My Account</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n+\r\n         <p>Employee: {data.name}</p>\r\n         <p>Employee Nrº: {data.employeeNr}</p>\r\n         <p>Telephone: {data.tel}</p>\r\n         <p>E-mail: {data.email}</p>\r\n"
+                },
+                {
+                    "date": 1738234672527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n-  const [data, setData] = useState([]);\r\n+  const [data, setData] = useState();\r\n   console.log(data);\r\n+  console.log(data);\r\n+\r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\"http://localhost:3045/api/employee/id/123\");\r\n       const body = await response.json();\r\n@@ -16,8 +18,9 @@\n       setData(body);\r\n     };\r\n     getData();\r\n   }, []);\r\n+\r\n   return (\r\n     <div className={styles.myaccount}>\r\n       <BackgroundBox>\r\n         <h1 className={styles.title}>My Account</h1>\r\n"
+                },
+                {
+                    "date": 1738234706533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\r\n import { Link } from \"react-router\";\r\n \r\n const MyAccount = () => {\r\n-  const [data, setData] = useState();\r\n+  const [data, setData] = useState({});\r\n   console.log(data);\r\n   console.log(data);\r\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n-      const response = await fetch(\"http://localhost:3045/api/employee/id/123\");\r\n+      const response = await fetch(\"http://localhost:3045/api/employees/id/123\");\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n     };\r\n"
+                },
+                {
+                    "date": 1738234772657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n   console.log(data);\r\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n-      const response = await fetch(\"http://localhost:3045/api/employees/id/123\");\r\n+      const response = await fetch(\r\n+        \"http://localhost:3045/api/employees/id/123\"\r\n+      );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n     };\r\n"
+                },
+                {
+                    "date": 1738234827697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/id/123\"\r\n+        \"http://localhost:3045/api/employees/123\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738234883751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/123\"\r\n+        \"http://localhost:3045/api/employees/123/123\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738234893658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/123/123\"\r\n+        \"http://localhost:3045/api/employees/123\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738234953188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/123\"\r\n+        \"http://localhost:3045/api/employees/679afffd28a96d91313b59fe\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738234958533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/679afffd28a96d91313b59fe\"\r\n+        \"http://localhost:3045/api/employees/id/679afffd28a96d91313b59fe\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738235009070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/id/679afffd28a96d91313b59fe\"\r\n+        \"http://localhost:3045/api/employees/679afffd28a96d91313b59fe\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738235014799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/679afffd28a96d91313b59fe\"\r\n+        \"http://localhost:3045/api/employees/123\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738235020969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/123\"\r\n+        \"http://localhost:3045/api/employees/id/679afffd28a96d91313b59fe\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738235070721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n       const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/id/679afffd28a96d91313b59fe\"\r\n+        \"http://localhost:3045/api/employees/123\"\r\n       );\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n"
+                },
+                {
+                    "date": 1738235180302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,9 @@\n   console.log(data);\r\n \r\n   useEffect(() => {\r\n     const getData = async () => {\r\n-      const response = await fetch(\r\n-        \"http://localhost:3045/api/employees/123\"\r\n-      );\r\n+      const response = await fetch(\"http://localhost:3045/api/employees/123\");\r\n       const body = await response.json();\r\n \r\n       setData(body);\r\n     };\r\n@@ -28,9 +26,8 @@\n         <h1 className={styles.title}>My Account</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n-\r\n         <p>Employee: {data.name}</p>\r\n         <p>Employee Nrº: {data.employeeNr}</p>\r\n         <p>Telephone: {data.tel}</p>\r\n         <p>E-mail: {data.email}</p>\r\n"
                 }
             ],
             "date": 1738199550466,

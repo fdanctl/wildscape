@@ -11,63 +11,15 @@ import Bar from "../../components/Bar";
 import Filter from "../../components/Filter";
 
 const Wildlife = () => {
-  const [selectedValue, setSelectedValue] = useState("");
-  const [speciesOptions, setSpeciesOptions] = useState("");
-  const [selectedFilter, setSelectedFilter] = useState(null);
-
-  const dropdownAnimalOptions = [
-    { value: "apple", label: "Apple" },
-    { value: "banana", label: "Banana" },
-    { value: "grape", label: "Grape" },
-  ];
-  const medicationOptions = [
-    { value: "apple", label: "Apple" },
-    { value: "banana", label: "Banana" },
-    { value: "grape", label: "Grape" },
-  ];
-  const foodOptions = [
-    { value: "apple", label: "Apple" },
-    { value: "banana", label: "Banana" },
-    { value: "grape", label: "Grape" },
-  ];
-  const filterOptions = ["Select All", "Erase"];
-
-  const handleDropdownChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-
-  const handleFilterChange = (option) => {
-    // This is the crucial addition
-    setSelectedFilter(option);
-    console.log("Selected Filter:", option); // Or any other logic you need
-  };
-
+  const [data, setData] = useState([]);
   useEffect(() => {
-    const fetchSpecies = async () => {
-      try {
-        const response = await fetch("/api/animals");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+    const getData = async () => {
+      const response = await fetch("http://localhost:3045/api/animals");
+      const body = await response.json();
 
-        const uniqueSpecies = [
-          ...new Set(data.map((animal) => animal.species)),
-        ];
-        const options = uniqueSpecies.map((species) => ({
-          value: species,
-          label: species,
-        }));
-
-        setSpeciesOptions(options);
-      } catch (err) {
-        console.error("Error fetching species:", err);
-      } finally {
-        console.error("Final");
-      }
+      setData(body);
     };
-
-    // fetchSpecies();
+    getData();
   }, []);
 
   return (
@@ -84,7 +36,7 @@ const Wildlife = () => {
           </Link>
         </div>
         <div className={styles.dropdownContainer}>
-          <Dropdown
+          {/* <Dropdown
             placeholder={"Type of Animal"}
             options={dropdownAnimalOptions}
             // options={speciesOptions}
@@ -102,29 +54,18 @@ const Wildlife = () => {
             options={foodOptions}
             value={selectedValue}
             onChange={handleDropdownChange}
-          />
+          /> */}
         </div>
         <div className={styles.barContainer}>
-          <Filter options={filterOptions}></Filter>
+          {/* <Filter options={filterOptions}></Filter> */}
+          {data.map((el) => (
           <Bar
-            food={"grass"}
-            species={"Lion"}
-            name={"oi"}
-            medication={"bruf"}
-          ></Bar>
-          <Bar
-            food={"fruit"}
-            species={"Monkey"}
-            name={"teste"}
-            medication={"activ"}
-          ></Bar>
-          <Bar
-            food={"fruit"}
-            species={"Monkey"}
-            name={"teste"}
-            medication={"activ"}
-          ></Bar>
-          <Bar></Bar>
+            species={el.species}
+            name={el.name}
+            medication={"brufen"}
+            food={"kj"}
+          />
+        ))}
         </div>
       </BackgroundBox>
     </span>

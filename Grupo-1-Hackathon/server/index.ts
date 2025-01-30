@@ -6,7 +6,7 @@ import { router as login } from "./routes/login";
 import { router as resources } from "./routes/resource";
 import { router as tasks} from "./routes/tasks";
 const app = express();
-const port = 3030;
+const port = 3045;
 app.use(cors());
 
 app.use(express.json());

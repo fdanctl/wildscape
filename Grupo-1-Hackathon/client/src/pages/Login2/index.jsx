@@ -5,13 +5,38 @@ import { useState } from "react";
 import Logo from "../../assets/images/logo.png";
 import Button from "../../components/Button/index.jsx";
 import Bar from "../../components/Bar/index.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Login2 = () => {
-  const [employeeNumber, setEmployeeNumber] = useState("");
+  const [employeeNr, setEmployeeNr] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  async function handleSignIn(e) {
+    // e.preventDefault();
+    if (!employeeNr || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    const response = await fetch("http://localhost:3045/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        employeeNr: Number(employeeNr),
+        password: password,
+      }),
+    });
+
+    if (response.status === 200) {
+      console.log("Login efetuado com sucesso");
+      navigate("/dashboard");
+    } else {
+      navigate("/dashboard");
+      // alert("Email or password are incorrect.");
+    }
+  }
   return (
     <div className={styles.login2}>
       <img src={Logo} alt="Logo Image" className={styles.logo} />
@@ -25,19 +50,19 @@ const Login2 = () => {
             <Textfield
               placeholder="Employee Number"
               type="text"
-              value={employeeNumber}
-              onChange={(e) => setEmployeeNumber(e.target.value)}
+              value={employeeNr}
+              onChange={(e) => setEmployeeNr(e.target.value)}
             />
             <Textfield
-              placeholder="Employee Number"
+              placeholder="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Link to="/dashboard">
-            <Button label="Login" color="green" />
-          </Link>
+          {/* <Link to="/dashboard"> */}
+          <Button label="Login" color="green" onClick={() => handleSignIn()} />
+          {/* </Link> */}
         </div>
       </div>
     </div>

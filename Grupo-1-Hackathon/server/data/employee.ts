@@ -41,7 +41,7 @@ export async function FindEmployeeByCredentials(
 ): Promise<EmployeeWithId | null> {
     const collection = await getMongoCollection(db, col);
     const result = await collection.findOne({
-        employeeNr: credentials.employeeNr,
+        employeeNr: Number(credentials.employeeNr),
         password: credentials.password,
     });
     return result;
