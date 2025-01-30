@@ -4,11 +4,10 @@ import BackgroundBox from "../../components/BackgroundBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
+import Button from "../../components/Button"; // Import the Button component
 
 const MyAccount = () => {
   const [data, setData] = useState({});
-  console.log(data);
-  console.log(data);
 
   useEffect(() => {
     const getData = async () => {
@@ -23,14 +22,18 @@ const MyAccount = () => {
   return (
     <div className={styles.myaccount}>
       <BackgroundBox>
-        <h1 className={styles.title}>My Account</h1>
         <Link to="/dashboard">
           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
         </Link>
-        <p>Employee: {data.name}</p>
-        <p>Employee Nrº: {data.employeeNr}</p>
-        <p>Telephone: {data.tel}</p>
-        <p>E-mail: {data.email}</p>
+        <h1 className={styles.title}>MY ACCOUNT</h1>
+        <div className={styles.details}>
+          <p>Employee: {data.name}</p>
+          <p>Employee Nrº: {data.employeeNr}</p>
+          <p>Telephone: {data.tel}</p>
+          <p>E-mail: {data.email}</p>
+        
+        <Button onClick={() => window.location.href = "/"} color={"green"} className={styles.logoutButton} label={"Logout"}/>
+        </div>
       </BackgroundBox>
     </div>
   );
