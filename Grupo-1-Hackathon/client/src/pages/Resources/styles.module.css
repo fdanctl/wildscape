@@ -51,5 +51,6 @@
 
 .barContainer {
   width: 80%;
+  color: black;
   justify-self: center;
 }
