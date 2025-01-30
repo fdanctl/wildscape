@@ -21,7 +21,7 @@ const AnimalCareLog = () => {
   }, []);
 
   return (
-    <span className={styles.wildlife}>
+    <span className={styles.animalCareLog}>
       <BackgroundBox>
         <h1 className={styles.title}>Animal Care Log</h1>
         <Link to="/dashboard">
@@ -32,9 +32,8 @@ const AnimalCareLog = () => {
           <Link to={"/addAnimal"}>
             <Button color={"green"} label={"Add"} />
           </Link>
-        </div>
-        <div className={styles.dropdownContainer}>
-          {/* <Dropdown
+          <div className={styles.dropdownContainer}>
+            {/* <Dropdown
             placeholder={"Type of Animal"}
             options={dropdownAnimalOptions}
             // options={speciesOptions}
@@ -53,17 +52,18 @@ const AnimalCareLog = () => {
             value={selectedValue}
             onChange={handleDropdownChange}
           /> */}
-        </div>
-        <div className={styles.barContainer}>
-          {/* <Filter options={filterOptions}></Filter> */}
-          {data.map((el) => (
-            <Bar
-              species={el.species}
-              name={el.name}
-              medication={"brufen"}
-              food={"kj"}
-            />
-          ))}
+          </div>
+          <div className={styles.barContainer}>
+            {/* <Filter options={filterOptions}></Filter> */}
+            {data.map((el) => (
+              <Bar
+                species={el.species}
+                name={el.name}
+                medication={"brufen"}
+                food={"kj"}
+              />
+            ))}
+          </div>
         </div>
       </BackgroundBox>
     </span>

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 66,
+            "activePatchIndex": 69,
             "patches": [
                 {
                     "date": 1738193921052,
@@ -272,6 +272,18 @@
                 {
                     "date": 1738219921761,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   display: flex;\n   flex-direction: row;\n   justify-content: space-around;\n   width: 82.5%;\n-  margin: 20px 120px -225px 121px;\n+  margin: 20px 120px -209px 121px;\n }\n \n .dropdownContainer > div {\n   width: 30%;\n"
+                },
+                {
+                    "date": 1738236368110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 0px 25px 50px 25px;\n+  /* margin: 0px 25px 50px 25px; */\n   padding-left: 20px;\n }\n \n .container {\n"
+                },
+                {
+                    "date": 1738236377148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  /* margin: 0px 25px 50px 25px; */\n+  margin: 0px 25px 50px 25px;\n   padding-left: 20px;\n }\n \n .container {\n"
+                },
+                {
+                    "date": 1738236385812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 0px 25px 50px 25px;\n+  margin: 30px;\n   padding-left: 20px;\n }\n \n .container {\n"
                 }
             ],
             "date": 1738193921052,

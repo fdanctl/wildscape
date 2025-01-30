@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1738199679257,
@@ -52,6 +52,30 @@
                 {
                     "date": 1738235311880,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n import { Link } from \"react-router\";\r\n import Button from \"../../components/Button\";\r\n import SearchField from \"../../components/Searchfield\";\r\n import Bar from \"../../components/Bar\";\r\n-import Filter from \"../../components/Filter\";\r\n \r\n const AnimalCareLog = () => {\r\n   const [data, setData] = useState([]);\r\n   useEffect(() => {\r\n@@ -23,9 +22,9 @@\n \r\n   return (\r\n     <span className={styles.wildlife}>\r\n       <BackgroundBox>\r\n-        <h1 className={styles.title}>Wildlife</h1>\r\n+        <h1 className={styles.title}>Animal Care Log</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n         <div className={styles.container}>\r\n"
+                },
+                {
+                    "date": 1738235600869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     getData();\r\n   }, []);\r\n \r\n   return (\r\n-    <span className={styles.wildlife}>\r\n+    <span className={styles.animalCareLog}>\r\n       <BackgroundBox>\r\n         <h1 className={styles.title}>Animal Care Log</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n"
+                },
+                {
+                    "date": 1738235640857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,14 +26,16 @@\n         <h1 className={styles.title}>Animal Care Log</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n-        <div className={styles.container}>\r\n-          <SearchField className={styles.searchField} />\r\n-          <Link to={\"/addAnimal\"}>\r\n-            <Button color={\"green\"} label={\"Add\"} />\r\n-          </Link>\r\n-        </div>\r\n+        <>\r\n+          <div className={styles.container}>\r\n+            <SearchField className={styles.searchField} />\r\n+            <Link to={\"/addAnimal\"}>\r\n+              <Button color={\"green\"} label={\"Add\"} />\r\n+            </Link>\r\n+          </div>\r\n+        </>\r\n         <div className={styles.dropdownContainer}>\r\n           {/* <Dropdown\r\n             placeholder={\"Type of Animal\"}\r\n             options={dropdownAnimalOptions}\r\n"
+                },
+                {
+                    "date": 1738235651761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,16 +26,16 @@\n         <h1 className={styles.title}>Animal Care Log</h1>\r\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n-        <>\r\n+        <div className={styles.container}>\r\n           <div className={styles.container}>\r\n             <SearchField className={styles.searchField} />\r\n             <Link to={\"/addAnimal\"}>\r\n               <Button color={\"green\"} label={\"Add\"} />\r\n             </Link>\r\n           </div>\r\n-        </>\r\n+        </div>\r\n         <div className={styles.dropdownContainer}>\r\n           {/* <Dropdown\r\n             placeholder={\"Type of Animal\"}\r\n             options={dropdownAnimalOptions}\r\n"
+                },
+                {
+                    "date": 1738235721867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,14 +27,12 @@\n         <Link to=\"/dashboard\">\r\n           <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\r\n         </Link>\r\n         <div className={styles.container}>\r\n-          <div className={styles.container}>\r\n-            <SearchField className={styles.searchField} />\r\n-            <Link to={\"/addAnimal\"}>\r\n-              <Button color={\"green\"} label={\"Add\"} />\r\n-            </Link>\r\n-          </div>\r\n+          <SearchField className={styles.searchField} />\r\n+          <Link to={\"/addAnimal\"}>\r\n+            <Button color={\"green\"} label={\"Add\"} />\r\n+          </Link>\r\n         </div>\r\n         <div className={styles.dropdownContainer}>\r\n           {/* <Dropdown\r\n             placeholder={\"Type of Animal\"}\r\n"
+                },
+                {
+                    "date": 1738235904096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,10 @@\n           <SearchField className={styles.searchField} />\r\n           <Link to={\"/addAnimal\"}>\r\n             <Button color={\"green\"} label={\"Add\"} />\r\n           </Link>\r\n-        </div>\r\n-        <div className={styles.dropdownContainer}>\r\n-          {/* <Dropdown\r\n+          <div className={styles.dropdownContainer}>\r\n+            {/* <Dropdown\r\n             placeholder={\"Type of Animal\"}\r\n             options={dropdownAnimalOptions}\r\n             // options={speciesOptions}\r\n             value={selectedValue}\r\n@@ -52,20 +51,21 @@\n             options={foodOptions}\r\n             value={selectedValue}\r\n             onChange={handleDropdownChange}\r\n           /> */}\r\n+          </div>\r\n+          <div className={styles.barContainer}>\r\n+            {/* <Filter options={filterOptions}></Filter> */}\r\n+            {data.map((el) => (\r\n+              <Bar\r\n+                species={el.species}\r\n+                name={el.name}\r\n+                medication={\"brufen\"}\r\n+                food={\"kj\"}\r\n+              />\r\n+            ))}\r\n+          </div>{\" \"}\r\n         </div>\r\n-        <div className={styles.barContainer}>\r\n-          {/* <Filter options={filterOptions}></Filter> */}\r\n-          {data.map((el) => (\r\n-            <Bar\r\n-              species={el.species}\r\n-              name={el.name}\r\n-              medication={\"brufen\"}\r\n-              food={\"kj\"}\r\n-            />\r\n-          ))}\r\n-        </div>\r\n       </BackgroundBox>\r\n     </span>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1738236059306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n                 medication={\"brufen\"}\r\n                 food={\"kj\"}\r\n               />\r\n             ))}\r\n-          </div>{\" \"}\r\n+          </div>\r\n         </div>\r\n       </BackgroundBox>\r\n     </span>\r\n   );\r\n"
                 }
             ],
             "date": 1738199679257,

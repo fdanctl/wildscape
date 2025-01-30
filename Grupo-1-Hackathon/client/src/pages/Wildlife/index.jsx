@@ -59,13 +59,13 @@ const Wildlife = () => {
         <div className={styles.barContainer}>
           {/* <Filter options={filterOptions}></Filter> */}
           {data.map((el) => (
-          <Bar
-            species={el.species}
-            name={el.name}
-            medication={"brufen"}
-            food={"kj"}
-          />
-        ))}
+            <Bar
+              species={el.species}
+              name={el.name}
+              medication={"brufen"}
+              food={"kj"}
+            />
+          ))}
         </div>
       </BackgroundBox>
     </span>
