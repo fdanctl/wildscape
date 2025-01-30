@@ -9,6 +9,7 @@
 
 /* Personalized Colors */
 .green {
+  border-radius: 5px;
   background: var(--green-card-color);
   color: var(--white-color);
   width: 100%;

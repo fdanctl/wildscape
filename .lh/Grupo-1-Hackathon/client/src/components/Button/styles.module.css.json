@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1738173307768,
@@ -32,6 +32,14 @@
                 {
                     "date": 1738198400650,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n .button {\n-  /* background: blue; */\n   border: none;\n   cursor: pointer;\n   font-size: 16px;\n   justify-self: center;\n"
+                },
+                {
+                    "date": 1738200900917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+.button {\n+  border: none;\n+  cursor: pointer;\n+  font-size: 16px;\n+  justify-self: center;\n+  border-radius: 15px;\n+  height: 50px;\n+}\n+\n+/* Personalized Colors */\n+.green {\n+  border-radius: 10px;\n+  background: var(--green-card-color);\n+  color: var(--white-color);\n+  width: 100%;\n+}\n"
+                },
+                {
+                    "date": 1738200906681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+.button {\n+  border: none;\n+  cursor: pointer;\n+  font-size: 16px;\n+  justify-self: center;\n+  border-radius: 15px;\n+  height: 50px;\n+}\n+\n+/* Personalized Colors */\n+.green {\n+  border-radius: 0px;\n+  background: var(--green-card-color);\n+  color: var(--white-color);\n+  width: 100%;\n+}\n"
                 }
             ],
             "date": 1738173307768,

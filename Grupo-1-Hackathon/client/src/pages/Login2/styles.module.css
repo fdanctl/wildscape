@@ -13,6 +13,13 @@
   top: 10px;
 }
 
+.icon {
+  color: var(--green-color);
+  font-size: 66px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -28,4 +35,18 @@
   margin: 110px 0px 20px 0px;
   align-self: center;
   color: var(--white-color);
+}
+
+.textfieldsContainer {
+  margin-top: 120px;
+}
+
+.textfieldUserPass {
+  margin-bottom: 80px;
+}
+
+.link {
+  position: absolute;
+  left: 60px;
+  top: 170px;
 }
