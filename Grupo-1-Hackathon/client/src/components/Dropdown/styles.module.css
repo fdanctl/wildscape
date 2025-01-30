@@ -19,7 +19,7 @@
 
 .inputField.withLabel {
   margin-left: 10px;
-  min-width: 25%;
+  min-width: 200px;
 }
 
 .inputLabel {

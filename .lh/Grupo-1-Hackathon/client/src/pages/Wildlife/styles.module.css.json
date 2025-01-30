@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 69,
+            "activePatchIndex": 73,
             "patches": [
                 {
                     "date": 1738193921052,
@@ -284,6 +284,22 @@
                 {
                     "date": 1738236385812,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n .icon {\n   color: var(--green-color);\n   font-size: 66px;\n-  margin: 0px 25px 50px 25px;\n+  margin: 30px;\n   padding-left: 20px;\n }\n \n .container {\n"
+                },
+                {
+                    "date": 1738236812852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,6 @@\n \n .barContainer {\n   width: 80%;\n   justify-self: center;\n+  margin-top: 15%;\n }\n"
+                },
+                {
+                    "date": 1738238264064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,6 @@\n .barContainer {\n   width: 80%;\n   justify-self: center;\n   margin-top: 15%;\n+  overflow-y: scroll\n }\n"
+                },
+                {
+                    "date": 1738238280025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,6 +52,7 @@\n .barContainer {\n   width: 80%;\n   justify-self: center;\n   margin-top: 15%;\n-  overflow-y: scroll\n+  overflow-y: scroll;\n+  max-height: 300px;\n }\n"
+                },
+                {
+                    "date": 1738238285635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n   width: 80%;\n   justify-self: center;\n   margin-top: 15%;\n   overflow-y: scroll;\n-  max-height: 300px;\n+  max-height: 350px;\n }\n"
                 }
             ],
             "date": 1738193921052,

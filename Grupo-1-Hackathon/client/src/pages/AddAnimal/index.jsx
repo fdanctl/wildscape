@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BackgroundBox from "../../components/BackgroundBox";
 import styles from "./styles.module.css";
 import Button from "../../components/Button";
@@ -10,24 +10,75 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const AddAnimal = () => {
-  const animalOptions = ["Lion", "Tiger", "Bear"]
-  return (
-    <span className={styles.wildlife}>
-      <BackgroundBox>
+  const [state, setState] = useState({
+    name: "",
+    age: "",
+    species: "",
+    dailyNeeds: [],
+  });
+  const animalOptions = [
+    { value: "lion", label: "Lion" },
+    { value: "penguin", label: "Penguin" },
+    { value: "bear", label: "Bear" },
+  ];
 
-        <h1 className={styles.title}>Wildlife</h1>
-        <Link to="/wildlife">
-          <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
-        </Link>
+  const handleClick = () => {
+    fetch("http://localhost:3045/api/animals", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: state.name,
+        age: state.age,
+        species: state.species,
+        dailyNeeds: [],
+      }),
+    });
+  };
+
+  const handleChange = (field, value) => {
+    setState((ps) => ({ ...ps, [field]: value }));
+  };
+
+  return (
+    <span className={styles.newAnimal}>
+      <BackgroundBox>
+        <>
+          <h1 className={styles.title}>New Animal</h1>
+          <Link to="/wildlife">
+            <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
+          </Link>
+        </>
         <div className={styles.boxContainer}>
-        <div className={styles.formContainer}>
-          <Dropdown label="Animal" options={animalOptions} className={styles.dropdown} />
-          <Textfield label="Name" className={styles.textfield} />
-          <Textfield label="Age" className={styles.textfield} />
-          <Textfield label="Medication" className={styles.textfield} />
-          <Button color={"green"} label={"Save"} className={styles.saveButton} />
-        </div>
-        <div className={styles.imagePlaceholder}></div>
+          <div className={styles.formContainer}>
+            <Dropdown
+              onChange={(e) => handleChange("species", e.target.value)}
+              label="Animal"
+              options={animalOptions}
+              className={styles.dropdown}
+            />
+            <Textfield
+              onChange={(e) => handleChange("name", e.target.value)}
+              value={state.name}
+              name="name"
+              label="Name"
+              className={styles.textfield}
+            />
+            <Textfield
+              value={state.age}
+              name="age"
+              label="Age"
+              onChange={(e) => handleChange("age", e.target.value)}
+              className={styles.textfield}
+            />
+            <Textfield label="Medication" className={styles.textfield} />
+            <Button
+              color={"green"}
+              label={"Save"}
+              className={styles.saveButton}
+              onClick={() => handleClick()}
+            />
+          </div>
+          <div className={styles.imagePlaceholder}></div>
         </div>
       </BackgroundBox>
     </span>

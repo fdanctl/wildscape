@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1738169636789,
@@ -24,6 +24,14 @@
                 {
                     "date": 1738220824497,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,48 +1,23 @@\n-.bar {\r\n-  background: var(--white-color);\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  justify-content: space-around;\r\n-}\r\n-\r\n-.bar p {\r\n-  color: var(--textfield-color);\r\n-}\r\n-\r\n-.icon {\r\n-  size: 24;\r\n-  color: var(--textfield-color);\r\n-}\r\n-.bar {\r\n-  background: var(--white-color);\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  justify-content: space-around;\r\n-}\r\n-\r\n-.bar p {\r\n-  color: var(--textfield-color);\r\n-}\r\n-\r\n-.icon {\r\n-  size: 24;\r\n-  color: \"#737373\";\r\n-}\r\n-.bar {\r\n-  background: var(--white-color);\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  justify-content: space-around;\r\n-}\r\n-\r\n-.bar p {\r\n-  color: #737373;\r\n-}\r\n-\r\n-.icon {\r\n-  size: 24;\r\n-  color: \"#737373\";\r\n-}\r\n+.bar {\n+  background: var(--white-color);\n+  display: flex;\n+  flex-direction: row;\n+  align-items: center;\n+  justify-content: space-between;\n+  padding: 1px 4rem;\n+  border-radius: 10px;\n+  min-height: 50px;\n+}\n+\n+.bar input {\n+  accent-color: var(--textfield-color);\n+}\n+\n+.bar p {\n+  color: var(--textfield-color);\n+}\n+\n+.icon {\n+  size: 24;\n+  color: var(--textfield-color);\n+}\n"
+                },
+                {
+                    "date": 1738238172107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   justify-content: space-between;\n   padding: 1px 4rem;\n   border-radius: 10px;\n   min-height: 50px;\n+  overflow-y: scroll;\n }\n \n .bar input {\n   accent-color: var(--textfield-color);\n"
+                },
+                {
+                    "date": 1738238190905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n   justify-content: space-between;\n   padding: 1px 4rem;\n   border-radius: 10px;\n   min-height: 50px;\n-  overflow-y: scroll;\n }\n \n .bar input {\n   accent-color: var(--textfield-color);\n"
                 }
             ],
             "date": 1738169636789,

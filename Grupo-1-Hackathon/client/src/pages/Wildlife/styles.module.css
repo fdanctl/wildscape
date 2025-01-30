@@ -52,4 +52,7 @@
 .barContainer {
   width: 80%;
   justify-self: center;
+  margin-top: 15%;
+  overflow-y: scroll;
+  max-height: 350px;
 }
