@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 43,
+            "activePatchIndex": 45,
             "patches": [
                 {
                     "date": 1738191586764,
@@ -180,6 +180,14 @@
                 {
                     "date": 1738199443315,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n-        <h1 className={styles.title}>WILDLIFE</h1>\n+        <h1 className={styles.title}>Wildlife</h1>\n         <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n"
+                },
+                {
+                    "date": 1738200215467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,18 @@\n import Button from \"../../components/Button\";\n import SearchField from \"../../components/Searchfield\";\n import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\n+import { Link } from \"@mui/material\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n       <BackgroundBox>\n         <h1 className={styles.title}>Wildlife</h1>\n-        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n+        <Link to=\"/dashboard\">\n+          <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />\n+        </Link>\n         {/* <SearchField />\n         <Button color={\"green\"} label={\"Add\"} /> */}\n       </BackgroundBox>\n     </div>\n"
+                },
+                {
+                    "date": 1738200256966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Button from \"../../components/Button\";\n import SearchField from \"../../components/Searchfield\";\n import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n import { faCircleArrowLeft } from \"@fortawesome/free-solid-svg-icons\";\n-import { Link } from \"@mui/material\";\n+import { Link } from \"react-router-dom\";\n \n const Wildlife = () => {\n   return (\n     <div className={styles.wildlife}>\n"
                 }
             ],
             "date": 1738191586764,

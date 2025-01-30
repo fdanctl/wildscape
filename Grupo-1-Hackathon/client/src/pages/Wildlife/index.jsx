@@ -6,13 +6,16 @@ import Button from "../../components/Button";
 import SearchField from "../../components/Searchfield";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Wildlife = () => {
   return (
     <div className={styles.wildlife}>
       <BackgroundBox>
         <h1 className={styles.title}>Wildlife</h1>
-        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
+        <Link to="/dashboard">
+          <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.icon} />
+        </Link>
         {/* <SearchField />
         <Button color={"green"} label={"Add"} /> */}
       </BackgroundBox>
