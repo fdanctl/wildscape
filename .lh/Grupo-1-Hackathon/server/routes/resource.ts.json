@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/server/routes/resource.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738232624999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738232624999,
+            "name": "Commit-0",
+            "content": "import express from \"express\";\nimport {\n  CreateResource,\n  ReadResources,\n  ReadResourcesByName,\n  UpdateResource,\n} from \"../services/resource\";\nexport const router = express.Router();\nimport { Request, Response } from \"express\";\nimport { FindAnimalByName } from \"../data/animal\";\n\n// ler todos os recursos na base de dados return os recursos com\n// estatisticas (consumo diario e estimativa de fim de stock)\nrouter.get(\"/\", async (req, res) => {\n  \n  \n  const result = await ReadResources();\n  res.status(200).json(result);\n});\n\nrouter.get(\"/search/:str\", async (req, res) => {\n  const str = req.params.str;\n  const result = await ReadResourcesByName(str);\n  res.status(200).json(result);\n});\n\n// adiciona recurso\nrouter.post(\"/\", async (req: Request, res: Response) => {\n  const body = req.body;\n  const id = await CreateResource(body);\n\n  if (id === \"1\") {\n    res\n      .status(400)\n      .json({ message: \"There is already a resource with that name\" });\n    return;\n  }\n  res.status(200).json({ message: \"created successfully\", id: id });\n});\n\n// deduzir comida do total\nrouter.patch(\"/:id\", async (req, res) => {\n  const id = req.params.id;\n  const quantity = req.body.quantity;\n  console.log(quantity);\n  await UpdateResource({ _id: id, quantity: quantity });\n  res.status(200).json({ message: \"atualizado com sucesso\" });\n});\n"
+        }
+    ]
+}

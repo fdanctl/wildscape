@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/client/src/components/Bar2/index.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1738233891884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738233964827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,16 @@\n import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\n import { faAppleWhole, faFish, faLeaf } from \"@fortawesome/free-solid-svg-icons\";\n import styles from \"./styles.module.css\";\n \n-const Bar2 = ({ species, name, medication, food, onchange }) => {\n+const Bar2 = ({ name, subtype, quant, time, onchange }) => {\n   return (\n     <div className={styles.bar} onChange={onchange}>\n       <input type=\"checkbox\" />\n-      <p>{species}</p>\n       <p>{name}</p>\n-      <p>{medication}</p>\n-      {food === \"grass\" ? (\n-        <FontAwesomeIcon icon={faLeaf} className={styles.icon} />\n-      ) : food === \"fruit\" ? (\n-        <FontAwesomeIcon icon={faAppleWhole} className={styles.icon} />\n-      ) : (\n-        <FontAwesomeIcon icon={faFish} className={styles.icon}/>\n-      )}\n+      <p>{subtype}</p>\n+      <p>{quant}</p>\n+      <p>{time}</p>\n     </div>\n   );\n };\n \n"
+                }
+            ],
+            "date": 1738233891884,
+            "name": "Commit-0",
+            "content": "import { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\nimport { faAppleWhole, faFish, faLeaf } from \"@fortawesome/free-solid-svg-icons\";\nimport styles from \"./styles.module.css\";\n\nconst Bar2 = ({ species, name, medication, food, onchange }) => {\n  return (\n    <div className={styles.bar} onChange={onchange}>\n      <input type=\"checkbox\" />\n      <p>{species}</p>\n      <p>{name}</p>\n      <p>{medication}</p>\n      {food === \"grass\" ? (\n        <FontAwesomeIcon icon={faLeaf} className={styles.icon} />\n      ) : food === \"fruit\" ? (\n        <FontAwesomeIcon icon={faAppleWhole} className={styles.icon} />\n      ) : (\n        <FontAwesomeIcon icon={faFish} className={styles.icon}/>\n      )}\n    </div>\n  );\n};\n\nexport default Bar2;\n"
+        }
+    ]
+}

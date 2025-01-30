@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Grupo-1-Hackathon/server/services/resource.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738232883477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738232883477,
+            "name": "Commit-0",
+            "content": "import { FindAllAnimals } from \"../data/animal\";\nimport {\n  ChangeResource,\n  FindResources,\n  FindResourceByName,\n  InsertResource,\n  FindResourceByNameSearch,\n} from \"../data/resource\";\nimport {\n  Resource,\n  ResourceDeduction,\n  ResourceWithStats,\n} from \"../models/resource\";\n\nexport async function ReadResources() {\n  console.log(\"111111\");\n  \n  const result = await FindResources();\n  let newResult: ResourceWithStats[] = result.concat();\n  const animals = await FindAllAnimals();\n  for (let i = 0; i < result.length; i++) {\n    const sum = animals.reduce((total, val) => {\n      return (\n        total +\n        val.dailyNeeds.reduce(\n          (acc, need) =>\n            need.resource_id === result[i]._id.toString()\n              ? acc + need.quantity\n              : acc,\n          0\n        )\n      );\n    }, 0);\n\n    newResult[i].dailyConsumption = sum;\n    newResult[i].daysLeft =\n      sum < 1 ? \"Undetermined\" : result[i].quantity / sum;\n  }\n\n  return newResult;\n}\n\nexport async function CreateResource(body: Resource): Promise<string> {\n  const result = await FindResourceByName(body.name);\n  if (!result) {\n    const id = await InsertResource(body);\n    return id;\n  }\n  return \"1\";\n}\n\nexport async function UpdateResource(body: ResourceDeduction) {\n  await ChangeResource(body);\n  return;\n}\n\nexport async function ReadResourcesByName(\n  str: string\n): Promise<Resource[] | null> {\n  const animal = await FindResourceByNameSearch(str);\n\n  return animal;\n}\n"
+        }
+    ]
+}

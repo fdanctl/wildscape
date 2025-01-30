@@ -12,6 +12,8 @@ import { FindAnimalByName } from "../data/animal";
 // ler todos os recursos na base de dados return os recursos com
 // estatisticas (consumo diario e estimativa de fim de stock)
 router.get("/", async (req, res) => {
+  
+  
   const result = await ReadResources();
   res.status(200).json(result);
 });

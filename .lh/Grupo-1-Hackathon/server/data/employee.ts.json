@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1738169548368,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738231155337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n const col = \"employees\";\n const db = \"wildscape\";\n \n+\n export async function InsertEmployee(obj: Employee): Promise<string> {\n     const collection = await getMongoCollection(db, col);\n     const result = await collection.insertOne(obj);\n     return result.insertedId;\n@@ -39,9 +40,9 @@\n     credentials: Credentials,\n ): Promise<EmployeeWithId | null> {\n     const collection = await getMongoCollection(db, col);\n     const result = await collection.findOne({\n-        employeeNr: credentials.employeeNr,\n+        employeeNr: Number(credentials.employeeNr),\n         password: credentials.password,\n     });\n     return result;\n }\n"
                 }
             ],
             "date": 1738169548368,

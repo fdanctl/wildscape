@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1738199796054,
@@ -12,6 +12,14 @@
                 {
                     "date": 1738199807028,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+.animalCareLog {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  align-items: center;\r\n+  background: var(--green-color);\r\n+  height: 100vh;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 45px;\r\n+  font-weight: 300;\r\n+  justify-self: center;\r\n+  align-self: center;\r\n+}\r\n+\r\n+.icon {\r\n+  color: var(--green-color);\r\n+  font-size: 66px;\r\n+  margin: 30px;\r\n+  padding-left: 20px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738235332339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,26 +18,38 @@\n   font-size: 66px;\r\n   margin: 30px;\r\n   padding-left: 20px;\r\n }\r\n-.animalCareLog {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    background: var(--green-color);\r\n-    height: 100vh;\r\n-  }\r\n-  \r\n-  .title {\r\n-    font-size: 45px;\r\n-    font-weight: 300;\r\n-    justify-self: center;\r\n-    align-self: center;\r\n-  }\r\n-  \r\n-  .icon {\r\n-    color: var(--green-color);\r\n-    font-size: 66px;\r\n-    margin: 30px;\r\n-    padding-left: 20px;\r\n-  }\r\n-  \n\\ No newline at end of file\n+\r\n+.container {\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  align-items: center;\r\n+  justify-self: center;\r\n+  gap: 10px;\r\n+  width: 80%;\r\n+}\r\n+\r\n+.searchField {\r\n+  width: 80%;\r\n+}\r\n+\r\n+.container > button {\r\n+  width: 10%;\r\n+}\r\n+\r\n+.dropdownContainer {\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  justify-content: space-around;\r\n+  width: 82.5%;\r\n+  margin: 20px 120px -209px 121px;\r\n+}\r\n+\r\n+.dropdownContainer > div {\r\n+  width: 30%;\r\n+}\r\n+\r\n+.barContainer {\r\n+  width: 80%;\r\n+  justify-self: center;\r\n+}\r\n"
+                },
+                {
+                    "date": 1738235341724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,38 +18,4 @@\n   font-size: 66px;\r\n   margin: 30px;\r\n   padding-left: 20px;\r\n }\r\n-\r\n-.container {\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  align-items: center;\r\n-  justify-self: center;\r\n-  gap: 10px;\r\n-  width: 80%;\r\n-}\r\n-\r\n-.searchField {\r\n-  width: 80%;\r\n-}\r\n-\r\n-.container > button {\r\n-  width: 10%;\r\n-}\r\n-\r\n-.dropdownContainer {\r\n-  display: flex;\r\n-  flex-direction: row;\r\n-  justify-content: space-around;\r\n-  width: 82.5%;\r\n-  margin: 20px 120px -209px 121px;\r\n-}\r\n-\r\n-.dropdownContainer > div {\r\n-  width: 30%;\r\n-}\r\n-\r\n-.barContainer {\r\n-  width: 80%;\r\n-  justify-self: center;\r\n-}\r\n"
                 }
             ],
             "date": 1738199796054,

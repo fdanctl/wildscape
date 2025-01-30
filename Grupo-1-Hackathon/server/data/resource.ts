@@ -16,8 +16,13 @@ export async function InsertResource(obj: Resource): Promise<string> {
 }
 
 export async function FindResources(): Promise<ResourceWithId[]> {
+  console.log("222222222");
+
   const collection = await getMongoCollection(db, col);
+  console.log("333333333");
+
   const result = await collection.find({}).toArray();
+  console.log("44444444");
 
   return result;
 }
