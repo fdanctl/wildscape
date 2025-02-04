@@ -87,6 +87,7 @@ recebe como body:
 ```
     name: string;
     age: number;
+    gender: "male" | "female";
     species: string;
     dailyNeeds: [{
         resource_id: string;
@@ -111,6 +112,7 @@ recebe como body
 ```
     name: string;
     age: number;
+    gender: "male" | "female";
     species: string;
     dailyNeeds: [{
         resource_id: string;
