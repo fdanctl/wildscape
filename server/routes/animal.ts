@@ -22,6 +22,7 @@ router.post("/", async (req, res) => {
   res.status(200).json({ message: "created successfully", id: id });
 });
 
+// get all animals data
 router.get("/", async (req, res) => {
   const result = await ReadAnimals();
   res.status(200).json(result);
@@ -35,6 +36,7 @@ router.get("/species/:animal", async (req, res) => {
   res.status(200).json({ animals });
 });
 
+// procurar animal
 router.get("/search/:str", async (req, res) => {
   const str = req.params.str;
   const result = await FindAnimalByName(str);

@@ -58,7 +58,7 @@ export async function ChangeResource(obj: ResourceDeduction) {
   const collection = await getMongoCollection(db, col);
   await collection.updateOne(
     { _id: newId },
-    { $inc: { quantity: -obj.quantity } }
+    { $inc: { quantity: obj.quantity } }
   );
   return;
 }

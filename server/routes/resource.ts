@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
   res.status(200).json(result);
 });
 
+// procurar recurso
 router.get("/search/:str", async (req, res) => {
   const str = req.params.str;
   const result = await ReadResourcesByName(str);
