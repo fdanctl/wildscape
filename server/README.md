@@ -59,7 +59,7 @@ recebe como body
 
 :id = id do recurso
 
-serve para deduzir uma quantidade à quantidade total do recurso
+serve para acrescentar/deduzir uma quantidade à quantidade total do recurso
 
 recebe como body
 
@@ -74,6 +74,9 @@ recebe como body
 ### GET /api/animals/search/:str
 
 pesquisa o nome do animal
+
+### GET /api/animals
+le todos os animais na base de dados
 
 ### POST /api/animals
 
@@ -155,7 +158,7 @@ update tarefa pelo `:id`
 
 apaga tarefa pelo `:id`
 
-### POST /login
+### POST /api/login
 
 verificar se as credenciais estao corretas, se sim envia o `_id` do employee
 
@@ -165,3 +168,31 @@ recebe como body
     employeeNr: number;
     password: string;
 ```
+
+## Employees
+
+### POST /api/employee
+
+adiciona funcionario
+
+recebe como body:
+```
+    name: string;
+    employeeNr: number;
+    password: string;
+    role: "manager" | "zookeeper";
+    tel: number;
+    email: string;
+```
+
+### GET /api/employee/id/:id
+le todos os dados do funcionario pelo id
+
+### GET /api/employee/:employeeNr
+le todos os dados do funcionario pelo numero de funcionario
+
+### POST /api/employee/:employeeNr
+edita o funcionario com o numero :employeeNr
+
+### DELETE /api/employee/:employeeNr
+apaga o funcionario com o numero :employeeNr
