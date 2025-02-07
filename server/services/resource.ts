@@ -20,7 +20,7 @@ export async function ReadResources(): Promise<ResourceWithStats[]> {
     for (let j = 0; j < animals[i].dailyNeeds.length; j++) {
       consumptionMap.set(
         animals[i].dailyNeeds[j].resource_id,
-        (consumptionMap.get(animals[i].dailyNeeds[j].resource_id) | 0) +
+        (consumptionMap.get(animals[i].dailyNeeds[j].resource_id) || 0) +
         animals[i].dailyNeeds[j].quantity,
       );
     }
