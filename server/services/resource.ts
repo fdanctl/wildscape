@@ -28,8 +28,12 @@ export async function ReadResources(): Promise<ResourceWithStats[]> {
 
   return result.map((e) => ({
     ...e,
-    dailyConsumption: consumptionMap.has(e._id.toString()) ? consumptionMap.get(e._id.toString()) : 0,
-    daysLeft: consumptionMap.has(e._id.toString()) ? e.quantity / consumptionMap.get(e._id.toString()) : "Undetermined",
+    dailyConsumption: consumptionMap.has(e._id.toString())
+      ? consumptionMap.get(e._id.toString())
+      : 0,
+    daysLeft: consumptionMap.has(e._id.toString())
+      ? e.quantity / consumptionMap.get(e._id.toString())
+      : "Undetermined",
   }));
 }
 
