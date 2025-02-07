@@ -76,6 +76,7 @@ recebe como body
 pesquisa o nome do animal
 
 ### GET /api/animals
+
 le todos os animais na base de dados
 
 ### POST /api/animals
@@ -126,6 +127,14 @@ recebe como body
 remove animal da base de dados `:id`
 
 ## Tasks
+
+### GET /api/tasks
+
+vai buscar todas as tarefas
+
+### GET /api/tasks/employee/:employee_id
+
+vai buscar todas as tarefas de um funcionario pelo id
 
 ### POST /api/tasks
 
@@ -178,6 +187,7 @@ recebe como body
 adiciona funcionario
 
 recebe como body:
+
 ```
     name: string;
     employeeNr: number;
@@ -188,13 +198,17 @@ recebe como body:
 ```
 
 ### GET /api/employee/id/:id
+
 le todos os dados do funcionario pelo id
 
 ### GET /api/employee/:employeeNr
+
 le todos os dados do funcionario pelo numero de funcionario
 
 ### POST /api/employee/:employeeNr
+
 edita o funcionario com o numero :employeeNr
 
 ### DELETE /api/employee/:employeeNr
+
 apaga o funcionario com o numero :employeeNr

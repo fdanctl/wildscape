@@ -20,13 +20,13 @@ router.post("/", async (req, res) => {
   res.status(200).json({ message: "created successfully", id: id });
 });
 
-// get data do animal por especie
+// get all tasks
 router.get("/", async (req, res) => {
   const tasks = await ReadAllTasks();
 
   res.status(200).json({ tasks });
 });
-// get data do animal por especie
+// get all tasks of a employee
 router.get("/employee/:employeeId", async (req, res) => {
   const animal = req.params.employeeId;
   const tasks = await ReadTasks(animal);
