@@ -13,8 +13,6 @@ import {
 } from "../models/resource";
 
 export async function ReadResources() {
-  console.log("111111");
-  
   const result = await FindResources();
   let newResult: ResourceWithStats[] = result.concat();
   const animals = await FindAllAnimals();

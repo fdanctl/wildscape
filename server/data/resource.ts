@@ -16,14 +16,8 @@ export async function InsertResource(obj: Resource): Promise<string> {
 }
 
 export async function FindResources(): Promise<ResourceWithId[]> {
-  console.log("222222222");
-
   const collection = await getMongoCollection(db, col);
-  console.log("333333333");
-
   const result = await collection.find({}).toArray();
-  console.log("44444444");
-
   return result;
 }
 
@@ -54,7 +48,6 @@ export async function RemoveResource(id: string): Promise<void> {
 
 export async function ChangeResource(obj: ResourceDeduction) {
   const newId = new ObjectId(obj._id);
-  console.log(obj.quantity);
   const collection = await getMongoCollection(db, col);
   await collection.updateOne(
     { _id: newId },
