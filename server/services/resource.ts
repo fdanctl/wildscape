@@ -12,30 +12,25 @@ import {
   ResourceWithStats,
 } from "../models/resource";
 
-export async function ReadResources() {
+export async function ReadResources(): Promise<ResourceWithStats[]> {
   const result = await FindResources();
-  let newResult: ResourceWithStats[] = result.concat();
   const animals = await FindAllAnimals();
-  for (let i = 0; i < result.length; i++) {
-    const sum = animals.reduce((total, val) => {
-      return (
-        total +
-        val.dailyNeeds.reduce(
-          (acc, need) =>
-            need.resource_id === result[i]._id.toString()
-              ? acc + need.quantity
-              : acc,
-          0
-        )
+  const consumptionMap = new Map();
+  for (let i = 0; i < animals.length; i++) {
+    for (let j = 0; j < animals[i].dailyNeeds.length; j++) {
+      consumptionMap.set(
+        animals[i].dailyNeeds[j].resource_id,
+        (consumptionMap.get(animals[i].dailyNeeds[j].resource_id) | 0) +
+        animals[i].dailyNeeds[j].quantity,
       );
-    }, 0);
-
-    newResult[i].dailyConsumption = sum;
-    newResult[i].daysLeft =
-      sum < 1 ? "Undetermined" : result[i].quantity / sum;
+    }
   }
 
-  return newResult;
+  return result.map((e) => ({
+    ...e,
+    dailyConsumption: consumptionMap.has(e._id.toString()) ? consumptionMap.get(e._id.toString()) : 0,
+    daysLeft: consumptionMap.has(e._id.toString()) ? e.quantity / consumptionMap.get(e._id.toString()) : "Undetermined",
+  }));
 }
 
 export async function CreateResource(body: Resource): Promise<string> {
@@ -53,7 +48,7 @@ export async function UpdateResource(body: ResourceDeduction) {
 }
 
 export async function ReadResourcesByName(
-  str: string
+  str: string,
 ): Promise<Resource[] | null> {
   const animal = await FindResourceByNameSearch(str);
 
