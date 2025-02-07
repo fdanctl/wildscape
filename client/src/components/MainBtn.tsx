@@ -4,7 +4,7 @@ export function MainBtn({
   onclick,
 }: {
   text: string;
-  className: string;
+  className?: string;
   onclick: () => void
 }) {
   return (
