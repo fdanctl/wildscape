@@ -13,6 +13,7 @@ export function LoginForm() {
   };
 
   const handleLogIn = () => {
+    // convert employeeNr to Number before post
     console.log(state)
   }
 

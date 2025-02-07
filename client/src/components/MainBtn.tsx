@@ -5,11 +5,11 @@ export function MainBtn({
 }: {
   text: string;
   className?: string;
-  onclick: () => void
+  onclick: () => void;
 }) {
   return (
     <button
-      className={`bg-primaryGreen text-grayish text-3xl px-12 py-4 rounded-xl ${className}`}
+      className={`bg-primaryGreen text-grayish text-3xl px-12 py-4 rounded-xl transition-all duration-200 ease-in-out ${className} hover:brightness-125`}
       type="button"
       onClick={onclick}
     >
