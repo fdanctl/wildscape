@@ -2,8 +2,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Login } from './pages/Login';
-import { Dashboard } from './pages/Dashboard';
+import { Login } from './components/pages/Login';
+import { Dashboard } from './components/pages/Dashboard';
+import { Resources } from './components/pages/Resources';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,6 +14,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Login/>} />
       <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/resources" element={<Resources/>} />
     </Routes>
   </BrowserRouter>
 );

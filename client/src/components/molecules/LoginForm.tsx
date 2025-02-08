@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { MainBtn } from "./MainBtn";
-import { TextInput } from "./TextInput";
+import { MainBtn } from "../atoms/MainBtn";
+import { TextInput } from "../atoms/TextInput";
 
 export function LoginForm() {
   const [state, setState] = useState({ employeeNr: "", password: "" });
@@ -31,6 +31,7 @@ export function LoginForm() {
           value={state.password}
           onchange={(e) => handleChange(e, "password")}
           password={true}
+          className="text-2xl pl-6 py-7"
         />
       </div>
       <MainBtn text="Login" className="w-full rounded-full" onclick={handleLogIn} />

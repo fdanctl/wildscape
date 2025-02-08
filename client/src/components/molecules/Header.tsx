@@ -18,13 +18,13 @@ export function Header({
   return (
     <header className="flex justify-between items-center text-grayish pt-2">
       <div className="flex flex-col">
-        <p className="text-3xl font-bold">{employeeName}</p>
-        <p className="text-lg">
+        <p className="text-2xl font-bold">{employeeName}</p>
+        <p className="text-base">
           {employeeRole[0].toUpperCase() + employeeRole.slice(1)}
         </p>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-xl">
+        <p className="text-lg">
           {date.toLocaleDateString("en", {
             weekday: "long",
             year: "numeric",
@@ -32,7 +32,7 @@ export function Header({
             day: "numeric",
           })}
         </p>
-        <p className="text-lg">{date.toLocaleTimeString("en")}</p>
+        <p className="text-base">{date.toLocaleTimeString("en")}</p>
       </div>
     </header>
   );
