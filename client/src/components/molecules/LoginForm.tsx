@@ -25,6 +25,7 @@ export function LoginForm() {
           placeholder="EmployeeNr"
           value={state.employeeNr}
           onchange={(e) => handleChange(e, "employeeNr")}
+          className="text-2xl pl-6 py-7"
         />
         <TextInput
           placeholder="Password"
