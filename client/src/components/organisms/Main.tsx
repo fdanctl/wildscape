@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { MainBtnS } from "../atoms/MainBtnS";
 import { SearchBar } from "../molecules/SearchBar";
 import { AnimalList } from "./AnimalList";
@@ -8,6 +9,7 @@ export function Main({
 }: {
   title: "Wildlife" | "Resources" | "Employees";
 }) {
+  const [search, setSearch] = useState<string>("");
   const searchTerm: "Animal" | "Resource" | "Employee" =
     title === "Wildlife"
       ? "Animal"
@@ -16,9 +18,9 @@ export function Main({
         : "Employee";
 
   const tagMap = new Map([
-    ["Wildlife", <AnimalList />],
-    ["Resources", <ResourceList />],
-    ["Employees", <ResourceList />],
+    ["Wildlife", <AnimalList search={search} />],
+    ["Resources", <ResourceList search={search} />],
+    ["Employees", <ResourceList search={search} />],
   ]);
 
   return (
@@ -27,7 +29,11 @@ export function Main({
         {title}
       </h2>
       <div className="grid gap-3 grid-cols-[1fr,auto]">
-        <SearchBar placeholder={searchTerm} />
+        <SearchBar
+          placeholder={searchTerm}
+          value={search}
+          onchange={(s) => setSearch(s)}
+        />
         <MainBtnS text="Add" onclick={() => console.log("bruh")} />
       </div>
       {tagMap.get(title)}

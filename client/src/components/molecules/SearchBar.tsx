@@ -1,12 +1,20 @@
 import { TextInput } from "../atoms/TextInput";
 
-export function SearchBar({ placeholder }: { placeholder: string }) {
+export function SearchBar({
+  placeholder,
+  value,
+  onchange,
+}: {
+  placeholder: string;
+  value: string;
+  onchange: (e:string) => void;
+}) {
   return (
     <div className="flex relative">
       <TextInput
         placeholder={`${placeholder} name`}
-        onchange={() => console.log("bruh")}
-        value={""}
+        onchange={(e) => onchange(e.target.value)}
+        value={value}
         className="pr-5 pl-6 py-1"
       />
       <i className="absolute right-3 top-1/2 transform -translate-y-1/2">

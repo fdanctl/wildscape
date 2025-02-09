@@ -4,7 +4,7 @@ import { Layout } from "../templates/Layout";
 export function Resources() {
   return (
     <Layout>
-      <Main title="Resources"/>
+      <Main title="Resources" />
     </Layout>
   );
 }

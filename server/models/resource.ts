@@ -22,8 +22,8 @@ export interface ResourceWithStats {
   subtype: string | null;
   quantity: number;
   unit: "kg" | "doses" | "tablets";
-  dailyConsumption?: number;
-  daysLeft?: number | "Undetermined";
+  dailyConsumption: number;
+  daysLeft: number | "Infinity";
 }
 
 export interface ResourceDeduction {
