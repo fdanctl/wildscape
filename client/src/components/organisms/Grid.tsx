@@ -15,8 +15,12 @@ export function Grid() {
     { text: "other text", done: true },
   ];
   return (
-    <div className="grid grid-cols-10 gap-2 h-full [&>div]:bg-grayish text-center">
-      <StatCard className="rounded-xl col-span-2" title="Total of animals" value="000"/>
+    <div className="grid grid-cols-10 gap-2 h-full text-center [&>div]:bg-grayish [&>a]:bg-grayish">
+      <StatCard
+        className="rounded-xl col-span-2"
+        title="Total of animals"
+        value="000"
+      />
       <div className="rounded-xl col-span-2">
         <p>Diferent Species</p>
         <p>0000</p>
@@ -30,7 +34,7 @@ export function Grid() {
         <div className="flex flex-col gap-1">
           {test.map((e) => (
             <Task
-            // key
+              // key
               text={e.text}
               done={e.done}
               handleDone={() => console.log("bruh")}
@@ -41,10 +45,14 @@ export function Grid() {
       <div className="rounded-xl col-span-6 row-span-8">
         <p>Species</p>
       </div>
-      <div className="rounded-xl col-span-3 row-span-2 flex items-center justify-center font-bold text-primaryGreen hover:bg-secundaryGreen">
-        <p>Wildlife</p>
-      </div>
-      <GridBtn className="col-span-3 row-span-2" text="Resources" onclick={() => console.log("bruh")}/>
+      <GridBtn
+        className="col-span-3 row-span-2"
+        text="Wildlife"
+      />
+      <GridBtn
+        className="col-span-3 row-span-2"
+        text="Resources"
+      />
     </div>
   );
 }

@@ -1,18 +1,18 @@
+import { Link } from "react-router-dom";
+
 export function GridBtn({
   text,
-  onclick,
   className,
 }: {
-  text: string;
-  onclick: () => void;
+  text: "Wildlife"| "Resources";
   className?: string;
 }) {
   return (
-    <div
-      onClick={onclick}
+    <Link
+      to={`/${text.toLowerCase()}`}
       className={`rounded-xl flex items-center justify-center font-bold text-primaryGreen cursor-pointer ${className} hover:bg-secundaryGreen`}
     >
       <p className="font-bold text-5xl">{text}</p>
-    </div>
+    </Link>
   );
 }

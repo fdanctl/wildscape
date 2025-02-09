@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login } from './components/pages/Login';
 import { Dashboard } from './components/pages/Dashboard';
 import { Resources } from './components/pages/Resources';
+import { Wildlife } from './components/pages/Wildlife';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <Route path="/" element={<Login/>} />
       <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="/resources" element={<Resources/>} />
+      <Route path="/wildlife" element={<Wildlife/>} />
     </Routes>
   </BrowserRouter>
 );

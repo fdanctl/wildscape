@@ -4,15 +4,15 @@ export function SearchBar({ placeholder }: { placeholder: string }) {
   return (
     <div className="flex relative">
       <TextInput
-        placeholder={`${placeholder} Name`}
+        placeholder={`${placeholder} name`}
         onchange={() => console.log("bruh")}
         value={""}
-        className="pr-5 pl-11 py-3 text-lg"
+        className="pr-5 pl-6 py-1"
       />
       <i className="absolute right-3 top-1/2 transform -translate-y-1/2">
         <svg
-          width="35"
-          height="35"
+          width="20"
+          height="20"
           viewBox="0 0 46 46"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
