@@ -1,10 +1,17 @@
+import { AnimalForm } from "../molecules/AnimalForm";
 import { Main } from "../organisms/Main";
 import { Layout } from "../templates/Layout";
+import { PopUp } from "../templates/PopUp";
 
 export function Wildlife() {
   return (
-    <Layout>
-      <Main title="Wildlife"/>
-    </Layout>
+    <>
+      <PopUp>
+        <AnimalForm />
+      </PopUp>
+      <Layout>
+        <Main title="Wildlife" />
+      </Layout>
+    </>
   );
 }

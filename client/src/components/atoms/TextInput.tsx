@@ -5,7 +5,7 @@ export function TextInput({
   password,
   className,
 }: {
-  placeholder: string;
+  placeholder?: string;
   onchange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
   password?: boolean;
