@@ -1,4 +1,5 @@
 import { ArrowSvg } from "../atoms/ArrowSvg";
+import { DoubleSlider } from "../atoms/DoubleSlider";
 import { FilterOptBtn } from "../atoms/FilterOptBtn";
 import { XSvg } from "../atoms/XSvg";
 
@@ -43,6 +44,7 @@ export function FilterBar() {
         </div>
         <div>
           <p className="font-bold text-2xl">Age</p>
+          <DoubleSlider />
         </div>
         <div>
           <p className="font-bold text-2xl mb-2">Gender</p>
