@@ -1,3 +1,4 @@
+import { useAnimalFilters } from "../../hooks/useAnimalFilters";
 import { ArrowSvg } from "../atoms/ArrowSvg";
 import { BackArrowSvg } from "../atoms/BackArrowSvg";
 import { CheckBox } from "../atoms/CheckBox";
@@ -5,7 +6,21 @@ import { FilterOptBtn } from "../atoms/FilterOptBtn";
 import { XSvg } from "../atoms/XSvg";
 
 export function SpeciesFilterBar() {
-  const species = ["lion", "penguin"];
+  const { species } = useAnimalFilters();
+
+  const speciesOpt = [
+    {
+      name: "Lion",
+      value: "lion",
+      selected: !species ? false : species.includes("lion"),
+    },
+    {
+      name: "Penguin",
+      value: "penguin",
+      selected: !species ? false : species.includes("penguin"),
+    },
+  ];
+
   return (
     <div className="flex flex-col justify-between text-primaryGreen h-full w-1/3 px-7 pt-10 pb-7 bg-grayish absolute right-0 z-10">
       <div className="[&>div]:mb-4">
@@ -25,10 +40,17 @@ export function SpeciesFilterBar() {
           </i>
         </div>
         <div>
-          {species.map((e) => (
-            <div className="flex gap-2 items-center mb-1">
-              <CheckBox />
-              <label className="text-lg">{e}</label>
+          {speciesOpt.map((e, i) => (
+            <div className="flex gap-2 items-center mb-1" key={i.toString()}>
+              <CheckBox
+                id={e.value}
+                name={e.value}
+                value={e.value}
+                selected={e.selected}
+              />
+              <label className="text-lg" htmlFor={e.value}>
+                {e.name}
+              </label>
             </div>
           ))}
         </div>

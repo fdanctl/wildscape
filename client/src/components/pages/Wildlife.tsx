@@ -12,13 +12,11 @@ export function Wildlife() {
       <PopUp>
         <AnimalForm />
       </PopUp>
-      */}
       <PopUp>
         <FilterBar />
-        {/*
         <SpeciesFilterBar />
-        */}
       </PopUp>
+      */}
       <Layout>
         <Main title="Wildlife" />
       </Layout>

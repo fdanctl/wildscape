@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAnimalFilters } from "../../hooks/useAnimalFilters";
+import { useDebounce } from "../../hooks/useDebounce";
 import { MainBtnS } from "../atoms/MainBtnS";
 import { SearchBar } from "../molecules/SearchBar";
 import { AnimalList } from "./AnimalList";
@@ -9,7 +11,14 @@ export function Main({
 }: {
   title: "Wildlife" | "Resources" | "Employees";
 }) {
-  const [search, setSearch] = useState<string>("");
+  const { q, setAnimalFilters } = useAnimalFilters();
+  const [search, setSearch] = useState<string>(q || "");
+  const debouncedSearch = useDebounce(search);
+
+  useEffect(() => {
+    setAnimalFilters({ q: search });
+  }, [debouncedSearch]);
+
   const searchTerm: "Animal" | "Resource" | "Employee" =
     title === "Wildlife"
       ? "Animal"
@@ -32,7 +41,7 @@ export function Main({
         <SearchBar
           placeholder={searchTerm}
           value={search}
-          onchange={(s) => setSearch(s)}
+          onchange={setSearch}
         />
         <MainBtnS text="Add" onclick={() => console.log("bruh")} />
       </div>
