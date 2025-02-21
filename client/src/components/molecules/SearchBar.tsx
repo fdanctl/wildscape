@@ -12,7 +12,7 @@ export function SearchBar({
   return (
     <div className="flex relative">
       <TextInput
-        placeholder={`${placeholder} name`}
+        placeholder={placeholder}
         onchange={(e) => onchange(e.target.value)}
         value={value}
         className="pr-5 pl-6 py-1"

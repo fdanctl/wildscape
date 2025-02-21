@@ -3,7 +3,7 @@ import { AnimalWithId } from "../../models/animal";
 import { FilterBtn } from "../atoms/FilterBtn";
 import { AnimalCard } from "../molecules/AnimalCard";
 
-export function AnimalList({ search }: { search: string }) {
+export function AnimalList() {
   const [animals, setAnimals] = useState<AnimalWithId[]>([]);
 
   useEffect(() => {
@@ -17,13 +17,12 @@ export function AnimalList({ search }: { search: string }) {
 
   return (
     <>
-      <FilterBtn  filters={12}/>
       {animals.length === 0 ? (
         <p className="text-center text-primaryGreen">No resources found</p>
       ) : (
         <div className="flex flex-col gap-2 h-[310px] overflow-y-auto">
           {animals
-            .filter((e) => e.name.toLowerCase().includes(search))
+            //.filter((e) => e.name.toLowerCase().includes(search))
             .sort((a, b) => {
               const textA = a.name.toUpperCase();
               const textB = b.name.toUpperCase();

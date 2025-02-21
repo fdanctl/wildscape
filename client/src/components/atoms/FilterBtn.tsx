@@ -1,6 +1,14 @@
-export function FilterBtn({ filters }: { filters: number }) {
+export function FilterBtn({
+  filters = 0,
+  onclick,
+}: {
+  filters?: number;
+  onclick: () => void;
+}) {
   return (
-    <button className="rounded-lg px-4 py-2 self-end flex justify-end items-center gap-2 border border-primaryGreen transition-all duration-200 ease-in-out hover:brightness-125">
+    <button className="rounded-lg px-4 py-2 self-end flex justify-end items-center gap-2 border border-primaryGreen transition-all duration-200 ease-in-out hover:brightness-125"
+    onClick={onclick}
+    >
       <p className="text-primaryGreen">Filter</p>
       {filters > 0 ? (
         <div className="flex justify-center items-center w-4 h-4 bg-primaryGreen rounded-full text-white">

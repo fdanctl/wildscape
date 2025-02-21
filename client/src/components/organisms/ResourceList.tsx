@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ResourceWithStats } from "../../models/resource";
 import { ResourceCard } from "../molecules/ResourceCard";
 
-export function ResourceList({ search }: { search: string }) {
+export function ResourceList() {
   const [resources, setResources] = useState<ResourceWithStats[]>([]);
   const [visibility, setVisibility] = useState(new Map());
 
@@ -35,7 +35,7 @@ export function ResourceList({ search }: { search: string }) {
           </div>
           <div className="flex flex-col gap-2 h-[300px] overflow-y-auto">
             {resources
-              .filter((e) => e.name.toLowerCase().includes(search))
+              // .filter((e) => e.name.toLowerCase().includes(search))
               .sort((a, b) => Number(a.daysLeft) - Number(b.daysLeft))
               .map((e) => (
                 <ResourceCard key={e._id} obj={e} />

@@ -27,15 +27,21 @@ export function ResourceForm() {
           <p>Quantity</p>
           <p>Unit</p>
         </div>
-        <div className="flex flex-col gap-2" >
+        <div className="flex flex-col gap-2">
           <TextInput
             className="!bg-grayish"
             onchange={() => console.log("jdwo")}
             value=""
           />
           <RadionSection>
-            {typeLabel.map((e) => (
-              <RadioBtn label={e.label} name="type" value={e.value} />
+            {typeLabel.map((e, i) => (
+              <RadioBtn
+                key={i.toString()}
+                label={e.label}
+                name="type"
+                value={e.value}
+                id={e.value}
+              />
             ))}
           </RadionSection>
           <TextInput
@@ -44,8 +50,14 @@ export function ResourceForm() {
             value=""
           />
           <RadionSection>
-            {unitLabel.map((e) => (
-              <RadioBtn label={e.label} name="unit" value={e.value} />
+            {unitLabel.map((e, i) => (
+              <RadioBtn
+                key={i.toString()}
+                label={e.label}
+                name="unit"
+                value={e.value}
+                id={e.value}
+              />
             ))}
           </RadionSection>
         </div>
