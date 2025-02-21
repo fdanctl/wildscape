@@ -22,7 +22,7 @@ export function ResourceCard({ obj }: { obj: ResourceWithStats }) {
 
   return (
      <div
-        className="flex flex-col gap-2 border border-primaryGreen rounded-xl pr-2 pl-6 py-4 cursor-pointer hover:border-2"
+        className="flex flex-col gap-2 border border-primaryGreen rounded-xl pr-2 pl-6 py-4 cursor-pointer hover:brightness-150"
         onClick={() => setVisibility((ps) => !ps)}
       >
         <div className="flex items-center justify-between">

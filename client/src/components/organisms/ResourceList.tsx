@@ -19,23 +19,23 @@ export function ResourceList() {
   }, []);
 
   return (
-    <div>
+    <>
+      <div className="flex justify-end gap-6 items-center text-center pr-2 mb-2 [&>p]:w-24 text-primaryGreen font-bold">
+        <p>Quantity</p>
+        <p>
+          Daily
+          <br />
+          Consumption
+        </p>
+        <p>Days Left</p>
+      </div>
+
       {resources.length === 0 ? (
         <p className="text-center text-primaryGreen">No resources found</p>
       ) : (
         <>
-          <div className="flex justify-end gap-6 items-center text-center pr-2 mb-2 [&>p]:w-24 text-primaryGreen font-bold">
-            <p>Quantity</p>
-            <p>
-              Daily
-              <br />
-              Consumption
-            </p>
-            <p>Days Left</p>
-          </div>
-          <div className="flex flex-col gap-2 h-[300px] overflow-y-auto">
+          <div className="flex flex-col gap-2 overflow-y-auto">
             {resources
-              // .filter((e) => e.name.toLowerCase().includes(search))
               .sort((a, b) => Number(a.daysLeft) - Number(b.daysLeft))
               .map((e) => (
                 <ResourceCard key={e._id} obj={e} />
@@ -43,6 +43,6 @@ export function ResourceList() {
           </div>
         </>
       )}
-    </div>
+    </>
   );
 }

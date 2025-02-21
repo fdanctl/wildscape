@@ -4,7 +4,7 @@ export function AnimalCard({ obj }: { obj: AnimalWithId}) {
 
 
   return (
-    <div className="flex items-center justify-between border border-primaryGreen rounded-xl pr-2 pl-6 py-4 cursor-pointer hover:border-2">
+    <div className="flex items-center justify-between border border-primaryGreen rounded-xl pr-2 pl-6 py-4 cursor-pointer hover:brightness-150">
       <div className="flex gap-6">
         <p className="text-xl font-bold text-primaryGreen">{obj.name}</p>
       </div>
