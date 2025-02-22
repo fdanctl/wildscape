@@ -70,5 +70,18 @@ export function useAnimalFilters() {
     [searchParams],
   );
 
-  return { q, order, species, gender, filtersCount, setAnimalFilters };
+  const clearAnimalFilters = useCallback(()=>{
+    setSearchParams()
+  },[])
+
+  return {
+    searchParams,
+    q,
+    order,
+    species,
+    gender,
+    filtersCount,
+    setAnimalFilters,
+    clearAnimalFilters,
+  };
 }
