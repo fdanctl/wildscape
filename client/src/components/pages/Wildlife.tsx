@@ -10,6 +10,8 @@ import { AnimalForm } from "../molecules/AnimalForm";
 import { FilterBar } from "../molecules/FilterBar";
 import { Layout } from "../templates/Layout";
 import { PopUp } from "../templates/PopUp";
+import { AnimalWithId } from "../../models/animal";
+import { useFilteredAnimals } from "../../hooks/useFilteredAnimal";
 
 interface WildlifePopUpState {
   baseFilters: boolean;
@@ -18,7 +20,11 @@ interface WildlifePopUpState {
 }
 
 export function Wildlife() {
+  const [animals, setAnimals] = useState<AnimalWithId[]>([]);
+  const filteredAnimals = useFilteredAnimals(animals);
+
   const { q, filtersCount, setAnimalFilters } = useAnimalFilters();
+
   const [search, setSearch] = useState<string>(q || "");
   const debouncedSearch = useDebounce(search);
 
@@ -28,8 +34,19 @@ export function Wildlife() {
     speciesFilters: false,
   });
 
+  // api call when page is loaded
   useEffect(() => {
-    setAnimalFilters({ q: search });
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3030/api/animals");
+      const body = await response.json();
+      setAnimals(body);
+    };
+    fetchData();
+  }, []);
+
+  //set q filter when local search state doesnt change for 500ms
+  useEffect(() => {
+    setAnimalFilters({ q: debouncedSearch });
   }, [debouncedSearch]);
 
   const handleChange = useCallback(
@@ -46,8 +63,6 @@ export function Wildlife() {
         {} as WildlifePopUpState,
       );
     });
-
-    console.log(popUpsState);
   };
 
   return (
@@ -60,6 +75,7 @@ export function Wildlife() {
       {popUpsState.baseFilters && (
         <PopUp close={closeAllPopUps}>
           <FilterBar
+            resultsNum={filteredAnimals.length}
             close={() =>
               setPopUpsState((ps) => ({ ...ps, baseFilters: false }))
             }
@@ -83,7 +99,7 @@ export function Wildlife() {
               setPopUpsState((ps) => ({ ...ps, baseFilters: true }))
             }
           />
-          <AnimalList />
+          <AnimalList list={filteredAnimals} />
         </ContentBox>
       </Layout>
     </>

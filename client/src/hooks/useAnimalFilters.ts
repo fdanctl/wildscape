@@ -3,12 +3,13 @@ import { useSearchParams } from "react-router-dom";
 
 export interface AnimalFilters {
   q?: string;
-  order?: "nameAsc" | "nameDes" | "ageAsc" | "ageDes";
+  order?: "nameAsc" | "nameDesc" | "ageAsc" | "ageDesc";
   species?: string;
   gender?: "male" | "female";
-  maxAge?: number;
-  minAge?: number;
+  ageRange?: number[];
 }
+
+export const defaultAgeRange = [0, 100];
 
 export function useAnimalFilters() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -17,6 +18,10 @@ export function useAnimalFilters() {
   const order = searchParams.get("order");
   const species = searchParams.get("species")?.split("|");
   const gender = searchParams.get("gender")?.split("|");
+  const ageRange = searchParams
+    .get("ageRange")
+    ?.split("-")
+    ?.map((e) => Number(e));
   const filtersCount = (species?.length || 0) + (gender?.length || 0);
 
   const setAnimalFilters = useCallback(
@@ -64,15 +69,26 @@ export function useAnimalFilters() {
             : params.set("gender", newGender.join("|"));
         }
 
+        if (filters.ageRange !== undefined) {
+          if (
+            remove ||
+            JSON.stringify(filters.ageRange) === JSON.stringify(defaultAgeRange)
+          ) {
+            params.delete("ageRange");
+          } else {
+            params.set("ageRange", Object.values(filters.ageRange).join("-"));
+          }
+        }
+
         return params;
       });
     },
     [searchParams],
   );
 
-  const clearAnimalFilters = useCallback(()=>{
-    setSearchParams()
-  },[])
+  const clearAnimalFilters = useCallback(() => {
+    setSearchParams();
+  }, []);
 
   return {
     searchParams,
@@ -80,6 +96,7 @@ export function useAnimalFilters() {
     order,
     species,
     gender,
+    ageRange,
     filtersCount,
     setAnimalFilters,
     clearAnimalFilters,

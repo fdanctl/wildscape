@@ -5,9 +5,17 @@ import { XSvg } from "../atoms/XSvg";
 import { Filters } from "./Filters";
 import { SpeciesFilters } from "./SpeciesFilters";
 
-export function FilterBar({ close }: { close: () => void }) {
+export function FilterBar({
+  resultsNum,
+  close,
+}: {
+  resultsNum: number;
+  close: () => void;
+}) {
   const [showingSpecies, setShowingSpecies] = useState<boolean>(false);
-  const { clearAnimalFilters } = useAnimalFilters();
+  const { species, gender, clearAnimalFilters } = useAnimalFilters();
+
+  const currUsedFilters = (gender || []).concat(species || []);
 
   return (
     <div className="flex flex-col justify-between text-primaryGreen h-full w-1/3 px-7 pt-10 pb-7 bg-grayish absolute right-0 z-10">
@@ -31,7 +39,14 @@ export function FilterBar({ close }: { close: () => void }) {
           </i>
         </div>
         <div>
-          {/* filters */}
+          <div className="flex flex-wrap gap-1">
+            {currUsedFilters.map((e, i) => (
+              <div key={i.toString()} className="border border-primaryGreen flex gap-1">
+                <p>{e}</p>
+                <p>X</p>
+              </div>
+            ))}
+          </div>
           <p className="font-bold cursor-pointer" onClick={clearAnimalFilters}>
             Limpar filtros
           </p>
@@ -42,7 +57,7 @@ export function FilterBar({ close }: { close: () => void }) {
           <Filters openSpecies={() => setShowingSpecies(true)} />
         )}
       </div>
-      <p className="text-center">Showing 10 results</p>
+      <p className="text-center">Showing {resultsNum} results</p>
     </div>
   );
 }

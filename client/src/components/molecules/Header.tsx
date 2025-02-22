@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useClock } from "../../hooks/useClock";
+import { capitalize } from "../../lib/utils";
 
 export function Header({
   employeeName,
@@ -7,32 +9,24 @@ export function Header({
   employeeName: string;
   employeeRole: string;
 }) {
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-  }, []);
+  const date = useClock()
 
   return (
     <header className="flex justify-between items-center text-grayish pt-2">
       <div className="flex flex-col">
         <p className="text-2xl font-bold">{employeeName}</p>
-        <p className="text-base">
-          {employeeRole[0].toUpperCase() + employeeRole.slice(1)}
-        </p>
+        <p className="text-base">{capitalize(employeeRole)}</p>
       </div>
       <div className="flex flex-col items-center">
         <p className="text-lg">
-          {date.toLocaleDateString("en", {
+          {date.toLocaleDateString("en-US", {
             weekday: "long",
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </p>
-        <p className="text-base">{date.toLocaleTimeString("en")}</p>
+        <p className="text-base">{date.toLocaleTimeString("en-US")}</p>
       </div>
     </header>
   );

@@ -6,39 +6,33 @@ import { FilterOptBtn } from "../atoms/FilterOptBtn";
 export function Filters({ openSpecies }: { openSpecies: () => void }) {
   const { order, gender } = useAnimalFilters();
 
-  const genderOpt = [
-    {
-      name: "Male",
-      value: "male",
-      selected: !gender ? false : gender.includes("male"),
-    },
-    {
-      name: "Female",
-      value: "female",
-      selected: !gender ? false : gender.includes("female"),
-    },
-  ];
-
   const orderOpt = [
     {
       name: "A-Z",
-      value: "nameAsc",
-      selected: order === "nameAsc",
+      value: "nameAsc" as AnimalFilters["order"],
     },
     {
       name: "Z-A",
-      value: "nameDes",
-      selected: order === "nameDes",
+      value: "nameDesc" as AnimalFilters["order"],
     },
     {
       name: "Youngest to Oldest",
-      value: "ageAsc",
-      selected: order === "ageAsc",
+      value: "ageAsc" as AnimalFilters["order"],
     },
     {
       name: "Oldest to Youngest",
-      value: "ageDes",
-      selected: order === "ageDes",
+      value: "ageDesc" as AnimalFilters["order"],
+    },
+  ];
+
+  const genderOpt = [
+    {
+      name: "Male",
+      value: "male" as AnimalFilters["gender"],
+    },
+    {
+      name: "Female",
+      value: "female" as AnimalFilters["gender"],
     },
   ];
 
@@ -51,7 +45,7 @@ export function Filters({ openSpecies }: { openSpecies: () => void }) {
             <FilterOptBtn
               key={i.toString()}
               name={e.name}
-              selected={e.selected}
+              selected={order === e.value}
               type="order"
               value={e.value as AnimalFilters["order"]}
             />
@@ -78,9 +72,9 @@ export function Filters({ openSpecies }: { openSpecies: () => void }) {
             <FilterOptBtn
               key={i.toString()}
               name={e.name}
-              selected={e.selected}
+              selected={!gender ? false : gender.includes(e.value as string)}
               type="gender"
-              value={e.value as AnimalFilters["gender"]}
+              value={e.value}
             />
           ))}
         </div>
