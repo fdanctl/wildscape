@@ -5,7 +5,8 @@ import { useAnimalFilters } from "./useAnimalFilters";
 // for filtering in client-side
 export function useFilteredAnimals(animals: AnimalWithId[]) {
   const [filteredAnimals, setFilteredAnimals] = useState<AnimalWithId[]>([]);
-  const { searchParams, q, order, species, gender } = useAnimalFilters();
+  const { searchParams, q, order, species, gender, ageRange } =
+    useAnimalFilters();
 
   const nameAsc = (a: AnimalWithId, b: AnimalWithId) => {
     const textA = a.name.toUpperCase();
@@ -37,7 +38,8 @@ export function useFilteredAnimals(animals: AnimalWithId[]) {
           (e) =>
             (!q || e.name.toLowerCase().includes(q.toLowerCase())) &&
             (!species || species.includes(e.species)) &&
-            (!gender || gender.includes(e.gender)),
+            (!gender || gender.includes(e.gender)) &&
+            (!ageRange || (e.age >= ageRange[0] && e.age <= ageRange[1])),
         )
         .sort((a, b) => (actionMap.get(order || "nameAsc") || nameAsc)(a, b)),
     );

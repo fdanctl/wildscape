@@ -4,7 +4,12 @@ import { DoubleSlider } from "../atoms/DoubleSlider";
 import { FilterOptBtn } from "../atoms/FilterOptBtn";
 
 export function Filters({ openSpecies }: { openSpecies: () => void }) {
-  const { order, gender } = useAnimalFilters();
+  const { order, species, gender, ageRange, clearAnimalFilters } =
+    useAnimalFilters();
+
+  const currUsedFilters = (gender || [])
+    .concat(species || [])
+    .concat(ageRange ? `Age Range [${ageRange.join("-")}]` : []);
 
   const orderOpt = [
     {
@@ -38,6 +43,24 @@ export function Filters({ openSpecies }: { openSpecies: () => void }) {
 
   return (
     <>
+      {currUsedFilters.length > 0 && (
+        <div>
+          <div className="flex flex-wrap gap-1">
+            {currUsedFilters.map((e, i) => (
+              <div
+                key={i.toString()}
+                className="border border-primaryGreen flex gap-1 p-1"
+              >
+                <p>{e}</p>
+                <p>X</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-bold cursor-pointer" onClick={clearAnimalFilters}>
+            Limpar filtros
+          </p>
+        </div>
+      )}
       <div>
         <p className="font-bold text-2xl mb-2">Order</p>
         <div className="flex flex-wrap gap-2">

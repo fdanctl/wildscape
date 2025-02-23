@@ -11,7 +11,7 @@ import { FilterBar } from "../molecules/FilterBar";
 import { Layout } from "../templates/Layout";
 import { PopUp } from "../templates/PopUp";
 import { AnimalWithId } from "../../models/animal";
-import { useFilteredAnimals } from "../../hooks/useFilteredAnimal";
+import { useFilteredAnimals } from "../../hooks/useFilteredAnimals";
 
 interface WildlifePopUpState {
   baseFilters: boolean;

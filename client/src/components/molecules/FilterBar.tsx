@@ -13,9 +13,7 @@ export function FilterBar({
   close: () => void;
 }) {
   const [showingSpecies, setShowingSpecies] = useState<boolean>(false);
-  const { species, gender, clearAnimalFilters } = useAnimalFilters();
 
-  const currUsedFilters = (gender || []).concat(species || []);
 
   return (
     <div className="flex flex-col justify-between text-primaryGreen h-full w-1/3 px-7 pt-10 pb-7 bg-grayish absolute right-0 z-10">
@@ -39,17 +37,6 @@ export function FilterBar({
           </i>
         </div>
         <div>
-          <div className="flex flex-wrap gap-1">
-            {currUsedFilters.map((e, i) => (
-              <div key={i.toString()} className="border border-primaryGreen flex gap-1">
-                <p>{e}</p>
-                <p>X</p>
-              </div>
-            ))}
-          </div>
-          <p className="font-bold cursor-pointer" onClick={clearAnimalFilters}>
-            Limpar filtros
-          </p>
         </div>
         {showingSpecies ? (
           <SpeciesFilters />

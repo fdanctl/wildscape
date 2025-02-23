@@ -12,7 +12,7 @@ export function ResourceCard({ obj }: { obj: ResourceWithStats }) {
   ]);
 
   const daysColor =
-    !obj.daysLeft || obj.daysLeft === "Infinity"
+    obj.daysLeft == null || obj.daysLeft === "Infinity"
       ? "text-xs"
       : obj.daysLeft > 30
         ? "text-[#008767]"
