@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAnimalFilters } from "../../hooks/useAnimalFilters";
+import { AnimalWithId } from "../../models/animal";
 import { MainBtnS } from "../atoms/MainBtnS";
 import { RadioBtn } from "../atoms/RadioBtn";
 import { TextInput } from "../atoms/TextInput";
@@ -18,12 +19,7 @@ interface DailyForm {
   quantity: string;
 }
 
-export function AnimalForm() {
-  const genderLabel = [
-    { label: "male", value: "male" },
-    { label: "female", value: "female" },
-  ];
-
+export function AnimalForm({ animalId }: { animalId?: string | null }) {
   const { q } = useAnimalFilters();
 
   const [form, setForm] = useState<Form>({
@@ -39,6 +35,31 @@ export function AnimalForm() {
     quantity: "",
   });
 
+  // fetch animal data by id
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!!animalId) {
+        const response = await fetch(
+          `http://localhost:3030/api/animals/${animalId}`,
+        );
+        const body: AnimalWithId = await response.json();
+        setForm({
+          name: body.name,
+          age: String(body.age),
+          species: body.species,
+          gender: body.gender,
+          needs: [],
+        });
+      }
+    };
+    fetchData();
+  }, []);
+
+  const genderLabel = [
+    { label: "male", value: "male" },
+    { label: "female", value: "female" },
+  ];
+
   const handleFormChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     field: keyof Form,
@@ -51,8 +72,7 @@ export function AnimalForm() {
 
   return (
     <form className="rounded-xl px-14 py-10 bg-secundaryGreen z-50 flex flex-col">
-      {/* or edit */}
-      <h2 className="font-bold text-3xl text-center mb-5">Add New Animal</h2>
+      <h2 className="font-bold text-3xl text-center mb-5">{animalId ? "Edit Animal" : "Add New Animal"}</h2>
       <div className="flex gap-4 [&_p]: text-lg">
         <div className="flex flex-col gap-2 items-end [&>label]:font-bold [&>label]:after:content-[':'] [&>label]:text-right">
           <label htmlFor="name">Name</label>
@@ -67,6 +87,7 @@ export function AnimalForm() {
             onchange={(e) => handleFormChange(e, "name")}
             value={form.name}
             id="name"
+            disabled={!!animalId}
           />
           <TextInput
             className="!w-10 !bg-grayish"

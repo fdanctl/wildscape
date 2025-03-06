@@ -34,6 +34,8 @@ export function Wildlife() {
     speciesFilters: false,
   });
 
+  const [currAnimalId, setCurrAnimalId] = useState<string | null>(null);
+
   // api call when page is loaded
   useEffect(() => {
     const fetchData = async () => {
@@ -69,7 +71,7 @@ export function Wildlife() {
     <>
       {popUpsState.animalForm && (
         <PopUp close={closeAllPopUps}>
-          <AnimalForm />
+          <AnimalForm animalId={currAnimalId} />
         </PopUp>
       )}
       {popUpsState.baseFilters && (
@@ -89,9 +91,10 @@ export function Wildlife() {
             searchPlaceholder="Animal name"
             searchValue={search}
             searchOnChange={handleChange}
-            addBtnOnClick={() =>
-              setPopUpsState((ps) => ({ ...ps, animalForm: true }))
-            }
+            addBtnOnClick={() => {
+              setCurrAnimalId(null);
+              setPopUpsState((ps) => ({ ...ps, animalForm: true }));
+            }}
           />
           <FilterBtn
             filters={filtersCount}
@@ -99,7 +102,13 @@ export function Wildlife() {
               setPopUpsState((ps) => ({ ...ps, baseFilters: true }))
             }
           />
-          <AnimalList list={filteredAnimals} />
+          <AnimalList
+            list={filteredAnimals}
+            openForm={() =>
+              setPopUpsState((ps) => ({ ...ps, animalForm: true }))
+            }
+            setCurrAnimal={setCurrAnimalId}
+          />
         </ContentBox>
       </Layout>
     </>

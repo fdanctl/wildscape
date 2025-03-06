@@ -1,45 +1,23 @@
-import { useEffect, useState } from "react";
-import { defaultAgeRange, useAnimalFilters } from "../../hooks/useAnimalFilters";
-import { useDebounce } from "../../hooks/useDebounce";
-
-export function DoubleSlider() {
-  const minAge = defaultAgeRange[0]
-  const maxAge = defaultAgeRange[1]
-
-  const { ageRange, setAnimalFilters } = useAnimalFilters();
-  const [range, setRange] = useState(ageRange || [minAge, maxAge]);
-  const debouncedRange = useDebounce(range);
-
-  const gap = 1;
-  const maxGap = maxAge - minAge;
-
-  useEffect(() => {
-    setAnimalFilters({ ageRange: debouncedRange });
-  }, [debouncedRange]);
-
-  const handleChangeMin = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRange((ps) => [
-      Math.min(Number(e.target.value), ps ? ps[1] - gap : maxAge),
-      ps ? ps[1] : maxAge,
-    ]);
-  };
-
-  const handleChangeMax = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRange((ps) => [
-      ps ? ps[0] : minAge,
-      Math.max(Number(e.target.value), ps ? ps[0] + gap : minAge),
-    ]);
-  };
-
-  useEffect(() => {
-    setAnimalFilters({ ageRange: range });
-  }, [debouncedRange]);
+export function DoubleSlider({
+  range,
+  min,
+  max,
+  handleChangeMax,
+  handleChangeMin,
+}: {
+  range: number[];
+  min: number;
+  max: number;
+  handleChangeMax: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChangeMin: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
+  const maxGap = max - min;
 
   return (
     <>
       <div className="flex justify-between">
-        <p>{range[0] || minAge}</p>
-        <p>{range[1] || maxAge}</p>
+        <p>{range[0] || min}</p>
+        <p>{range[1] || max}</p>
       </div>
 
       <div className="relative w-full h-full mt-2">
@@ -58,16 +36,16 @@ export function DoubleSlider() {
           type="range"
           min="0"
           max="100"
-          value={range[0] || minAge}
+          value={range[0] || min}
           id="slider-1"
           onChange={(e) => handleChangeMin(e)}
         />
         <input
           className="appearance-none w-full outline-none m-auto top-0 bottom-0 bg-transparent pointer-events-auto absolute cursor-pointer"
           type="range"
-          min={minAge}
-          max={maxAge}
-          value={range[1] || maxAge}
+          min={min}
+          max={max}
+          value={range[1] || max}
           id="slider-2"
           onChange={(e) => handleChangeMax(e)}
         />

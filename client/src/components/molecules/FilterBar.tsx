@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useAnimalFilters } from "../../hooks/useAnimalFilters";
 import { BackArrowSvg } from "../atoms/BackArrowSvg";
 import { XSvg } from "../atoms/XSvg";
 import { Filters } from "./Filters";

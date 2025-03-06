@@ -1,5 +1,105 @@
 [{
   "_id": {
+    "$oid": "67a6f2006fa544d88be87510"
+  },
+  "name": "Tiger Meat",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 400,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2026fa544d88be87511"
+  },
+  "name": "Zebra Grass Mix",
+  "type": "food",
+  "subtype": "grass",
+  "quantity": 800,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2046fa544d88be87512"
+  },
+  "name": "Eucalyptus Leaves",
+  "type": "food",
+  "subtype": "leaves",
+  "quantity": 300,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2066fa544d88be87513"
+  },
+  "name": "Bear Fish and Berries",
+  "type": "food",
+  "subtype": "mixed",
+  "quantity": 600,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2086fa544d88be87514"
+  },
+  "name": "Owl Frozen Mice",
+  "type": "food",
+  "subtype": "rodent",
+  "quantity": 250,
+  "unit": "units"
+},
+{
+  "_id": {
+    "$oid": "67a6f20a6fa544d88be87515"
+  },
+  "name": "Cheetah Raw Meat",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 500,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f20c6fa544d88be87516"
+  },
+  "name": "Monkey Fruit Mix",
+  "type": "food",
+  "subtype": "fruit",
+  "quantity": 200,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f20e6fa544d88be87517"
+  },
+  "name": "Wolf Meat and Bones",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 450,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2106fa544d88be87518"
+  },
+  "name": "Camel Hay and Water",
+  "type": "food",
+  "subtype": "hay",
+  "quantity": 700,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a6f2126fa544d88be87519"
+  },
+  "name": "Rabbit Fresh Vegetables",
+  "type": "food",
+  "subtype": "vegetables",
+  "quantity": 300,
+  "unit": "kg"
+},
+{
+  "_id": {
     "$oid": "6799f2b008e74859037bc3c0"
   },
   "name": "Feline Food",
@@ -67,4 +167,64 @@
   "subtype": "vitamin",
   "quantity": 200,
   "unit": "tablets"
+},
+{
+  "_id": {
+    "$oid": "67a5dfae6fa544d88be87493"
+  },
+  "name": "Penguin Vacines",
+  "type": "med",
+  "subtype": "vacine",
+  "quantity": 200,
+  "unit": "doses"
+},
+{
+  "_id": {
+    "$oid": "67a702006fa544d88be87700"
+  },
+  "name": "Big Cat Raw Meat",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 1000,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a702016fa544d88be87701"
+  },
+  "name": "Elephant Grass Bundle",
+  "type": "food",
+  "subtype": "grass",
+  "quantity": 2000,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a702026fa544d88be87702"
+  },
+  "name": "Beaver Fresh Bark",
+  "type": "food",
+  "subtype": "wood",
+  "quantity": 500,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a702036fa544d88be87703"
+  },
+  "name": "Lemur Fruit Mix",
+  "type": "food",
+  "subtype": "fruit",
+  "quantity": 300,
+  "unit": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a702046fa544d88be87704"
+  },
+  "name": "Wolf Meat Supply",
+  "type": "food",
+  "subtype": "meat",
+  "quantity": 800,
+  "unit": "kg"
 }]

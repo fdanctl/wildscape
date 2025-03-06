@@ -22,7 +22,8 @@ export function useAnimalFilters() {
     .get("ageRange")
     ?.split("-")
     ?.map((e) => Number(e));
-  const filtersCount = (species?.length || 0) + (gender?.length || 0);
+  const filtersCount =
+    (species?.length || 0) + (gender?.length || 0) + (ageRange ? 1 : 0);
 
   const setAnimalFilters = useCallback(
     (filters: AnimalFilters, remove = false) => {
@@ -83,12 +84,12 @@ export function useAnimalFilters() {
         return params;
       });
     },
-    [searchParams],
+    [gender, setSearchParams, species],
   );
 
   const clearAnimalFilters = useCallback(() => {
     setSearchParams();
-  }, []);
+  }, [setSearchParams]);
 
   return {
     searchParams,

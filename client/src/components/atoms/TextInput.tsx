@@ -4,7 +4,8 @@ export function TextInput({
   value,
   password,
   className,
-  id
+  id,
+  disabled,
 }: {
   placeholder?: string;
   onchange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -12,6 +13,7 @@ export function TextInput({
   password?: boolean;
   className?: string;
   id?: string;
+  disabled?: boolean;
 }) {
   return (
     <input
@@ -21,6 +23,7 @@ export function TextInput({
       value={value}
       onChange={onchange}
       id={id}
+      disabled={disabled}
     />
   );
 }

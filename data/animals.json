@@ -1,9 +1,170 @@
 [{
   "_id": {
+    "$oid": "67a6f1006fa544d88be87500"
+  },
+  "name": "Rex",
+  "age": 6,
+  "gender": "male",
+  "species": "tiger",
+  "dailyNeeds": [
+    {
+      "quantity": 60,
+      "unit": "kg",
+      "resource_id": "67a6f2006fa544d88be87510"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1026fa544d88be87501"
+  },
+  "name": "Zara",
+  "age": 8,
+  "gender": "female",
+  "species": "zebra",
+  "dailyNeeds": [
+    {
+      "quantity": 35,
+      "unit": "kg",
+      "resource_id": "67a6f2026fa544d88be87511"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1046fa544d88be87502"
+  },
+  "name": "Kiko",
+  "age": 5,
+  "gender": "male",
+  "species": "koala",
+  "dailyNeeds": [
+    {
+      "quantity": 10,
+      "unit": "kg",
+      "resource_id": "67a6f2046fa544d88be87512"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1066fa544d88be87503"
+  },
+  "name": "Benny",
+  "age": 2,
+  "gender": "male",
+  "species": "bear",
+  "dailyNeeds": [
+    {
+      "quantity": 50,
+      "unit": "kg",
+      "resource_id": "67a6f2066fa544d88be87513"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1086fa544d88be87504"
+  },
+  "name": "Oscar",
+  "age": 9,
+  "gender": "male",
+  "species": "owl",
+  "dailyNeeds": [
+    {
+      "quantity": 10,
+      "unit": "units",
+      "resource_id": "67a6f2086fa544d88be87514"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f10a6fa544d88be87505"
+  },
+  "name": "Nala",
+  "age": 7,
+  "gender": "female",
+  "species": "cheetah",
+  "dailyNeeds": [
+    {
+      "quantity": 55,
+      "unit": "kg",
+      "resource_id": "67a6f20a6fa544d88be87515"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f10c6fa544d88be87506"
+  },
+  "name": "Milo",
+  "age": 3,
+  "gender": "male",
+  "species": "monkey",
+  "dailyNeeds": [
+    {
+      "quantity": 8,
+      "unit": "kg",
+      "resource_id": "67a6f20c6fa544d88be87516"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f10e6fa544d88be87507"
+  },
+  "name": "Luna",
+  "age": 4,
+  "gender": "female",
+  "species": "wolf",
+  "dailyNeeds": [
+    {
+      "quantity": 45,
+      "unit": "kg",
+      "resource_id": "67a6f20e6fa544d88be87517"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1106fa544d88be87508"
+  },
+  "name": "Charlie",
+  "age": 10,
+  "gender": "male",
+  "species": "camel",
+  "dailyNeeds": [
+    {
+      "quantity": 40,
+      "unit": "kg",
+      "resource_id": "67a6f2106fa544d88be87518"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a6f1126fa544d88be87509"
+  },
+  "name": "Ruby",
+  "age": 6,
+  "gender": "female",
+  "species": "rabbit",
+  "dailyNeeds": [
+    {
+      "quantity": 2,
+      "unit": "kg",
+      "resource_id": "67a6f2126fa544d88be87519"
+    }
+  ]
+},
+{
+  "_id": {
     "$oid": "6799f478828675b64c75f470"
   },
   "name": "Simba",
   "age": 5,
+  "gender": "male",
   "species": "lion",
   "dailyNeeds": [
     {
@@ -24,6 +185,7 @@
   },
   "name": "Gigi",
   "age": 7,
+  "gender": "female",
   "species": "giraffe",
   "dailyNeeds": [
     {
@@ -39,6 +201,7 @@
   },
   "name": "Dumbo",
   "age": 12,
+  "gender": "male",
   "species": "elephant",
   "dailyNeeds": [
     {
@@ -54,6 +217,7 @@
   },
   "name": "Penko",
   "age": 3,
+  "gender": "female",
   "species": "penguin",
   "dailyNeeds": [
     {
@@ -69,6 +233,7 @@
   },
   "name": "Penny",
   "age": 9,
+  "gender": "female",
   "species": "penguin",
   "dailyNeeds": [
     {
@@ -89,12 +254,93 @@
   },
   "name": "Polly",
   "age": 4,
+  "gender": "female",
   "species": "parrot",
   "dailyNeeds": [
     {
       "quantity": 0.5,
       "unit": "kg",
       "resource_id": "679a3dc6fd21a421e9bb7f44"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a701006fa544d88be87600"
+  },
+  "name": "Leo",
+  "age": 6,
+  "gender": "male",
+  "species": "lion",
+  "dailyNeeds": [
+    {
+      "quantity": 50,
+      "unit": "kg",
+      "resource_id": "67a702006fa544d88be87700"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a701016fa544d88be87601"
+  },
+  "name": "Ella",
+  "age": 8,
+  "gender": "female",
+  "species": "elephant",
+  "dailyNeeds": [
+    {
+      "quantity": 120,
+      "unit": "kg",
+      "resource_id": "67a702016fa544d88be87701"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a701026fa544d88be87602"
+  },
+  "name": "Bucky",
+  "age": 3,
+  "gender": "male",
+  "species": "beaver",
+  "dailyNeeds": [
+    {
+      "quantity": 5,
+      "unit": "kg",
+      "resource_id": "67a702026fa544d88be87702"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a701036fa544d88be87603"
+  },
+  "name": "Lola",
+  "age": 2,
+  "gender": "female",
+  "species": "lemur",
+  "dailyNeeds": [
+    {
+      "quantity": 6,
+      "unit": "kg",
+      "resource_id": "67a702036fa544d88be87703"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a701046fa544d88be87604"
+  },
+  "name": "Duke",
+  "age": 9,
+  "gender": "male",
+  "species": "wolf",
+  "dailyNeeds": [
+    {
+      "quantity": 40,
+      "unit": "kg",
+      "resource_id": "67a702046fa544d88be87704"
     }
   ]
 }]
