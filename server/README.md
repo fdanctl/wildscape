@@ -10,6 +10,10 @@ http://localhost:3030
 
 pesquisa o nome do recurso
 
+### GET /api/resources/:id
+
+get resource by id
+
 ### GET /api/resources
 
 ler todos os recursos na base de dados return os recursos com estatisticas (consumo diario e estimativa de fim de stock)

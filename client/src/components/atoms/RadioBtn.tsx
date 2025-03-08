@@ -3,13 +3,15 @@ export function RadioBtn({
   name,
   value,
   id,
+  checked,
   onchange,
 }: {
   label: string;
   name: string;
   value: string;
   id: string;
-  onchange?: () => void;
+  checked: boolean;
+  onchange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <div className="flex gap-1">
@@ -19,6 +21,7 @@ export function RadioBtn({
         id={id}
         name={name}
         value={value}
+        checked={checked}
         onChange={onchange}
       />
       <label htmlFor={value}>{label}</label>

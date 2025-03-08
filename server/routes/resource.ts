@@ -1,6 +1,7 @@
 import express from "express";
 import {
   CreateResource,
+  ReadResourceById,
   ReadResources,
   ReadResourcesByName,
   UpdateResource,
@@ -36,10 +37,24 @@ router.post("/", async (req: Request, res: Response) => {
   res.status(200).json({ message: "created successfully", id: id });
 });
 
-// aumentar/deduzir comida do total
-router.patch("/:id", async (req, res) => {
-  const id = req.params.id;
-  const quantity = req.body.quantity;
-  await UpdateResource({ _id: id, quantity: quantity });
-  res.status(200).json({ message: "atualizado com sucesso" });
-});
+router
+  .route("/:id")
+
+  .get(async (req, res) => {
+    const id = req.params.id;
+    const data = await ReadResourceById(id);
+
+    if (!data) {
+      res.status(404).json({ message: "page not found" });
+    }
+
+    res.status(200).json(data);
+  })
+
+  // aumentar/deduzir comida do total
+  .patch(async (req, res) => {
+    const id = req.params.id;
+    const quantity = req.body.quantity;
+    await UpdateResource({ _id: id, quantity: quantity });
+    res.status(200).json({ message: "atualizado com sucesso" });
+  });

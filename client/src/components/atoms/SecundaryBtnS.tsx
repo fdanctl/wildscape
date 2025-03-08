@@ -1,4 +1,4 @@
-export function MainBtnS({
+export function SecundaryBtnS({
   text,
   className,
   type = "button",
@@ -11,7 +11,7 @@ export function MainBtnS({
 }) {
   return (
     <button
-      className={`bg-primaryGreen text-grayish text-xl px-5 py-1 rounded transition-all duration-200 ease-in-out ${className} hover:brightness-125`}
+      className={`border border-primaryGreen text-primaryGreen text-xl px-5 py-1 rounded transition-all duration-200 ease-in-out ${className} hover:brightness-125`}
       type={type}
       onClick={onclick}
     >

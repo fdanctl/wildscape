@@ -4,9 +4,11 @@ import { SecundaryBtn } from "../atoms/SecundaryBtn";
 export function RemoveConfirm({
   type,
   name,
+  resourceId,
 }: {
   type: "animal" | "resource" | "employee";
   name: string;
+  resourceId?: string | null;
 }) {
   return (
     <div className="rounded-xl px-14 py-10 bg-secundaryGreen z-50 flex flex-col gap-8 max-w-[80vw] text-center font-bold">

@@ -5,11 +5,13 @@ import {
   FindResourceByName,
   InsertResource,
   FindResourceByNameSearch,
+  FindResourceById,
 } from "../data/resource";
 import {
   Resource,
   ResourceDeduction,
   ResourceWithStats,
+  ResourceWithId,
 } from "../models/resource";
 
 export async function ReadResources(): Promise<ResourceWithStats[]> {
@@ -35,6 +37,14 @@ export async function ReadResources(): Promise<ResourceWithStats[]> {
       ? Math.floor(e.quantity / consumptionMap.get(e._id.toString()))
       : "Infinity",
   }));
+}
+
+export async function ReadResourceById(
+  id: string,
+): Promise< ResourceWithId | null> {
+  const resource = await FindResourceById(id)
+
+  return resource
 }
 
 export async function CreateResource(body: Resource): Promise<string> {

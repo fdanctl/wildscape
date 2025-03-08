@@ -22,7 +22,7 @@ export async function FindResources(): Promise<ResourceWithId[]> {
 }
 
 export async function FindResourceByName(
-  resourceName: string
+  resourceName: string,
 ): Promise<ResourceWithId[]> {
   const collection = await getMongoCollection(db, col);
   const result = await collection.findOne({ name: resourceName });
@@ -30,8 +30,17 @@ export async function FindResourceByName(
   return result;
 }
 
+export async function FindResourceById(
+  id: string,
+): Promise<ResourceWithId | null> {
+  const newId = new ObjectId(id);
+  const collection = await getMongoCollection(db, col);
+  const result = await collection.findOne({ _id: newId });
+  return result;
+}
+
 export async function FindResourceByNameSearch(
-  str: string
+  str: string,
 ): Promise<ResourceWithId[] | null> {
   const collection = await getMongoCollection(db, col);
   const result = await collection
@@ -51,7 +60,7 @@ export async function ChangeResource(obj: ResourceDeduction) {
   const collection = await getMongoCollection(db, col);
   await collection.updateOne(
     { _id: newId },
-    { $inc: { quantity: obj.quantity } }
+    { $inc: { quantity: obj.quantity } },
   );
   return;
 }

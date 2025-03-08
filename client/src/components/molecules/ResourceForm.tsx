@@ -4,7 +4,7 @@ import { TextInput } from "../atoms/TextInput";
 import { RadionSection } from "./RadioSection";
 
 // make to also edit, props { edit, state }: {edit: bool; state: ResourceInterface}
-export function ResourceForm() {
+export function ResourceForm({ resourceId }: { resourceId?: string | null }) {
   const typeLabel = [
     { label: "food", value: "food" },
     { label: "medicine", value: "medicine" },
@@ -41,6 +41,7 @@ export function ResourceForm() {
                 name="type"
                 value={e.value}
                 id={e.value}
+                checked={false}
               />
             ))}
           </RadionSection>
@@ -57,6 +58,7 @@ export function ResourceForm() {
                 name="unit"
                 value={e.value}
                 id={e.value}
+                checked={false}
               />
             ))}
           </RadionSection>

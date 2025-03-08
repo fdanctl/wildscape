@@ -1,8 +1,19 @@
+import { Dispatch, SetStateAction } from "react";
 import { useEffect, useState } from "react";
 import { ResourceWithStats } from "../../models/resource";
 import { ResourceCard } from "../molecules/ResourceCard";
 
-export function ResourceList() {
+export function ResourceList({
+  add,
+  edit,
+  remove,
+  setCurrResource,
+}: {
+  add: () => void;
+  edit: () => void;
+  remove: () => void;
+  setCurrResource: Dispatch<SetStateAction<string | null>>;
+}) {
   const [resources, setResources] = useState<ResourceWithStats[]>([]);
   const [visibility, setVisibility] = useState(new Map());
 
@@ -38,7 +49,14 @@ export function ResourceList() {
             {resources
               .sort((a, b) => Number(a.daysLeft) - Number(b.daysLeft))
               .map((e) => (
-                <ResourceCard key={e._id} obj={e} />
+                <ResourceCard
+                  key={e._id}
+                  obj={e}
+                  add={add}
+                  edit={edit}
+                  remove={remove}
+                  setCurrResource={setCurrResource}
+                />
               ))}
           </div>
         </>

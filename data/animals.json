@@ -10,7 +10,8 @@
     {
       "quantity": 60,
       "unit": "kg",
-      "resource_id": "67a6f2006fa544d88be87510"
+      "resource_id": "67a6f2006fa544d88be87510",
+      "resourceName": "Tiger Meat"
     }
   ]
 },
@@ -26,7 +27,8 @@
     {
       "quantity": 35,
       "unit": "kg",
-      "resource_id": "67a6f2026fa544d88be87511"
+      "resource_id": "67a6f2026fa544d88be87511",
+      "resourceName": "Zebra Grass Mix"
     }
   ]
 },
@@ -42,7 +44,8 @@
     {
       "quantity": 10,
       "unit": "kg",
-      "resource_id": "67a6f2046fa544d88be87512"
+      "resource_id": "67a6f2046fa544d88be87512",
+      "resourceName": "Eucalyptus Leaves"
     }
   ]
 },
@@ -58,7 +61,8 @@
     {
       "quantity": 50,
       "unit": "kg",
-      "resource_id": "67a6f2066fa544d88be87513"
+      "resource_id": "67a6f2066fa544d88be87513",
+      "resourceName": "Beat Fish and Berries"
     }
   ]
 },
@@ -74,7 +78,8 @@
     {
       "quantity": 10,
       "unit": "units",
-      "resource_id": "67a6f2086fa544d88be87514"
+      "resource_id": "67a6f2086fa544d88be87514",
+      "resourceName": "Owl Frozen Mice"
     }
   ]
 },
@@ -90,7 +95,8 @@
     {
       "quantity": 55,
       "unit": "kg",
-      "resource_id": "67a6f20a6fa544d88be87515"
+      "resource_id": "67a6f20a6fa544d88be87515",
+      "resourceName": "Cheetah Raw Meat"
     }
   ]
 },
@@ -106,7 +112,8 @@
     {
       "quantity": 8,
       "unit": "kg",
-      "resource_id": "67a6f20c6fa544d88be87516"
+      "resource_id": "67a6f20c6fa544d88be87516",
+      "resourceName": "Monkey Fruit Mix"
     }
   ]
 },
@@ -122,7 +129,8 @@
     {
       "quantity": 45,
       "unit": "kg",
-      "resource_id": "67a6f20e6fa544d88be87517"
+      "resource_id": "67a6f20e6fa544d88be87517",
+      "resourceName": "Wolf Meat"
     }
   ]
 },
@@ -138,7 +146,8 @@
     {
       "quantity": 40,
       "unit": "kg",
-      "resource_id": "67a6f2106fa544d88be87518"
+      "resource_id": "67a6f2106fa544d88be87518",
+      "resourceName": "Camel Hay"
     }
   ]
 },
@@ -154,7 +163,8 @@
     {
       "quantity": 2,
       "unit": "kg",
-      "resource_id": "67a6f2126fa544d88be87519"
+      "resource_id": "67a6f2126fa544d88be87519",
+      "resourceName": "Rabbit Fresh Vegetables"
     }
   ]
 },
@@ -170,12 +180,14 @@
     {
       "quantity": 50,
       "unit": "kg",
-      "resource_id": "6799f2b008e74859037bc3c0"
+      "resource_id": "6799f2b008e74859037bc3c0",
+      "resourceName": "Feline Food"
     },
     {
       "quantity": 1,
       "unit": "doses",
-      "resource_id": "6799f3a2828675b64c75f46f"
+      "resource_id": "6799f3a2828675b64c75f46f",
+      "resourceName": "Feline Vacines"
     }
   ]
 },
@@ -191,7 +203,8 @@
     {
       "quantity": 30,
       "unit": "kg",
-      "resource_id": "679a3d85fd21a421e9bb7f40"
+      "resource_id": "679a3d85fd21a421e9bb7f40",
+      "resourceName": "Hay"
     }
   ]
 },
@@ -207,7 +220,8 @@
     {
       "quantity": 100,
       "unit": "kg",
-      "resource_id": "679a3d85fd21a421e9bb7f40"
+      "resource_id": "679a3d85fd21a421e9bb7f40",
+      "resourceName": "Hay"
     }
   ]
 },
@@ -223,7 +237,8 @@
     {
       "quantity": 5,
       "unit": "kg",
-      "resource_id": "679a3da2fd21a421e9bb7f42"
+      "resource_id": "679a3da2fd21a421e9bb7f42",
+      "resourceName": "Penguin Fish"
     }
   ]
 },
@@ -239,12 +254,14 @@
     {
       "quantity": 5,
       "unit": "kg",
-      "resource_id": "679a3da2fd21a421e9bb7f42"
+      "resource_id": "679a3da2fd21a421e9bb7f42",
+      "resourceName": "Penguin Fish"
     },
     {
       "quantity": 1,
       "unit": "tablets",
-      "resource_id": "679a4060fd21a421e9bb7f59"
+      "resource_id": "679a4060fd21a421e9bb7f59",
+      "resourceName": "Penguin Vitamin Supplement"
     }
   ]
 },
@@ -260,7 +277,8 @@
     {
       "quantity": 0.5,
       "unit": "kg",
-      "resource_id": "679a3dc6fd21a421e9bb7f44"
+      "resource_id": "679a3dc6fd21a421e9bb7f44",
+      "resourceName": "Parrot Seed Mix"
     }
   ]
 },
@@ -276,7 +294,8 @@
     {
       "quantity": 50,
       "unit": "kg",
-      "resource_id": "67a702006fa544d88be87700"
+      "resource_id": "67a702006fa544d88be87700",
+      "resourceName": "Big Cat Raw Meat"
     }
   ]
 },
@@ -292,7 +311,8 @@
     {
       "quantity": 120,
       "unit": "kg",
-      "resource_id": "67a702016fa544d88be87701"
+      "resource_id": "67a702016fa544d88be87701",
+      "resourceName": "Elephant Grass Bundle"
     }
   ]
 },
@@ -308,7 +328,8 @@
     {
       "quantity": 5,
       "unit": "kg",
-      "resource_id": "67a702026fa544d88be87702"
+      "resource_id": "67a702026fa544d88be87702",
+      "resourceName": "Beaver Fresh Bark"
     }
   ]
 },
@@ -324,7 +345,8 @@
     {
       "quantity": 6,
       "unit": "kg",
-      "resource_id": "67a702036fa544d88be87703"
+      "resource_id": "67a702036fa544d88be87703",
+      "resourceName": "Lemur Fruit Mix"
     }
   ]
 },
@@ -340,7 +362,8 @@
     {
       "quantity": 40,
       "unit": "kg",
-      "resource_id": "67a702046fa544d88be87704"
+      "resource_id": "67a6f20e6fa544d88be87517",
+      "resourceName": "Wolf Meat"
     }
   ]
 }]

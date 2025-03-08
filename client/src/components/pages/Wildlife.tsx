@@ -44,19 +44,16 @@ export function Wildlife() {
       setAnimals(body);
     };
     fetchData();
-  }, []);
+  }, [popUpsState.animalForm]);
 
   //set q filter when local search state doesnt change for 500ms
   useEffect(() => {
     setAnimalFilters({ q: debouncedSearch });
-  }, [debouncedSearch]);
+  }, [debouncedSearch, setAnimalFilters]);
 
-  const handleChange = useCallback(
-    (s: string) => {
-      setSearch(s);
-    },
-    [search],
-  );
+  const handleChange = useCallback((s: string) => {
+    setSearch(s);
+  }, []);
 
   const closeAllPopUps = () => {
     setPopUpsState((ps) => {
@@ -71,7 +68,13 @@ export function Wildlife() {
     <>
       {popUpsState.animalForm && (
         <PopUp close={closeAllPopUps}>
-          <AnimalForm animalId={currAnimalId} />
+          <AnimalForm
+            animalId={currAnimalId}
+            close={() => {
+              setPopUpsState((ps) => ({ ...ps, animalForm: false }));
+              setCurrAnimalId(null);
+            }}
+          />
         </PopUp>
       )}
       {popUpsState.baseFilters && (

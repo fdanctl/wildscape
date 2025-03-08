@@ -72,7 +72,7 @@
   "_id": {
     "$oid": "67a6f20e6fa544d88be87517"
   },
-  "name": "Wolf Meat and Bones",
+  "name": "Wolf Meat",
   "type": "food",
   "subtype": "meat",
   "quantity": 450,
@@ -82,7 +82,7 @@
   "_id": {
     "$oid": "67a6f2106fa544d88be87518"
   },
-  "name": "Camel Hay and Water",
+  "name": "Camel Hay",
   "type": "food",
   "subtype": "hay",
   "quantity": 700,
@@ -216,15 +216,5 @@
   "type": "food",
   "subtype": "fruit",
   "quantity": 300,
-  "unit": "kg"
-},
-{
-  "_id": {
-    "$oid": "67a702046fa544d88be87704"
-  },
-  "name": "Wolf Meat Supply",
-  "type": "food",
-  "subtype": "meat",
-  "quantity": 800,
   "unit": "kg"
 }]

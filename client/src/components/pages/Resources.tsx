@@ -31,6 +31,8 @@ export function Resources() {
     removeConfirm: false,
   });
 
+  const [currResourceId, setCurrResourceId] = useState<string | null>(null);
+
   useEffect(() => {
     setAnimalFilters({ q: search });
   }, [debouncedSearch]);
@@ -65,17 +67,17 @@ export function Resources() {
       )}
       {popUpsState.addForm && (
         <PopUp close={closeAllPopUps}>
-          <AddForm />
+          <AddForm resourceId={currResourceId} />
         </PopUp>
       )}
       {popUpsState.resourceForm && (
         <PopUp close={closeAllPopUps}>
-          <ResourceForm />
+          <ResourceForm resourceId={currResourceId} />
         </PopUp>
       )}
       {popUpsState.removeConfirm && (
         <PopUp close={closeAllPopUps}>
-          <RemoveConfirm type="resource" name="Feline Food" />
+          <RemoveConfirm resourceId={currResourceId} type="resource" name="Feline Food" />
         </PopUp>
       )}
       <Layout>
@@ -89,7 +91,14 @@ export function Resources() {
               setPopUpsState((ps) => ({ ...ps, resourceForm: true }))
             }
           />
-          <ResourceList />
+          <ResourceList
+            add={() => setPopUpsState((ps) => ({ ...ps, addForm: true }))}
+            edit={() => setPopUpsState((ps) => ({ ...ps, resourceForm: true }))}
+            remove={() =>
+              setPopUpsState((ps) => ({ ...ps, removeConfirm: true }))
+            }
+            setCurrResource={setCurrResourceId}
+          />
         </ContentBox>
       </Layout>
     </>
