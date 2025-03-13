@@ -103,7 +103,7 @@ export function Resources() {
       {popUpsState.removeConfirm && (
         <PopUp close={closeAllPopUps}>
           <RemoveConfirm
-            resourceId={currResourceId}
+            id={currResourceId}
             type="resource"
             close={() => {
               setPopUpsState((ps) => ({ ...ps, removeConfirm: false }));

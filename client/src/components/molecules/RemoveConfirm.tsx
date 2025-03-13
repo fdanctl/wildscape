@@ -1,30 +1,31 @@
 import { useEffect, useState } from "react";
+import { AnimalWithId } from "../../models/animal";
 import { ResourceWithId } from "../../models/resource";
 import { MainBtn } from "../atoms/MainBtn";
 import { SecundaryBtn } from "../atoms/SecundaryBtn";
 
 export function RemoveConfirm({
-  resourceId,
+  id,
   type,
   close,
 }: {
-  resourceId: string | null;
+  id: string | null;
   type: "resource" | "animal";
   close: () => void;
 }) {
-  const [resource, setResource] = useState<ResourceWithId | null>(null);
+  const [data, setData] = useState<ResourceWithId | AnimalWithId | null>(null);
 
   // fetch resource data by id
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3030/api/resources/${resourceId}`,
+        `http://localhost:3030/api/${type + "s"}/${id}`,
       );
       const body: ResourceWithId = await response.json();
-      setResource(body);
+      setData(body);
     };
     fetchData();
-  }, [resourceId]);
+  }, [id]);
 
   const handleSubmit = async () => {
     const options = {
@@ -34,7 +35,7 @@ export function RemoveConfirm({
       },
     };
     const response = await fetch(
-      `http://localhost:3030/api/resources/${resourceId}`,
+      `http://localhost:3030/api/${type + "s"}/${id}`,
       options,
     );
 
@@ -48,7 +49,7 @@ export function RemoveConfirm({
   return (
     <div className="rounded-xl px-14 py-10 bg-secundaryGreen z-50 flex flex-col gap-8 max-w-[80vw] text-center font-bold">
       <h2 className="text-4xl font bold">
-        {`Are you sure you want to remove ${resource?.name} from ${type + "s"}?`}
+        {`Are you sure you want to remove ${data?.name} from ${type + "s"}?`}
       </h2>
       <div className="flex gap-4 self-end">
         <SecundaryBtn text="Yes" onclick={handleSubmit} />

@@ -12,11 +12,13 @@ import { Layout } from "../templates/Layout";
 import { PopUp } from "../templates/PopUp";
 import { AnimalWithId } from "../../models/animal";
 import { useFilteredAnimals } from "../../hooks/useFilteredAnimals";
+import { RemoveConfirm } from "../molecules/RemoveConfirm";
 
 interface WildlifePopUpState {
   baseFilters: boolean;
   animalForm: boolean;
   speciesFilters: boolean;
+  removeConfirm: boolean;
 }
 
 export function Wildlife() {
@@ -32,6 +34,7 @@ export function Wildlife() {
     baseFilters: false,
     animalForm: false,
     speciesFilters: false,
+    removeConfirm: false,
   });
 
   const [currAnimalId, setCurrAnimalId] = useState<string | null>(null);
@@ -70,8 +73,27 @@ export function Wildlife() {
         <PopUp close={closeAllPopUps}>
           <AnimalForm
             animalId={currAnimalId}
+            openRemove={() =>
+              setPopUpsState((ps) => ({ ...ps, removeConfirm: true }))
+            }
             close={() => {
               setPopUpsState((ps) => ({ ...ps, animalForm: false }));
+              setCurrAnimalId(null);
+            }}
+          />
+        </PopUp>
+      )}
+      {popUpsState.removeConfirm && (
+        <PopUp close={closeAllPopUps}>
+          <RemoveConfirm
+            id={currAnimalId}
+            type="animal"
+            close={() => {
+              setPopUpsState((ps) => ({
+                ...ps,
+                removeConfirm: false,
+                animalForm: false,
+              }));
               setCurrAnimalId(null);
             }}
           />

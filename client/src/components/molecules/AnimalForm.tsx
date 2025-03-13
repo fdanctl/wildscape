@@ -31,9 +31,11 @@ interface DailyForm {
 
 export function AnimalForm({
   animalId,
+  openRemove,
   close,
 }: {
   animalId?: string | null;
+  openRemove?: () => void;
   close: () => void;
 }) {
   const { q } = useAnimalFilters();
@@ -145,9 +147,7 @@ export function AnimalForm({
         ? "http://localhost:3030/api/animals"
         : `http://localhost:3030/api/animals/${animalId}`;
 
-      const method = !animalId
-        ? "POST"
-        : "PATCH"
+      const method = !animalId ? "POST" : "PATCH";
 
       const options = {
         method: method,
@@ -270,12 +270,19 @@ export function AnimalForm({
         />
       </div>
       <div className="flex gap-2 justify-end">
-      <SecundaryBtnS
-        text={animalId ? "Edit" : "Add"}
-        className="self-end mt-4"
-        onclick={handleSubmit}
-      />
-      <MainBtnS text="Cancel" className="self-end mt-4" onclick={close} />
+        {animalId && (
+          <MainBtnS
+            text="Remove"
+            className="bg-redish self-end mt-4"
+            onclick={() => openRemove && openRemove()}
+          />
+        )}
+        <SecundaryBtnS
+          text={animalId ? "Edit" : "Add"}
+          className="self-end mt-4"
+          onclick={handleSubmit}
+        />
+        <MainBtnS text="Cancel" className="self-end mt-4" onclick={close} />
       </div>
     </form>
   );
