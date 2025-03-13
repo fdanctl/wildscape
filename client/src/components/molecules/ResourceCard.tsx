@@ -7,13 +7,11 @@ import { SteakSvg } from "../atoms/SteakSvg";
 export function ResourceCard({
   obj,
   add,
-  edit,
   remove,
   setCurrResource,
 }: {
   obj: ResourceWithStats;
   add: () => void;
-  edit: () => void;
   remove: () => void;
   setCurrResource: Dispatch<SetStateAction<string | null>>;
 }) {
@@ -60,14 +58,6 @@ export function ResourceCard({
             }}
           >
             Remove
-          </button>
-          <button
-            onClick={() => {
-              setCurrResource(obj._id);
-              edit();
-            }}
-          >
-            Edit
           </button>
           <button
             onClick={() => {

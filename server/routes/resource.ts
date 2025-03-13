@@ -1,6 +1,7 @@
 import express from "express";
 import {
   CreateResource,
+  DeleteResource,
   ReadResourceById,
   ReadResources,
   ReadResourcesByName,
@@ -57,4 +58,11 @@ router
     const quantity = req.body.quantity;
     await UpdateResource({ _id: id, quantity: quantity });
     res.status(200).json({ message: "atualizado com sucesso" });
+  })
+
+  // apagar recurso
+  .delete(async (req, res) => {
+    const id = req.params.id;
+    await DeleteResource(id);
+    res.status(200).json({ message: "removido com sucesso" });
   });

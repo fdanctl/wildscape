@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAnimalFilters } from "../../hooks/useAnimalFilters";
 import { useDebounce } from "../../hooks/useDebounce";
+import { ResourceWithStats } from "../../models/resource";
 import { ContentBox } from "../atoms/ContentBox";
 import { Title } from "../atoms/Title";
 import { AddForm } from "../molecules/AddForm";
@@ -24,6 +25,8 @@ export function Resources() {
   const [search, setSearch] = useState<string>(q || "");
   const debouncedSearch = useDebounce(search);
 
+  const [resources, setResources] = useState<ResourceWithStats[]>([]);
+
   const [popUpsState, setPopUpsState] = useState<ResourcesPopUpState>({
     nttf: false,
     addForm: false,
@@ -32,6 +35,19 @@ export function Resources() {
   });
 
   const [currResourceId, setCurrResourceId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3030/api/resources");
+      const body: ResourceWithStats[] = await response.json();
+      setResources(body);
+    };
+    fetchData();
+  }, [
+    popUpsState.addForm,
+    popUpsState.resourceForm,
+    popUpsState.removeConfirm,
+  ]);
 
   useEffect(() => {
     setAnimalFilters({ q: search });
@@ -51,8 +67,6 @@ export function Resources() {
         {} as ResourcesPopUpState,
       );
     });
-
-    console.log(popUpsState);
   };
 
   return (
@@ -67,17 +81,35 @@ export function Resources() {
       )}
       {popUpsState.addForm && (
         <PopUp close={closeAllPopUps}>
-          <AddForm resourceId={currResourceId} />
+          <AddForm
+            resourceId={currResourceId}
+            close={() => {
+              setPopUpsState((ps) => ({ ...ps, addForm: false }));
+              setCurrResourceId(null);
+            }}
+          />
         </PopUp>
       )}
       {popUpsState.resourceForm && (
         <PopUp close={closeAllPopUps}>
-          <ResourceForm resourceId={currResourceId} />
+          <ResourceForm
+            close={() => {
+              setPopUpsState((ps) => ({ ...ps, resourceForm: false }));
+              setCurrResourceId(null);
+            }}
+          />
         </PopUp>
       )}
       {popUpsState.removeConfirm && (
         <PopUp close={closeAllPopUps}>
-          <RemoveConfirm resourceId={currResourceId} type="resource" name="Feline Food" />
+          <RemoveConfirm
+            resourceId={currResourceId}
+            type="resource"
+            close={() => {
+              setPopUpsState((ps) => ({ ...ps, removeConfirm: false }));
+              setCurrResourceId(null);
+            }}
+          />
         </PopUp>
       )}
       <Layout>
@@ -92,8 +124,10 @@ export function Resources() {
             }
           />
           <ResourceList
+            list={resources.filter(
+              (e) => !q || e.name.toLowerCase().includes(q.toLowerCase()),
+            )}
             add={() => setPopUpsState((ps) => ({ ...ps, addForm: true }))}
-            edit={() => setPopUpsState((ps) => ({ ...ps, resourceForm: true }))}
             remove={() =>
               setPopUpsState((ps) => ({ ...ps, removeConfirm: true }))
             }

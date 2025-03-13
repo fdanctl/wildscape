@@ -6,7 +6,7 @@ export const isFormFilled = (obj: Record<string, any>) => {
   for (const field in obj) {
     if (obj.hasOwnProperty(field)) {
       const value = obj[field];
-      if (value.length === 0) {
+      if (value?.length === 0) {
         return false
       }
     }

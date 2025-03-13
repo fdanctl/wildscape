@@ -4,30 +4,16 @@ import { ResourceWithStats } from "../../models/resource";
 import { ResourceCard } from "../molecules/ResourceCard";
 
 export function ResourceList({
+  list,
   add,
-  edit,
   remove,
   setCurrResource,
 }: {
+  list: ResourceWithStats[];
   add: () => void;
-  edit: () => void;
   remove: () => void;
   setCurrResource: Dispatch<SetStateAction<string | null>>;
 }) {
-  const [resources, setResources] = useState<ResourceWithStats[]>([]);
-  const [visibility, setVisibility] = useState(new Map());
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("http://localhost:3030/api/resources");
-      const body: ResourceWithStats[] = await response.json();
-      setResources(body);
-      setVisibility(body.reduce((map, ele) => map.set(ele, false), new Map()));
-    };
-    fetchData();
-
-    console.log(visibility);
-  }, []);
 
   return (
     <>
@@ -41,19 +27,18 @@ export function ResourceList({
         <p>Days Left</p>
       </div>
 
-      {resources.length === 0 ? (
+      {list.length === 0 ? (
         <p className="text-center text-primaryGreen">No resources found</p>
       ) : (
         <>
           <div className="flex flex-col gap-2 overflow-y-auto">
-            {resources
+            {list
               .sort((a, b) => Number(a.daysLeft) - Number(b.daysLeft))
               .map((e) => (
                 <ResourceCard
                   key={e._id}
                   obj={e}
                   add={add}
-                  edit={edit}
                   remove={remove}
                   setCurrResource={setCurrResource}
                 />

@@ -6,6 +6,7 @@ import {
   InsertResource,
   FindResourceByNameSearch,
   FindResourceById,
+  RemoveResource,
 } from "../data/resource";
 import {
   Resource,
@@ -67,4 +68,8 @@ export async function ReadResourcesByName(
   const animal = await FindResourceByNameSearch(str);
 
   return animal;
+}
+
+export async function DeleteResource(id: string): Promise<void> {
+  await RemoveResource(id);
 }
